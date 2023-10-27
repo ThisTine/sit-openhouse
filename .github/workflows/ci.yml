@@ -1,0 +1,19 @@
+name: CI
+
+on:
+    pull_request: 
+        branches: 
+            - "*"
+
+jobs:
+    lint:
+        name: Check lint ⚡️
+        runs-on: ubuntu-latest
+        container: node:lts
+        steps:
+            - name: Checkout 🚣
+              uses: actions/checkout@v2
+            - name: install packages 👇
+              run: npm i
+            - name: run lint ✅❌👉👈
+              run: npm run lint
