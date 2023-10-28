@@ -40,5 +40,5 @@
     "react/self-closing-comp": "warn",
     "react/jsx-sort-props": "warn"
   },
-  "extends": ["next/core-web-vitals","plugin:react/recommended"]
+  "extends": ["next/core-web-vitals","plugin:react/recommended","plugin:tailwindcss/recommended"]
 }
