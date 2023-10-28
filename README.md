@@ -19,7 +19,7 @@ prod -> [https://openhouse.sit.kmutt.ac.th](https://openhouse.sit.kmutt.ac.th)
 
 ### Development ✍️
 - Installing package `pnpm install`
-- run project `pnpn dev`
+- run project `pnpm dev`
 
 ### Project structure 🧱
 - All soruce files are localted in `/src` folder 
