@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
 	content: [
@@ -8,6 +9,9 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			fontFamily:{
+				'sans': ["'Roboto'",...defaultTheme.fontFamily.sans]
+			},
 			colors:{
 				'primary': '#3366CC',
 				'secondary': '#336699',

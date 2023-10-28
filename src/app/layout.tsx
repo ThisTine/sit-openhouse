@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import {  Roboto_Flex, Noto_Sans_Thai } from 'next/font/google';
 import './globals.css';
 import NavBar from '@/share/components/NavBar';
 import Footer from '@/share/components/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const roboto = Roboto_Flex({subsets:["latin"]});
+const noto = Noto_Sans_Thai({subsets:["latin"]});
 
 export const metadata: Metadata = {
 	title: 'SIT Openhouse',
@@ -18,9 +19,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body style={{fontFamily: `${roboto.style.fontFamily}, ${noto.style.fontFamily}`}}>
 				<NavBar/>
-				<main className='min-w-full min-h-screen'>
+				<main className='min-h-screen min-w-full'>
 					{children}
 				</main>
 				<Footer/>
