@@ -19,19 +19,15 @@ jobs:
               run: npm run lint
 
     check-build:
-        name: 🐳 Build React.js Frontend
+        name: 🐳 Check Build 
         runs-on: ubuntu-latest
         timeout-minutes: 5
         container: node:lts
         steps:
           - name: 🎤 Checkout
             uses: actions/checkout@v3
-          
-          - uses: pnpm/action-setup@v2
-            with:
-              version: 7
 
-          - name: ⌚ Compile React.js production build
+          - name: ⌚ Compile production build
             run: |
-              pnpm i
-              pnpm run build
+              npm i
+              npm run build
