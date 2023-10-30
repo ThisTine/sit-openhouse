@@ -32,4 +32,4 @@ jobs:
               npm i
               npm run build
           - name: 🥺 Finish leaw na
-            run: echo "### Finish leaw na! :emoji_pleading_face:" >> $GITHUB_STEP_SUMMARY
+            run: echo -e "### Finish leaw na! \U0001F97A " >> $GITHUB_STEP_SUMMARY
