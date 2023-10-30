@@ -26,7 +26,7 @@ prod -> [https://openhouse.sit.kmutt.ac.th](https://openhouse.sit.kmutt.ac.th)
 - There're **4 pages** localted in 4 locations
   - index page (`/`) `/src/app/page.tsx`
   - Agenda page (`/agenda`) `/src/app/agenda/page.tsx`
-  - register page (`/register`) `/src/app/register/page.tsx`
+  - register page (`/register/solution-chllenge`) `/src/app/register/solution-chllenge/page.tsx`
   - info page (`/info`) `scr/app/info/page.tsx`
 - `/src/share` folder is used for a *share components, type, function only*. if there's component that only use in a specific page, please consider create `components`, `types` or `utils` folder beside `page.tsx` in a spacific page.
 
