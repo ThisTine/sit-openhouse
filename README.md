@@ -1,6 +1,10 @@
 # SIT Openhouse website 🎉
 design -> [Figma](https://www.figma.com/file/2131IaOxPgUKKG4P8jeMzT/Openhouse2023?type=design&node-id=0%3A1&mode=design&t=BFTgLYMepp5IG8lH-1)
 
+Photo -> [Onedrive](https://mailkmuttacth.sharepoint.com/:f:/s/SRM/EiZloWTDy5NOrG9w6lHhlTIBj-SAluWJLzml5xIi8V44jg?e=TG7vg7)
+
+Logo -> [Googledrive](https://drive.google.com/drive/folders/1GiB8nIEuycF5nPeWcXf4trkkXqwwTKwJ?usp=share_link)
+
 staging -> [https://openhouse23.thistine.com](https://openhouse23.thistine.com)
 
 prod -> [https://openhouse.sit.kmutt.ac.th](https://openhouse.sit.kmutt.ac.th)
