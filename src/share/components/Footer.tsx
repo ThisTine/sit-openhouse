@@ -63,8 +63,8 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className="flex w-[100%] justify-center lg:hidden">
-				<div className="mx-16 grid grid-cols-2 gap-2 border-b-2 border-inherit max-sm:mx-6">
-					<div className="col-span-2 text-center text-2xl font-bold text-gray-200">
+				<div className="mx-16 grid grid-cols-2 gap-2 border-b-2 border-inherit pb-4 max-sm:mx-6">
+					<div className="col-span-2 pb-2 text-center text-2xl font-bold text-gray-200">
 						<h1>Contect</h1>
 					</div>
 					<div>
