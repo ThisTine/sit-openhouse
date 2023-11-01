@@ -1,6 +1,6 @@
 // Page for Register Form
 
-import TeamInfoForm from "@/app/components/teamInfoForm";
+import TeamInfoForm from "@/app/register/components/teamInfoForm";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import {Button} from "@mui/material";
 import Image from "next/image";
