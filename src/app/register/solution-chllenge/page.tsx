@@ -59,8 +59,10 @@ const page = () => {
           			ให้เธอหายไปจากตรงนี้ให้เธอหายไปไม่ย้อนคืน
 					</p>
 				</div>
-				<div className="rounded-xl bg-gray-2">
-					<TeamInfoForm grade={grade} prefix={prefix} />
+				<div className="relative my-3 rounded-xl bg-primary">
+					<div className="relative bottom-3 right-3 rounded-xl bg-gray-2">
+						<TeamInfoForm grade={grade} prefix={prefix}/>
+					</div>
 				</div>
 				<div className="m-5">
 					<p className="text-text-primary">** กรุณาตรวจสอบความถูกต้องให้ครบถ้วนก่อนกดยืนยัน
