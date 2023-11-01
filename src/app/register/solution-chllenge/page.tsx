@@ -45,10 +45,10 @@ const page = () => {
 							<p className="text-xl text-text-primary">Back</p>
 						</Button>
 					</div>
-					<Image alt="sit-logo" height={200} src="/assets/sit_logo.png" width={200} />
+					<Image alt="sit-logo" height={60} src="/assets/sit_logo.png" width={200} />
 				</div>
 				<div className="w-72">
-					<h1 className="text-2xl font-bold" style={{color:"#3399CC"}}>แบบฟอร์มลงทะเบียน ICT Challenge 2023 </h1>
+					<h1 className="text-3xl font-bold" style={{color:"#3399CC"}}>แบบฟอร์มลงทะเบียน ICT Challenge 2023 </h1>
 				</div>
 				<div>
 					<p className="py-3  text-gray-3">

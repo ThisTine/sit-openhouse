@@ -74,17 +74,17 @@ const TeamMemberForm = ({prefix,grade} : ITeamInfoFormProps) =>{
 					<TextField  className="bg-white" fullWidth size="medium"/>
 				</div>
 				<div className="py-5">
-					<h2 className="text-gray-4">Facebook (ไม่บังคับ) *</h2>
+					<h2 className="text-gray-4">Facebook (ไม่บังคับ) </h2>
 					<TextField  className="bg-white" fullWidth size="medium"/>
 				</div>
 				<div className="py-5">
-					<h2 className="text-gray-4">Line ID (ไม่บังคับ) *</h2>
+					<h2 className="text-gray-4">Line ID (ไม่บังคับ) </h2>
 					<TextField  className="bg-white" fullWidth size="medium"/>
 				</div>
 			</div>
 			<div className="my-5 flex justify-between">
 				<Button variant="outlined">ย้อนกลับ</Button>
-				<Button className="bg-primary" variant="contained">ถัดไป</Button>
+				<Button className="bg-primary" variant="contained">คนถัดไป</Button>
 			</div>
 		</div>
 	);
