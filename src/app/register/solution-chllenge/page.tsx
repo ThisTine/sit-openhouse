@@ -1,9 +1,8 @@
 // Page for Register Form
 
 import TeamInfoForm from "@/app/components/teamInfoForm";
-import RegisterForm from "@/app/components/teamMemberForm";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import { Box, Button, Container, IconButton, Select, TextField, TextareaAutosize, Typography } from "@mui/material";
+import {Button} from "@mui/material";
 import Image from "next/image";
 
 const page = () => {
@@ -53,11 +52,11 @@ const page = () => {
 				</div>
 				<div>
 					<p className="py-3  text-gray-3">
-          ก่อนนี้เธอคงจะปวดร้าว ต้องฝืนอดทนว่าไม่รู้ตัว คงไม่มีทางหรอก 
-          แต่เธอแค่ไม่กล้าบอก ก่อนนี้โลกดูช่างสดใส ได้ฝืนอดทนไม่ให้รู้ตัว 
-          เธอนั้นสำคัญเท่าไรฉันแค่ไม่กล้าบอกให้รู้ ฮู้ คงต้องเข้าใจหากฉันไม่บอกไป
-          เธอคงฝืนทนอยู่อย่างนี้เหมือนเดิมอยู่อย่างนี้ คงไม่เปลี่ยนไปหากฉันยื้อต่อไป
-          ให้เธอหายไปจากตรงนี้ให้เธอหายไปไม่ย้อนคืน
+          			ก่อนนี้เธอคงจะปวดร้าว ต้องฝืนอดทนว่าไม่รู้ตัว คงไม่มีทางหรอก 
+          			แต่เธอแค่ไม่กล้าบอก ก่อนนี้โลกดูช่างสดใส ได้ฝืนอดทนไม่ให้รู้ตัว 
+          			เธอนั้นสำคัญเท่าไรฉันแค่ไม่กล้าบอกให้รู้ ฮู้ คงต้องเข้าใจหากฉันไม่บอกไป
+          			เธอคงฝืนทนอยู่อย่างนี้เหมือนเดิมอยู่อย่างนี้ คงไม่เปลี่ยนไปหากฉันยื้อต่อไป
+          			ให้เธอหายไปจากตรงนี้ให้เธอหายไปไม่ย้อนคืน
 					</p>
 				</div>
 				<div className="rounded-xl bg-gray-2">
