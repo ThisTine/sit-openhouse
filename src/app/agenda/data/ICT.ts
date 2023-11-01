@@ -1,4 +1,5 @@
-const ICTChallenge = [
+import Agenda from "./agenda.model";
+const ICTChallenge: Agenda[] = [
 	{
 		th: ["ลงทะเบียนเข้าร่วมงาน"],
 		en: ["Registration"],
@@ -26,7 +27,7 @@ const ICTChallenge = [
 	{
 		th: ["การแข่งขันรอบคัดเลือก"],
 		en: ["Qualifying Round"],
-		location: "LX 10-11",
+		location: "LX 3 Auditorium",
 		start: 1000,
 		end: 1130
 	},

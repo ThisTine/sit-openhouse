@@ -1,4 +1,5 @@
-const openHouseWorkshop = [
+import Agenda from "./agenda.model";
+const openHouseWorkshop: Agenda[] = [
 	{
 		start: 800,
 		end: 900
