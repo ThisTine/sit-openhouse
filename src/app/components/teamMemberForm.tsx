@@ -82,7 +82,7 @@ const TeamMemberForm = ({prefix,grade} : ITeamInfoFormProps) =>{
 					<TextField  className="bg-white" fullWidth size="medium"/>
 				</div>
 			</div>
-			<div className="flex justify-between">
+			<div className="my-5 flex justify-between">
 				<Button variant="outlined">ย้อนกลับ</Button>
 				<Button className="bg-primary" variant="contained">ถัดไป</Button>
 			</div>
