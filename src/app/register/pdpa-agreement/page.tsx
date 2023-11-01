@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import Image from "next/image";
-import PdpaText from "@/app/components/pdpaText";
+import PdpaText from "@/app/register/components/pdpaText";
 
 const PDPAagreementPage = () => {
 	return (
