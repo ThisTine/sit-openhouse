@@ -54,7 +54,7 @@ const TeamMemberForm = ({prefix,grade} : ITeamInfoFormProps) =>{
 			<div className="py-5">
 				<h2 className="text-gray-4">ระดับชั้นที่กำลังศึกษาอยู่*</h2>
 				<div className="grid grid-cols-6 gap-4">
-					<div className="col-span-6 py-5 md:col-span-2">
+					<div className="col-span-6 md:col-span-2">
 						<Select
 							className="bg-white"
 							fullWidth

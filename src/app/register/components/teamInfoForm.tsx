@@ -61,7 +61,7 @@ const TeamInfoForm = ({prefix,grade}: ITeamInfoFormProps) => {
 			</div>
 			<h2 className="text-gray-4">กลุ่มสาระการเรียนรู้ที่สังกัด หรือตําแหน่งปัจจุบัน *</h2>
 			<div className="grid grid-cols-6 gap-4">
-				<div className="col-span-6 py-5 md:col-span-4">
+				<div className="col-span-6 md:col-span-4">
 					<TextField  className="rounded-lg bg-white" fullWidth size="medium"/>
 				</div>
 			</div>
