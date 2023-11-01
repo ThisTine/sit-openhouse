@@ -36,7 +36,7 @@ const page = () => {
 		}
 	];
 	return (
-		<div style={{backgroundColor:"#34312F"}}>
+		<div style={{backgroundColor:"#34312F" , padding:'30px'}}>
 			<div className="p-5">
 				<div className="flex justify-between py-3">
 					<div>
@@ -45,7 +45,7 @@ const page = () => {
 							<p className="text-xl text-text-primary">Back</p>
 						</Button>
 					</div>
-					<Image alt="sit-logo" height={60} src="/assets/sit_logo.png" width={200} />
+				
 				</div>
 				<div className="w-72">
 					<h1 className="text-3xl font-bold" style={{color:"#3399CC"}}>แบบฟอร์มลงทะเบียน ICT Challenge 2023 </h1>
