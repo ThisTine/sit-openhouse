@@ -4,7 +4,7 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 const config: Config = {
 	content: [
 		'./src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
+		'./src/share/components/**/*.{js,ts,jsx,tsx,mdx}',
 		'./src/app/**/*.{js,ts,jsx,tsx,mdx}'
 	],
 	theme: {
@@ -13,7 +13,7 @@ const config: Config = {
 				'sans': ["'Roboto'",...defaultTheme.fontFamily.sans]
 			},
 			colors:{
-				'primary': '#3366CC',
+				'primary': '#3399CC',
 				'secondary': '#336699',
 				'text-primary': '#E8E8E8',
 				'gray-4': '#505050',
