@@ -1,7 +1,10 @@
-import { Select, TextField, TextareaAutosize } from "@mui/material";
+"use client"; 
+import { MenuItem, Select, TextField, TextareaAutosize } from "@mui/material";
 import TeamMemberForm, { ITeamInfoFormProps } from "./teamMemberForm";
+import React, { useState } from "react";
 
 const TeamInfoForm = ({prefix,grade}: ITeamInfoFormProps) => {
+	const [PrefixAjarn , setPrefixAjarn] = useState('');
 	return (
 		<div className="p-8">
 			<div className="col-span-4">
@@ -29,13 +32,11 @@ const TeamInfoForm = ({prefix,grade}: ITeamInfoFormProps) => {
 					<Select
 						className="bg-white"
 						fullWidth
-					// onChange={handleChange}
-					// value={age}
+						onChange={(e)=>setPrefixAjarn(e.target.value as string)}
+						value={PrefixAjarn}
 					>
 						{prefix.map((item) => (
-							<option key={item.value} value={item.value} >
-								{item.label}
-							</option>
+							<MenuItem key={item.value} value={item.value}>{item.label}</MenuItem>
 						))}
 					</Select>
 				</div>
