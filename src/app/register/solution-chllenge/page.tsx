@@ -37,8 +37,8 @@ const SolutionFormPage = () => {
 						<TeamInfoForm grade={grade} prefix={prefix}/>
 					</div>
 				</div>
-				<div className="m-5">
-					<p className="text-text-primary">** กรุณาตรวจสอบความถูกต้องให้ครบถ้วนก่อนกดยืนยัน
+				<div className="m-2">
+					<p className="flex justify-end text-text-primary">** กรุณาตรวจสอบความถูกต้องให้ครบถ้วนก่อนกดยืนยัน
               หากกดยืนยันแล้วจะไม่สามารถแก้ไขข้อมูลการสมัครได้</p>
 				</div>
 				<div>
