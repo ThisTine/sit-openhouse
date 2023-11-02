@@ -27,13 +27,13 @@ const TeamInfoForm = ({prefix,grade}: ITeamInfoFormProps) => {
 				<div className="col-span-7 py-5 md:col-span-1">
 					<h2 className="text-gray-4">คำนำหน้า*</h2>
 					<Select
-                	className="bg-white"
+						className="bg-white"
 						fullWidth
 					// onChange={handleChange}
 					// value={age}
 					>
 						{prefix.map((item) => (
-							<option key={item.value} value={item.value}>
+							<option key={item.value} value={item.value} >
 								{item.label}
 							</option>
 						))}
