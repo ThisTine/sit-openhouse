@@ -5,6 +5,8 @@ interface Agenda {
 	start: number;
 	end: number;
 	height?: number;
+	description?: string[];
+	isLimited?: boolean;
 }
 
 export default Agenda;

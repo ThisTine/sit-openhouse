@@ -1,9 +1,8 @@
 import { FC } from "react";
 import { th, en } from "../text";
 import AllTable from "./AllTable";
-import SeparateTable from "./SeparateTable";
 
-const TimeTable:FC<{lang:string, filter:number}> = ({lang, filter}) => {
+const TimeTable: FC<{ lang: string; filter: number }> = ({ lang, filter }) => {
 	return (
 		//Main div
 		<div className="mb-20 flex w-screen flex-col items-center justify-center">
@@ -17,24 +16,48 @@ const TimeTable:FC<{lang:string, filter:number}> = ({lang, filter}) => {
 					</h4>
 				</div>
 				{/* Category */}
-				{(filter === 0 || filter === 3) ? <div className="flex w-1/3 min-w-[150px] max-w-[250px] flex-col items-center justify-center rounded bg-[#3399CC]">
+				<div
+					className={
+						"flex w-1/3 min-w-[100px] max-w-[250px] flex-col items-center justify-center rounded " +
+						(filter === 0 || filter === 3
+							? "bg-[#3399CC]"
+							: "bg-[#495057]")
+					}>
 					<h3>CS Project D-Day</h3>
 					<h4>{lang === "th" ? th.ddayLocation : en.ddayLocation}</h4>
-				</div> : null}
-				{(filter === 0 || filter === 2) ? <div className="flex w-1/3 min-w-[150px] max-w-[250px] flex-col items-center justify-center rounded bg-[#3399CC]">
+				</div>
+				<div
+					className={
+						"flex w-1/3 min-w-[100px] max-w-[250px] flex-col items-center justify-center rounded " +
+						(filter === 0 || filter === 2
+							? "bg-[#3399CC]"
+							: "bg-[#495057]")
+					}>
 					<h3>ICT Challenge</h3>
-				</div> : null}
-				{(filter === 0 || filter === 1) ? <div className="flex w-1/3 min-w-[150px] max-w-[250px] flex-col items-center justify-center rounded bg-[#3399CC]">
+				</div>
+				<div
+					className={
+						"flex w-1/3 min-w-[100px] max-w-[250px] flex-col items-center justify-center rounded " +
+						(filter === 0 || filter === 1
+							? "bg-[#3399CC]"
+							: "bg-[#495057]")
+					}>
 					<h3>Open House 2023 (Stage)</h3>
 					<h4>
 						{lang === "th"
 							? th.openhouseLocation
 							: en.openhouseLocation}
 					</h4>
-				</div> : null}
-				{(filter === 0 || filter === 1) ? <div className="flex w-1/3 min-w-[150px] max-w-[250px] flex-col items-center justify-center rounded bg-[#3399CC]">
+				</div>
+				<div
+					className={
+						"flex w-1/3 min-w-[100px] max-w-[250px] flex-col items-center justify-center rounded " +
+						(filter === 0 || filter === 1
+							? "bg-[#3399CC]"
+							: "bg-[#495057]")
+					}>
 					<h3>Open House 2023 (Workshop)</h3>
-				</div> : null}
+				</div>
 			</div>
 			{/* Agenda */}
 			<div className="flex w-11/12 justify-center space-x-2 pt-3 text-white">
@@ -51,7 +74,7 @@ const TimeTable:FC<{lang:string, filter:number}> = ({lang, filter}) => {
 					<h4>16:00</h4>
 					<h4>17:00</h4>
 				</div>
-				{filter == 0 ? <AllTable lang={lang} /> : <SeparateTable filter={filter} lang={lang} />}
+				<AllTable filter={filter} lang={lang} />
 			</div>
 		</div>
 	);

@@ -30,11 +30,11 @@ const RenderDesktop: FC<{
 				<div
 					className={
 						"rounded p-1 pl-2 pr-2 text-white " +
-						(filter === 1 ? "bg-[#F03D3E]" : "") +
+						(filter === 3 ? "bg-[#F03D3E]" : "") +
 						" cursor-pointer"
 					}
-					onClick={() => handleFilterSelect(1)}>
-					Open House
+					onClick={() => handleFilterSelect(3)}>
+					CS D-Day
 				</div>
 				<div
 					className={
@@ -48,21 +48,24 @@ const RenderDesktop: FC<{
 				<div
 					className={
 						"rounded p-1 pl-2 pr-2 text-white " +
-						(filter === 3 ? "bg-[#F03D3E]" : "") +
+						(filter === 1 ? "bg-[#F03D3E]" : "") +
 						" cursor-pointer"
 					}
-					onClick={() => handleFilterSelect(3)}>
-					CS D-Day
+					onClick={() => handleFilterSelect(1)}>
+					Open House
 				</div>
 			</div>
 			{/* Date */}
 			<div className="flex pt-10">
 				<div className="w-1/12" />
 				<h1 className="text-2xl text-white">
-					{lang === 'th' ? "วันที่ 27 พฤศจิกายน 2566": "27 November 2023"}
-				</h1></div>
+					{lang === "th"
+						? "วันที่ 27 พฤศจิกายน 2566"
+						: "27 November 2023"}
+				</h1>
+			</div>
 			{/* Agenda */}
-			<div className="flex items-start justify-start pt-10">
+			<div className="flex items-start justify-start px-10 pt-10">
 				<TimeTable {...{ lang, filter }} />
 			</div>
 		</div>

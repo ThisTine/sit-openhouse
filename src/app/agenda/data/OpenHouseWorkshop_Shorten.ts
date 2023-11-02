@@ -33,8 +33,8 @@ const openHouseWorkshop_Shorten: Agenda[] = [
 		height: 215
 	},
 	{
-		th: ["Workshop สาขา CS", "Easy & Fun Java (กิจกรรมภาษาอังกฤษ)"],
-		en: ["Workshop CS", "Easy & Fun Java (English Workshop)"],
+		th: ["Workshop สาขา CS", "Easy & Fun Java", "(กิจกรรมภาษาอังกฤษ)"],
+		en: ["Workshop CS", "Easy & Fun Java", "(English Workshop)"],
 		location: "LX 10/5",
 		start: 1300,
 		end: 1400,
