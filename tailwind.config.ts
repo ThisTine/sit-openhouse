@@ -13,7 +13,7 @@ const config: Config = {
 				'sans': ["'Roboto'",...defaultTheme.fontFamily.sans]
 			},
 			colors:{
-				'primary': '#3366CC',
+				'primary': '#3399CC',
 				'secondary': '#336699',
 				'text-primary': '#E8E8E8',
 				'gray-4': '#505050',
@@ -21,6 +21,7 @@ const config: Config = {
 				'gray-2': '#E1E1E1',
 				'gray-1': '#F9F9F9'
 			},
+			
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic':
