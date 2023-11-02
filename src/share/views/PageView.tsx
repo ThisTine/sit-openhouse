@@ -3,6 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import Button from "../components/Button";
 import Filter from "public/images/bitmap.png";
 import Filter2 from "public/images/phone.png";
+import Location from "@/share/icon/Location.svg";
 
 
 interface PageProps {
@@ -10,9 +11,11 @@ interface PageProps {
     title: string;
     subtitle: string;
     details: string;
+	location?: string;
+	showButton?: boolean;
 }
 
-const PageView = ({ imageUrl, title, subtitle, details }: PageProps) => {
+const PageView = ({ imageUrl, title, subtitle, details, location, showButton }: PageProps) => {
 	return (
 		<div>
 			<div className="fixed z-0 h-screen w-full">
@@ -27,11 +30,15 @@ const PageView = ({ imageUrl, title, subtitle, details }: PageProps) => {
 					<h1 className="text-3xl font-bold">
 						{title}
 					</h1>
+					{location ? <div className="flex items-center gap-2">
+						<Image alt="location" src={Location} />
+						<p>{location}</p>
+					</div> : null}
 					<p className="text-xl">
 						{subtitle}
 					</p>
 					<p className="pb-32 underline">{details}</p>
-					<Button onClick={() => {}}>สมัครเลย!</Button>
+					{showButton ? <Button onClick={() => {}}>สมัครเลย!</Button> : <h1 className="text-4xl font-medium">ลงทะเบียนเข้าชมหน้างาน</h1>}
 				</div>
 			</div>
 		</div>
