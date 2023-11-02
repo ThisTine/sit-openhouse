@@ -45,26 +45,6 @@ const slider = [
 export default function App() {
 	return (
 		<Swiper className="mySwiper" modules={[Pagination]} pagination={true}>
-			{/* <SwiperSlide>
-				<PageView 
-				  details="รายละเอียดเพิ่มเติม..."
-				  imageUrl={ImageUrl}
-				  subtitle="งานเปิดบ้านคณะเทคโนโลยีสารสนเทศ ครั้งแรกในรอบ 5 ปีกับงานเปิดบ้านเพื่อน้อง ๆ  มัธยมปลายที่สนใจในคณะเทคโนโลยีสารสนเทศ และสาขาทั้งหมดภายในคณะ
-				  มาทำความรู้จักกันได้ผ่าน เวิร์คช็อปสุดพิเศษจากรุ่นพี่ SIT, ช่วงการบรรยายสุดพิเศษจากวิทยากรรับเชิญ, บูทประจำสาขา และกิจกรรมอื่นๆอีกมากมาย"
-				  title="OPEN HOUSE@SIT"
-				/>
-			</SwiperSlide>
-			<SwiperSlide>
-				<PageView 
-				  details="รายละเอียดเพิ่มเติม..."
-				  imageUrl={ImageUrl}
-				  subtitle="ลับสมองประลองปัญญา กับการแข่งขันตอบปัญหาวิชาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ ICT Challenge 2023 เวทีสำหรับน้อง ๆ ระดับมัธยมปลายที่มีความสนใจทางด้านคอมพิวเตอร์และต้องการทดสอบความสามารถตนเองที่จะมาไขปัญหาทางด้านไอที พร้อมชิงรางวัลทุนการศึกษากว่า 10,000 บาท"
-				  title="ICT CHALLENGE 2023"
-				/>
-			</SwiperSlide>
-			<SwiperSlide>
-				<div className="h-screen w-full bg-gray-400" />
-			</SwiperSlide> */}
 			{
 				slider.map((slide, index) => {
 					return (

@@ -32,13 +32,13 @@ const PageView = ({ imageUrl, title, subtitle, details, location, showButton }: 
 					</h1>
 					{location ? <div className="flex items-center gap-2">
 						<Image alt="location" src={Location} />
-						<p>{location}</p>
+						<p className="text-xl font-semibold">{location}</p>
 					</div> : null}
 					<p className="text-xl">
 						{subtitle}
 					</p>
 					<p className="pb-32 underline">{details}</p>
-					{showButton ? <Button onClick={() => {}}>สมัครเลย!</Button> : <h1 className="text-4xl font-medium">ลงทะเบียนเข้าชมหน้างาน</h1>}
+					{showButton ? <Button onClick={() => {}}>สมัครเลย!</Button> : <h1 className="text-2xl font-bold max-md:text-center md:text-4xl md:font-medium">ลงทะเบียนเข้าชมหน้างาน</h1>}
 				</div>
 			</div>
 		</div>

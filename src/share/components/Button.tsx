@@ -15,7 +15,7 @@ const Button = ({ children, onClick }: ButtonProps) => {
 			>
 				{children}
 			</button>
-			<button className="text-2xl font-bold underline md:hidden" type="button">
+			<button className="text-2xl font-bold md:hidden" type="button">
 				<h1>ลงทะเบียนเลย!</h1>
 			</button>
 		</div>
