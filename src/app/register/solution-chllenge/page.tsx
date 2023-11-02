@@ -3,7 +3,7 @@
 import TeamInfoForm from "@/app/register/components/teamInfoForm";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import {Button} from "@mui/material";
-import Image from "next/image";
+import ConfirmModal from "../components/confirmModal";
 
 const page = () => {
 	const prefix = [
@@ -68,8 +68,8 @@ const page = () => {
 					<p className="text-text-primary">** กรุณาตรวจสอบความถูกต้องให้ครบถ้วนก่อนกดยืนยัน
               หากกดยืนยันแล้วจะไม่สามารถแก้ไขข้อมูลการสมัครได้</p>
 				</div>
-				<div className="flex justify-end">
-					<Button className="h-12 w-32 bg-primary" variant="contained">ถัดไป</Button>
+				<div>
+					<ConfirmModal/>
 				</div>
 			</div>
 		</div>

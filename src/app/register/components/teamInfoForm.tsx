@@ -30,7 +30,7 @@ const TeamInfoForm = ({prefix,grade}: ITeamInfoFormProps) => {
 				<div className="col-span-7 py-5 md:col-span-1">
 					<h2 className="text-gray-4">คำนำหน้า*</h2>
 					<Select
-                	className="bg-white"
+						className="bg-white"
 						fullWidth
 						onChange={(e)=>setPrefixAjarn(e.target.value as string)}
 						value={PrefixAjarn}
