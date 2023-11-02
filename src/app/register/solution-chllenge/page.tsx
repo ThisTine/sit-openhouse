@@ -1,10 +1,11 @@
+'use client';
 // Page for Register Form
 import TeamInfoForm from "@/app/register/components/teamInfoForm";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import {Button} from "@mui/material";
 import ConfirmModal from "../components/confirmModal";
 import { grade, prefix } from "../constant/formConst";
-import { useForm, Controller } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 const SolutionFormPage = () => {
 	const { handleSubmit, control } = useForm();
 	return (
