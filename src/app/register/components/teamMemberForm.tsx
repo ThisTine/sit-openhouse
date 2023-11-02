@@ -1,4 +1,5 @@
-import { TextField, TextareaAutosize, Button, Select } from "@mui/material";
+import { TextField, TextareaAutosize, Button, Select, MenuItem } from "@mui/material";
+import { useState } from "react";
 
 export interface ITeamInfoFormProps {
     prefix : {
@@ -10,16 +11,28 @@ export interface ITeamInfoFormProps {
         label: string;
     }[]
 }
-
 const TeamMemberForm = ({prefix,grade} : ITeamInfoFormProps) =>{
+	const [PrefixMember , setPrefixMember] = useState('');
+	const [Grade , setGrade] = useState('');
+	const [member, setMember] = useState(1);
+	const handleMemeberNext = () =>{
+		if(member <3){
+			setMember(member+1);
+		}
+	};
+	const handleMemeberBack = () =>{
+		if(member >1){
+			setMember(member-1);
+		}
+	};
 	return(
 		<div>
 			<h2 className="text-lg text-primary">สมาชิกในทีม</h2>
 			<div className="my-3">
 				<div className="flex gap-4">
-					<Button className="bg-primary text-white opacity-50 hover:opacity-100" variant="contained" >คนที่ 1</Button>
-					<Button className="bg-primary text-white opacity-50 hover:opacity-100" variant="contained" >คนที่ 2</Button>
-					<Button className="bg-primary text-white opacity-50 hover:opacity-100" variant="contained" >คนที่ 3</Button>
+					<div className={(member == 1) ? 'rounded-lg bg-primary p-2 text-white opacity-100' :'rounded-lg bg-primary p-2 text-white opacity-50'}>คนที่ 1</div>
+					<div className={(member == 2) ? 'rounded-lg bg-primary p-2 text-white opacity-100' :'rounded-lg bg-primary p-2 text-white opacity-50'}>คนที่ 2</div>
+					<div className={(member == 3) ? 'rounded-lg bg-primary p-2 text-white opacity-100' :'rounded-lg bg-primary p-2 text-white opacity-50'}>คนที่ 3</div>
 				</div>
 			</div>
 			<h2 className="text-primary">ข้อมูลส่วนตัว</h2>
@@ -30,13 +43,13 @@ const TeamMemberForm = ({prefix,grade} : ITeamInfoFormProps) =>{
 					<Select
                 	className="bg-white"
 						fullWidth
-					// onChange={handleChange}
-					// value={age}
+						onChange={(e)=>setPrefixMember(e.target.value as string)}
+						value={PrefixMember}
 					>
 						{prefix.map((item) => (
-							<option key={item.value} value={item.value}>
+							<MenuItem key={item.value} value={item.value}>
 								{item.label}
-							</option>
+							</MenuItem>
 						))}
 					</Select>
 				</div>
@@ -58,13 +71,13 @@ const TeamMemberForm = ({prefix,grade} : ITeamInfoFormProps) =>{
 						<Select
 							className="bg-white"
 							fullWidth
-							// onChange={handleChange}
-							// value={age}
+							onChange={(e)=>setGrade(e.target.value as string)}
+							value={Grade}
 						>
 							{grade.map((item) => (
-								<option key={item.value} value={item.value}>
+								<MenuItem key={item.value} value={item.value}>
 									{item.label}
-								</option>
+								</MenuItem>
 							))}
 						</Select>
 					</div>
@@ -97,11 +110,9 @@ const TeamMemberForm = ({prefix,grade} : ITeamInfoFormProps) =>{
 			</div>
 			
 			<div className="my-5 flex justify-between">
-				<Button variant="outlined">ย้อนกลับ</Button>
-				<Button className="bg-primary" variant="contained">คนถัดไป</Button>
+				<Button onClick={handleMemeberBack} variant="outlined">ย้อนกลับ</Button>
+				<Button className="bg-primary" onClick={handleMemeberNext} variant="contained">คนถัดไป</Button>
 			</div>
 		</div>
 	);
-};
-
-export default TeamMemberForm;
+};export default TeamMemberForm;
