@@ -1,40 +1,12 @@
 // Page for Register Form
-
 import TeamInfoForm from "@/app/register/components/teamInfoForm";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import {Button} from "@mui/material";
 import ConfirmModal from "../components/confirmModal";
-
-const page = () => {
-	const prefix = [
-		{
-			value: "นาย",
-			label: "นาย"
-		},
-		{
-			value: "นาง",
-			label: "นาง"
-		},
-		{
-			value: "นางสาว",
-			label: "นางสาว"
-		}
-	];
-
-	const grade = [
-		{
-			value: "มัธยมศึกษาปีที่ 4",
-			label: "มัธยมศึกษาปีที่ 4"
-		},
-		{
-			value: "มัธยมศึกษาปีที่ 5",
-			label: "มัธยมศึกษาปีที่ 5"
-		},
-		{
-			value: "มัธยมศึกษาปีที่ 6",
-			label: "มัธยมศึกษาปีที่ 6"
-		}
-	];
+import { grade, prefix } from "../constant/formConst";
+import { useForm, Controller } from 'react-hook-form';
+const SolutionFormPage = () => {
+	const { handleSubmit, control } = useForm();
 	return (
 		<div style={{backgroundColor:"#34312F" , padding:'30px'}}>
 			<div className="p-5">
@@ -76,4 +48,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default SolutionFormPage;
