@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import TimeModal from "./TimeModal";
 import Model from "../data/agenda.model";
 
-const Column = (data: Model[], lang: string) => {
+const Column: FC<{ data: Model[]; lang: string }> = ({ data, lang }) => {
 	const [hover, setHover] = useState(-1);
 	return (
-		<div className="mt-1 flex w-1/3 flex-col space-y-1 text-black">
+		<div className="mt-1 flex w-1/3  min-w-[150px] max-w-[250px] flex-col space-y-1 text-black">
 			{data!.map((data, index: number) => {
 				const th = data!.th;
 				const en = data!.en;
