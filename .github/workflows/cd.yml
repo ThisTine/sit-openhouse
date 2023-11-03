@@ -59,4 +59,5 @@ jobs:
             password: ${{ secrets.PASSWORD }}
             script: |
               cd ${{secrets.DEPLOYPATH}}
+              pwd
               bash delpoy.sh ${{ secrets.DOCKER_REGISTRY_PATH }}/${{ secrets.DOCKER_APP_NAME }}:${{steps.meta.outputs.tags}}
