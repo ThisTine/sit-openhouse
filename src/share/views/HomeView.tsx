@@ -32,24 +32,24 @@ export function HomeView({ PageView }: HomeViewProps) {
 			</div>
 			<div className='relative z-40 flex h-full flex-col justify-center md:pl-16 md:pt-24 lg:pl-12 xl:ml-24'>
 				<div className='flex flex-col gap-2 max-md:hidden'>
-					<div className='font-bold text-white max-xl:text-4xl md:text-4xl xl:text-6xl'>กลับมาอีกครั้ง กับ 3 อีเว้นท์แห่งปี</div>
-					<div className='font-bold text-white max-xl:text-4xl md:text-3xl xl:text-5xl'>จากคณะเทคโนโลยีสารสนเทศที่ทุกคนรอคอย</div>
+					<div className='font-bold text-white max-xl:text-4xl md:text-4xl xl:text-5xl 2xl:text-6xl'>กลับมาอีกครั้ง กับ 3 อีเว้นท์แห่งปี</div>
+					<div className='font-bold text-white max-xl:text-4xl md:text-3xl xl:text-4xl 2xl:text-5xl'>จากคณะเทคโนโลยีสารสนเทศที่ทุกคนรอคอย</div>
 					<div className="lx:w-1/3 mt-7 flex gap-5 text-white md:w-2/3 lg:w-2/3">
 						<Image alt="location" src={Location} />
-						<p className="w-3/4 md:text-2xl lg:text-3xl xl:text-3xl">อาคารการเรียนรู้พหุวิทยาการ (LX Buliding) <br /> มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี </p>
+						<p className="w-3/4 md:text-2xl lg:text-3xl xl:text-2xl 2xl:text-3xl">อาคารการเรียนรู้พหุวิทยาการ (LX Buliding) <br /> มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี </p>
 					</div>
-					<div className='mt-10 flex w-2/4 flex-col gap-10 text-[#3399CC] md:ml-8 md:text-4xl lg:ml-6 lg:text-4xl xl:text-6xl'>
+					<div className='mt-10 flex w-2/4 flex-col gap-10 text-[#3399CC] md:ml-8 md:text-4xl lg:ml-6 lg:text-4xl xl:text-3xl 2xl:text-6xl'>
 						<div className="hover:cursor-pointer" onClick={() =>changePage(1)}>
 							SIT OPEN HOUSE 2023
-							<p className="md:text-2xl xl:text-3xl">งานเปิดบ้านเทคโนโลยีสารสนเท​ศ</p>
+							<p className="md:text-2xl xl:text-xl 2xl:text-3xl">งานเปิดบ้านเทคโนโลยีสารสนเท​ศ</p>
 						</div>
 						<div className="hover:cursor-pointer" onClick={() => changePage(2)}>
 							ICT CHALLENGE
-							<p className="md:text-2xl xl:text-3xl">การแข่งขันตอบปัญหาวิชาการคอมพิวเตอร์ ฯ</p>
+							<p className="md:text-2xl xl:text-xl 2xl:text-3xl">การแข่งขันตอบปัญหาวิชาการคอมพิวเตอร์ ฯ</p>
 						</div>
 						<div className="hover:cursor-pointer" onClick={() => changePage(3)}>
 							CS PROJECT D-DAY EXHIBITION 
-							<p className="md:text-2xl xl:text-3xl">นิทรรศการแสดงผลงานนักศึกษา CS@SIT ชั้นปีที่ 4</p>
+							<p className="md:text-2xl xl:text-xl 2xl:text-3xl">นิทรรศการแสดงผลงานนักศึกษา CS@SIT ชั้นปีที่ 4</p>
 						</div>
 					</div>
 				</div>
