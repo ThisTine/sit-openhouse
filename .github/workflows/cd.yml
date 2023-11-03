@@ -59,4 +59,4 @@ jobs:
             password: ${{ secrets.PASSWORD }}
             script: |
               cd ${{secrets.DEPLOYPATH}}
-              bash delpoy.sh 
+              bash delpoy.sh ${{needs.build-docker.meta.outputs.tags}}
