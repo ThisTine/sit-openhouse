@@ -1,4 +1,4 @@
-interface ICTChallengeForm {
+export interface ICTChallengeForm {
     teamName : string,
     schoolName : string,
     schoolAddress : string,

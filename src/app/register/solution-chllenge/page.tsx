@@ -20,7 +20,7 @@ const SolutionFormPage = () => {
 					</div>
 				
 				</div>
-				<div className="w-72">
+				<div className="w-72 md:w-full">
 					<h1 className="text-3xl font-bold" style={{color:"#3399CC"}}>แบบฟอร์มลงทะเบียน ICT Challenge 2023 </h1>
 				</div>
 				<div>
