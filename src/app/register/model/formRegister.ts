@@ -10,6 +10,14 @@ export interface ICTChallengeForm {
   ajarnPosition: string;
 }
 
+export interface StudentOpenhouseForm {
+  studentName: string;
+  studentSurname: string;
+  studentPhoneNum: string;
+  studentEmail: string;
+  studentSchoolName: string;
+  studentSchoolAddress: string;
+}
 export interface Iprefix {
   label: string;
   value: string;
