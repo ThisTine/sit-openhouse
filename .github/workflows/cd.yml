@@ -60,4 +60,4 @@ jobs:
             script: |
               cd ${{secrets.DEPLOYPATH}}
               pwd
-              bash deploy.sh ${{steps.meta.outputs.tags}}
+              bash deploy.sh ${{needs.build-docker.meta.outputs.tags}}
