@@ -31,8 +31,8 @@ jobs:
               id: meta
               uses: docker/metadata-action@v5
               with:
-                  images: ${{ secrets.DOCKER_REGISTRY_PATH }}/${{ secrets.DOCKER_APP_NAME }}
-                  tags: type=schedule,pattern={{date 'YYYYMMDD-hhmmss' tz='Asia/Bangkok'}}
+                tags: type=schedule,pattern={{date 'YYYYMMDDhhmmss'}}
+                images: ${{ secrets.DOCKER_REGISTRY_PATH }}/${{ secrets.DOCKER_APP_NAME }}
 
             - name: Build and push 🤖
               uses: docker/build-push-action@v5
