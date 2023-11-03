@@ -62,11 +62,11 @@ const PageView = ({ imageUrl, title, subtitle, details, location, showButton, sh
 				</div>
 			</div>
 			<div
-				className={`fixed right-0 top-0 z-40 h-full bg-[#34312F] p-10 pl-20 text-white duration-300 ease-in-out max-lg:w-full max-lg:rounded-t-2xl lg:w-[65vw] lg:rounded-l-2xl ${
+				className={`fixed right-0 top-0 z-40 h-full bg-[#34312F] text-white duration-300 ease-in-out max-lg:w-full max-lg:rounded-t-2xl lg:w-[65vw] lg:rounded-l-2xl lg:p-10 lg:pl-20 ${
 					slide ? "max-lg:inset-y-40 lg:translate-x-0" : "max-lg:inset-y-full lg:translate-x-full"
 				}`}
 			>
-				<div className="w-full overflow-y-scroll max-lg:pt-5 lg:pt-16">
+				<div className="w-full overflow-y-scroll max-lg:px-10 max-lg:pt-14 lg:pt-16">
 					{ moreDetails() }
 				</div>
 			</div>
