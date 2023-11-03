@@ -3,8 +3,10 @@ import React from 'react';
 
 const CongratICT = () => {
 	return (
-		<div className='h-screen bg-no-repeat p-10' style={{ backgroundImage: `url(/assets/bgcongrateICT.png)` }}>
-			<div><Image alt="congratulation" height={150} src="/assets/ICT.png" width={600} /></div>
+		<div className='flex h-screen flex-col items-center justify-center bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(/assets/bgcongrateICT.png)` }}>
+		
+			<div className='flex justify-center align-middle'><Image alt="congratulation" height={150} src="/assets/ICT.png" width={600} /></div>
+			
 		</div>
 	);
 };
