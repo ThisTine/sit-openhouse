@@ -34,7 +34,8 @@ const slider = [
 		subtitle: "ลับสมองประลองปัญญา กับการแข่งขันตอบปัญหาวิชาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ ICT Challenge 2023 เวทีสำหรับน้อง ๆ ระดับมัธยมปลายที่มีความสนใจทางด้านคอมพิวเตอร์และต้องการทดสอบความสามารถตนเองที่จะมาไขปัญหาทางด้านไอที พร้อมชิงรางวัลทุนการศึกษากว่า 10,000 บาท",
 		title: "ICT CHALLENGE 2023",
 		location: "Auditorium ชั้น 3 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
-		showButton: true
+		showButton: true,
+		showLicense: true
 	},
 	{
 		details: "รายละเอียดเพิ่มเติม...",
@@ -66,6 +67,7 @@ export default function App() {
 							  imageUrl={slide.imageUrl}
 							  location={slide.location}
 							  showButton={slide.showButton}
+							  showLicense={slide.showLicense}
 							  subtitle={slide.subtitle}
 							  title={slide.title}
 							/>
