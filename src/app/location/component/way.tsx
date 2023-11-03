@@ -4,16 +4,30 @@ export default function Way() {
 															
 		<div className="relative">	
 															
-			<div className="absolute z-10 flex h-[400px] w-[800px] flex-col items-start justify-center  rounded-[10px]  bg-zinc-300 p-5"  >
-				<h1 className="p-1 text-xl ">สถานที่ LOCATION</h1>
-				<h1 className="p-1 text-3xl text-primary">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</h1>
-				<h4 className="p-1">126 Pracha Uthit Rd, Bang Mot, Thung Khru, Bangkok 10140</h4>
+			<div className="absolute z-10 flex h-auto w-auto flex-col items-start justify-center  rounded-[10px]  bg-zinc-300 p-5"  >
+				<h3 className="p-1 text-xl ">รถโดยสารประจำทางที่ผ่านมหาวิทยาลัยฯ (ถนนประชาอุทิศ)</h3>
+			
+				<h4 className="p-1">สายรถ 75 เส้นทางเดินรถ วัดพุทธบูชา - หัวลำโพงสายรถ 21</h4>
+				<h4 className="p-1">เส้นทางเดินรถ วัดคู่สร้าง - จุฬาลงกรณ์มหาวิทยาลัย</h4>
+
+				<h3 className="p-1 text-xl ">รถโดยสารประจำทางที่สามารถมาถึงมหาวิทยาลัย</h3>
+				<h4 className="">รถโดยสารประจำทางหลายสาย สามารถเดินทางมาถึงมหาวิทยาลัยได้ โดยต้องมาลงถนนสุขสวัสดิ์ - ถนนราษฎร์บูรณะ และขึ้นรถโดยสารประจำทางที่ผ่านมหาวิทยาลัย หรือรถโดยสารขนาดเล็ก
+				</h4>
+				<h4>สายรถ 142 เส้นทางเดินรถ การเคหะ ชุมชนธนบุรี - อู่ฟาร์มจระเข้ (สมุทรปราการ)</h4>
+				<h4>สายรถ 141 เส้นทางเดินรถ แสมดำ - จุฬาลงกรณ์มหาวิทยาลัย</h4>
+				<h4>สายรถ 140 เส้นทางเดินรถ อนุสาวรีย์ชัยฯ - แสมดำ</h4>
+				<h4>สายรถ 138 เส้นทางเดินรถ พระประแดง - หมอชิตใหม่</h4>
+				<h4>สายรถ 82 เส้นทางเดินรถ พระประแดง - สนามหลวง</h4>
+				<h4>สายรถ 20 เส้นทางเดินรถ สุขสวัสดิ์ - ท่าดินแดง</h4>
+				<h4 >สายรถ 6 เส้นทางเดินรถ พระประแดง - เทเวศร์</h4>
+				<div className="m-2"> </div>
+				
 				<div className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
 																เปืด Google Map
 				</div>
 			</div>
 																		
-			<div className=" h-[400px] w-[800px] translate-x-2 translate-y-5 rounded-[10px] bg-sky-500" />
+			<div className=" h-[400px] w-[800px] translate-x-3 translate-y-14 rounded-[10px] bg-sky-500" />
 		</div>
 	
 		
