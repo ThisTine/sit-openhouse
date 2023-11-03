@@ -62,15 +62,15 @@ export function HomeView({ PageView }: HomeViewProps) {
 						<p className="max-lg:text-base lg:text-2xl">อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)<br />  มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี </p>
 					</div>
 					<div className="flex flex-col gap-10 px-5 text-2xl text-[#3399CC]">
-						<div>
+						<div className="hover:cursor-pointer" onClick={() =>changePage(1)}>
 							SIT OPEN HOUSE 2023
 							<p className="text-xl">งานเปิดบ้านเทคโนโลยีสารสนเท​ศ</p>
 						</div>
-						<div>
+						<div className="hover:cursor-pointer" onClick={() =>changePage(2)}>
 							ICT CHALLENGE
 							<p className="text-xl">การแข่งขันตอบปัญหาวิชาการคอมพิวเตอร์ ฯ</p>
 						</div>
-						<div>
+						<div className="hover:cursor-pointer" onClick={() =>changePage(3)}>
 							CS PROJECT D-DAY EXHIBITION 
 							<p className="text-xl">นิทรรศการแสดงผลงานนักศึกษา CS@SIT ชั้นปีที่ 4</p>
 						</div>

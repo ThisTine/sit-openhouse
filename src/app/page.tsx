@@ -26,7 +26,15 @@ const slider = [
 		subtitle: "งานเปิดบ้านคณะเทคโนโลยีสารสนเทศ ครั้งแรกในรอบ 5 ปีกับงานเปิดบ้านเพื่อน้อง ๆ  มัธยมปลายที่สนใจในคณะเทคโนโลยีสารสนเทศ และสาขาทั้งหมดภายในคณะมาทำความรู้จักกันได้ผ่าน เวิร์คช็อปสุดพิเศษจากรุ่นพี่ SIT, ช่วงการบรรยายสุดพิเศษจากวิทยากรรับเชิญ, บูทประจำสาขา และกิจกรรมอื่นๆอีกมากมาย",
 		title: "OPEN HOUSE@SIT",
 		location: "ชั้น 1 และ 10 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
-		showButton: true
+		showButton: true,
+		//write a jsx element here
+		moreDetails: () => {
+			return (
+				<div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius reiciendis sapiente eum ipsam, optio consequuntur ullam quo minima, saepe rem, vel delectus eos blanditiis porro! Eligendi ab facilis nobis repellendus officia at libero quae consequatur doloribus dicta sunt error nesciunt totam quis magni consectetur, distinctio, enim nemo similique maxime illo aspernatur deleniti molestiae! Quam sunt at iusto perspiciatis voluptate fugiat praesentium similique adipisci, consectetur corrupti laudantium nihil quis repellat amet doloremque quaerat sint officia repellendus minus illo sed deserunt inventore optio accusamus! Earum, amet blanditiis. Fugiat deleniti provident dolore ducimus eum autem vitae recusandae perspiciatis excepturi sit reprehenderit, eos dolor?</p>
+				</div>
+			);
+		}
 	},
 	{
 		details: "รายละเอียดเพิ่มเติม...",
@@ -35,7 +43,14 @@ const slider = [
 		title: "ICT CHALLENGE 2023",
 		location: "Auditorium ชั้น 3 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
 		showButton: true,
-		showLicense: true
+		showLicense: true,
+		moreDetails: () => {
+			return (
+				<div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In facilis nemo excepturi autem voluptate culpa natus provident optio. Accusamus animi quam doloremque fuga cumque alias. Aperiam obcaecati odit illum, quod vitae praesentium doloribus impedit repellat eos asperiores veniam necessitatibus fuga molestiae temporibus nisi quas debitis eaque aut? Vero qui officia earum totam beatae fuga enim quasi fugiat ullam nam sit ea delectus animi doloribus quia cupiditate debitis, sint atque minima error? Ea similique ipsam inventore laborum iusto aliquam dolorem, pariatur quam omnis id culpa quos iure sequi consectetur consequatur atque distinctio dolores laudantium neque voluptas repudiandae quibusdam minus nobis aspernatur!</p>
+				</div>
+			);
+		}
 	},
 	{
 		details: "รายละเอียดเพิ่มเติม...",
@@ -43,10 +58,16 @@ const slider = [
 		subtitle: "นิทรรศการจัดแสดงผลงานของนักศึกษาชั้นปีที่ 4 หลักสูตรวิทยาการคอมพิวเตอร์ (หลักสูตรภาษาอังกฤษ) คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี รวบรวมผลงานหลากหลายประเภทกว่า 16 ชิ้น จากความต้องการในกระดาษสู่ผลงานที่ใช้งานได้จริง ",
 		title: "CS PROJECT D-DAY EXHIBITION 2023",
 		location: "ชั้น 3 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
-		ShadowRoot: false
+		ShadowRoot: false,
+		moreDetails: () => {
+			return (
+				<div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dolorum dignissimos aspernatur nulla dicta accusamus saepe. Corporis ducimus repellat tempore. Mollitia, neque laboriosam dolores aut repellat suscipit ipsum quidem asperiores ipsam accusantium? Quas, ratione libero. Ducimus molestias ipsam repellendus, tempora, fugit qui facilis corporis illo consectetur, iste eligendi? Aspernatur debitis voluptas, itaque iusto facere ratione distinctio, obcaecati exercitationem ipsa eligendi harum asperiores, omnis nisi? Libero, eligendi incidunt inventore unde commodi sequi. Quas nostrum fugiat suscipit distinctio id ullam excepturi sit delectus aliquid at provident odio alias voluptatum pariatur officiis nihil, laborum quae recusandae nam veritatis! Adipisci corrupti repellat aut eum!</p>
+				</div>
+			);
+		}
 	}
 ];
-
 
 export default function App() {
 
@@ -79,6 +100,7 @@ export default function App() {
 							  details={slide.details}
 							  imageUrl={slide.imageUrl}
 							  location={slide.location}
+							  moreDetails={slide.moreDetails}
 							  showButton={slide.showButton}
 							  showLicense={slide.showLicense}
 							  subtitle={slide.subtitle}
