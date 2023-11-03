@@ -22,15 +22,15 @@ const SolutionFormPage = () => {
 	return (
 	
 		//   ! isSuccess ? (
-		//   <div style={{backgroundColor:"#34312F" , padding:'30px'}}>
-		// 	<div className="p-5">
-		// 		<div className="flex justify-between py-3">
-		// 			<div>
-		// 				<Button>
-		// 					<ArrowBackIosNewIcon className="text-white" />
-		// 					<p className="text-xl text-text-primary">Back</p>
-		// 				</Button>
-		// 			</div>
+		  <div style={{backgroundColor:"#34312F" , padding:'30px'}}>
+			<div className="p-5">
+				<div className="flex justify-between py-3">
+					<div>
+						<Button>
+							<ArrowBackIosNewIcon className="text-white" />
+							<p className="text-xl text-text-primary">Back</p>
+						</Button>
+					</div>
 				
 				</div>
 				<div className="w-72 md:w-full">
