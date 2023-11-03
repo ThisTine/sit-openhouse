@@ -65,7 +65,7 @@ const Footer = () => {
 			<div className="flex w-[100%] justify-center lg:hidden">
 				<div className="mx-16 grid grid-cols-2 gap-2 border-b-2 border-inherit pb-6 max-sm:mx-6">
 					<div className="col-span-2 pb-2 text-center text-3xl font-bold text-gray-200">
-						<h1>Contect</h1>
+						<h1>Contact</h1>
 					</div>
 					<div>
 						<h1 className="text-base font-bold text-gray-200">Open House@SIT</h1>
