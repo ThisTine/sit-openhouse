@@ -44,7 +44,7 @@ jobs:
               tags: ${{ steps.meta.outputs.tags }}
               labels: ${{ steps.meta.outputs.labels }}
           - name: Summary ✍️
-            run: echo "# ${{ secrets.DOCKER_APP_NAME }}:${{steps.meta.outputs.tags}}" >> $GITHUB_STEP_SUMMARY
+            run: echo "# Build as ${{steps.meta.outputs.tags}}" >> $GITHUB_STEP_SUMMARY
     deploy-web:
       name: deploy production build 👷
       needs: [build-docker]
@@ -60,4 +60,4 @@ jobs:
             script: |
               cd ${{secrets.DEPLOYPATH}}
               pwd
-              bash deploy.sh ${{ secrets.DOCKER_REGISTRY_PATH }}/${{ secrets.DOCKER_APP_NAME }}:${{steps.meta.outputs.tags}}
+              bash deploy.sh ${{steps.meta.outputs.tags}}
