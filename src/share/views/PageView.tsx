@@ -56,17 +56,17 @@ const PageView = ({ imageUrl, title, subtitle, details, location, showButton, sh
 					{showButton ? <Button onClick={() => {}}>สมัครเลย!</Button> : <h1 className="text-2xl font-bold max-md:text-center md:text-4xl md:font-medium">ลงทะเบียนเข้าชมหน้างาน</h1>}
 					{showLicense ? <Link className="flex items-center gap-2 underline max-md:place-self-center lg:text-base" href="/"><Image alt="download icon" src={Download} /> <p>download ใบขออนุญาตโรงเรียนและกฎกติกาการแข่งขัน</p></Link> : null}
 				</div>
-				<div className={`fixed left-5 top-5 ml-16 mt-16 flex place-items-center gap-2 ${slide ? "" : "hidden"}`}>
+				<div className={`fixed left-5 top-5 flex place-items-center gap-2 max-lg:ml-5 max-lg:mt-16 lg:ml-16 lg:mt-16 ${slide ? "" : "hidden"}`}>
 					<Image alt="back" className="h-[20px]" src={Back} />
 					<h1 className="cursor-pointer text-2xl text-white" onClick={toggleSidebar}>Back</h1>
 				</div>
 			</div>
 			<div
-				className={`mac-lg:h-[65vw] fixed right-0 top-0 z-40 bg-[#34312F] p-10 pl-20 text-white duration-300 ease-in-out max-lg:w-full  lg:h-full lg:w-[65vw] ${
-					slide ? "max-lg:translate-y-full lg:translate-x-0" : "max-lg:hidden lg:translate-x-full"
+				className={`fixed right-0 top-0 z-40 h-full bg-[#34312F] p-10 pl-20 text-white duration-300 ease-in-out max-lg:w-full max-lg:rounded-t-2xl lg:w-[65vw] lg:rounded-l-2xl ${
+					slide ? "max-lg:inset-y-40 lg:translate-x-0" : "max-lg:inset-y-full lg:translate-x-full"
 				}`}
 			>
-				<div className="pt-16">
+				<div className="w-full overflow-y-scroll max-lg:pt-5 lg:pt-16">
 					{ moreDetails() }
 				</div>
 			</div>

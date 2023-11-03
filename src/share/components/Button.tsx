@@ -9,14 +9,11 @@ const Button = ({ children, onClick }: ButtonProps) => {
 	return (
 		<div className="justify-center max-md:flex">
 			<button
-				className="w-4/12 rounded-md bg-[#228BE6] px-4 py-3 text-2xl text-white duration-300 hover:bg-blue-600 max-md:hidden"
+				className="rounded-md bg-[#228BE6] px-4 py-3 text-2xl text-white duration-300 hover:bg-blue-600 max-md:w-full md:w-4/12"
 				onClick={onClick}
 				type="button"
 			>
 				{children}
-			</button>
-			<button className="text-2xl font-bold md:hidden" type="button">
-				<h1>ลงทะเบียนเลย!</h1>
 			</button>
 		</div>
 	);

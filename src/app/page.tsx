@@ -31,7 +31,7 @@ const slider = [
 		moreDetails: () => {
 			return (
 				<div>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius reiciendis sapiente eum ipsam, optio consequuntur ullam quo minima, saepe rem, vel delectus eos blanditiis porro! Eligendi ab facilis nobis repellendus officia at libero quae consequatur doloribus dicta sunt error nesciunt totam quis magni consectetur, distinctio, enim nemo similique maxime illo aspernatur deleniti molestiae! Quam sunt at iusto perspiciatis voluptate fugiat praesentium similique adipisci, consectetur corrupti laudantium nihil quis repellat amet doloremque quaerat sint officia repellendus minus illo sed deserunt inventore optio accusamus! Earum, amet blanditiis. Fugiat deleniti provident dolore ducimus eum autem vitae recusandae perspiciatis excepturi sit reprehenderit, eos dolor?</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt exercitationem saepe deserunt labore! Reprehenderit quasi quo, quae modi corporis voluptates ad ut, nemo quaerat facilis ullam sunt quidem? Vero quibusdam et, velit recusandae quas quisquam cumque aperiam modi vel exercitationem veritatis nesciunt nam incidunt officia! Repellendus facilis voluptatem laudantium, blanditiis, nam voluptatum ex quo quos vel ipsa aspernatur qui aperiam reprehenderit in alias voluptate obcaecati culpa! Ab vitae saepe facere dignissimos voluptates, blanditiis alias omnis commodi. Commodi consectetur labore et numquam dolor porro totam ipsa fugiat natus? Dolor quibusdam magni, provident perferendis vero, dolores minus voluptates eum ad corrupti cupiditate.</p>
 				</div>
 			);
 		}
