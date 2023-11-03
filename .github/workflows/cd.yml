@@ -32,7 +32,8 @@ jobs:
               uses: docker/metadata-action@v5
               with:
                 images: ${{ secrets.DOCKER_REGISTRY_PATH }}/${{ secrets.DOCKER_APP_NAME }}
-                tags: type=raw,pattern={{date 'YYYYMMDDhhmmss'}}
+                tags: |
+                  type=raw,value={{date 'YYYYMMDDhhmm'}}
 
             - name: Build and push 🤖
               uses: docker/build-push-action@v5
