@@ -32,9 +32,9 @@ const PageView = ({ imageUrl, title, subtitle, details, location, showButton }: 
 					</h1>
 					{location ? <div className="flex items-center gap-2">
 						<Image alt="location" src={Location} />
-						<p className="text-xl font-semibold">{location}</p>
+						<p className="font-semibold max-lg:text-base lg:text-xl">{location}</p>
 					</div> : null}
-					<p className="text-xl">
+					<p className="text-base lg:text-xl">
 						{subtitle}
 					</p>
 					<p className="pb-32 underline">{details}</p>
