@@ -58,6 +58,6 @@ jobs:
             username: ${{ secrets.USERNAME }}
             password: ${{ secrets.PASSWORD }}
             script: |
-              cd ${{secrets.DEPLOYPATH}}
+              cd /home/ohadmin/docker/prod
               pwd
               bash delpoy.sh ${{ secrets.DOCKER_REGISTRY_PATH }}/${{ secrets.DOCKER_APP_NAME }}:${{steps.meta.outputs.tags}}
