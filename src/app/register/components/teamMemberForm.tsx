@@ -1,17 +1,15 @@
 import { TextField, TextareaAutosize, Button, Select, MenuItem } from "@mui/material";
 import { useState } from "react";
+import { Igrade, Iprefix } from "../model/formRegister";
 
-export interface ITeamInfoFormProps {
-    prefix : {
-        value: string;
-        label: string;
-    }[]
-    grade : {
-        value: string;
-        label: string;
-    }[]
+interface IteamMemberFormProps {
+	prefix : Iprefix[]
+	grade : Igrade[]
+
 }
-const TeamMemberForm = ({prefix,grade} : ITeamInfoFormProps) =>{
+
+
+const TeamMemberForm = ({prefix,grade} : IteamMemberFormProps) =>{
 	const [PrefixMember , setPrefixMember] = useState('');
 	const [Grade , setGrade] = useState('');
 	const [member, setMember] = useState(1);

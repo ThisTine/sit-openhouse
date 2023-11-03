@@ -6,8 +6,12 @@ import {Button} from "@mui/material";
 import ConfirmModal from "../components/confirmModal";
 import { grade, prefix } from "../constant/formConst";
 import { useForm } from 'react-hook-form';
+import { yupResolver } from "@hookform/resolvers/yup";
+import { ictFormAddSchema } from "../schema/ictFormSchema";
+import { ICTChallengeForm } from "../model/formRegister";
 const SolutionFormPage = () => {
-	const { handleSubmit, control } = useForm();
+	const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver(ictFormAddSchema)});
+	const onSubmit = (data : ICTChallengeForm) => console.log(data);
 	return (
 		<div style={{backgroundColor:"#34312F" , padding:'30px'}}>
 			<div className="p-5">
@@ -20,7 +24,7 @@ const SolutionFormPage = () => {
 					</div>
 				
 				</div>
-				<div className="w-72">
+				<div className="w-72 md:w-full">
 					<h1 className="text-3xl font-bold" style={{color:"#3399CC"}}>แบบฟอร์มลงทะเบียน ICT Challenge 2023 </h1>
 				</div>
 				<div>
@@ -34,7 +38,7 @@ const SolutionFormPage = () => {
 				</div>
 				<div className="relative my-3 rounded-xl bg-primary">
 					<div className="relative bottom-3 right-3 rounded-xl bg-gray-2">
-						<TeamInfoForm grade={grade} prefix={prefix}/>
+						<TeamInfoForm formControl={control} formErrors={errors} grade={grade} prefix={prefix}/>
 					</div>
 				</div>
 				<div className="m-2">
@@ -42,7 +46,7 @@ const SolutionFormPage = () => {
               หากกดยืนยันแล้วจะไม่สามารถแก้ไขข้อมูลการสมัครได้</p>
 				</div>
 				<div>
-					<ConfirmModal/>
+					<ConfirmModal handleOnSubmit = {handleSubmit}/>
 				</div>
 			</div>
 		</div>
