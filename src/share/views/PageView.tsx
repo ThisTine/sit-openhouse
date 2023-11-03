@@ -41,7 +41,7 @@ const PageView = ({ imageUrl, title, subtitle, details, location, showButton, sh
 				<Image alt="filter" className="md:hidden" layout="fill" objectFit="cover" src={Filter2} />
 			</div>
 			<div className="relative z-20 grid h-screen w-full grid-cols-1 items-center max-lg:px-10 lg:grid-cols-2">
-				<div className={`grid gap-4 text-white lg:pl-28 ${slide ? "hidden" : ""}`}>
+				<div className={`grid gap-4 text-white transition-opacity duration-500 lg:pl-28 ${slide ? "opacity-0" : "opacity-100"}`}>
 					<h1 className="text-3xl font-bold">
 						{title}
 					</h1>

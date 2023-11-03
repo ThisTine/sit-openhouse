@@ -41,7 +41,7 @@ const NavBar = () => {
 					<Image alt="KMUTTWITSIT" height="60" src={Logo} width="192"/>
 				</div>
 			</div> 
-			<div className={isOpen ? 'fixed z-10 w-full translate-y-0 bg-[#3399CC] transition-transform duration-500 ease-in-out' : 'h-0 -translate-y-full transition-transform duration-500 ease-in-out'}>				
+			<div className={isOpen ? 'visible fixed z-10 w-full translate-y-0 bg-[#3399CC] opacity-100 transition-all duration-500 ease-in-out' : 'invisible fixed z-10 w-full -translate-y-full opacity-0 transition-all duration-500 ease-in-out'}>				
 				<div className="pl-7 pt-5" onClick={handleClick}>
 					<Image alt="exit" className='pt-3' onClick={handleClick} src={exit} />
 					<div className='mt-5 flex flex-col gap-5 pb-5 pl-1 text-white'>
