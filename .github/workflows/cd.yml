@@ -3,7 +3,7 @@ name: CD
 on:
     push: 
         branches: 
-            - mail-eslint-fix
+            - main
 
 jobs:
     build-docker:
