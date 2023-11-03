@@ -1,14 +1,28 @@
 "use client";
 import { Box, Button, Modal } from '@mui/material';
 import React, { useState } from 'react';
+import { UseFormHandleSubmit } from 'react-hook-form';
+import { ICTChallengeForm } from '../model/formRegister';
 
-const ConfirmModal = () => {
+interface ConfirmModalProps {
+	handleOnSubmit : UseFormHandleSubmit<ICTChallengeForm,undefined>;
+}
+
+const ConfirmModal = ({handleOnSubmit} : ConfirmModalProps) => {
 	const [open, setOpen] = useState(false);
-	const handleOpen = () => setOpen(true);
+	const handleOpen = () => {
+		setOpen(true);
+
+	};
 	const handleClose = () => setOpen(false);
+
+	const onSubmit = (data : ICTChallengeForm) => {
+		handleOpen();
+		console.log(data);
+	};
 	return (
 		<div className="flex justify-end">
-			<Button className="h-12 w-32 bg-primary" onClick={handleOpen} variant="contained">ส่งข้อมูล</Button>
+			<Button className="h-12 w-32 bg-primary" onClick={handleOnSubmit(onSubmit)} variant="contained">ส่งข้อมูล</Button>
 			<div >
 				<Modal
 					aria-describedby="modal-modal-description"
@@ -26,7 +40,7 @@ const ConfirmModal = () => {
 						</h4>
 						<Box display="flex" flexDirection="row" gap="5px" height="60px" justifyContent="flex-end" margin="20px">
 							<Button className="h-12 w-32 bg-primary text-white">confirm</Button>
-							<Button className='h-12 w-32 bg-red-800 text-white'>cancel</Button>
+							<Button className='h-12 w-32 bg-red-800 text-white' onClick={handleClose}>cancel</Button>
 						</Box>
 					</Box>
 				</Modal>
