@@ -78,7 +78,7 @@ export function HomeView({ PageView }: HomeViewProps) {
 							<p className="text-xl">นิทรรศการแสดงผลงานนักศึกษา CS@SIT ชั้นปีที่ 4</p>
 						</div>
 					</div>
-					<div className="mt-6 flex justify-center px-5 text-2xl font-bold text-white">
+					<div className="mt-2 flex justify-center px-5 text-2xl font-bold text-white">
 						27 พฤศจิกายน พ.ศ. 2566
 					</div>
 				</div>
