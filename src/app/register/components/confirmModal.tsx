@@ -44,7 +44,6 @@ const ConfirmModal = ({handleOnSubmit} : ConfirmModalProps) => {
 						</Box>
 					</Box>
 				</Modal>
-				<div>test</div>
 			</div>
 		</div>
 	);
