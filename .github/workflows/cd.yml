@@ -9,7 +9,6 @@ jobs:
     build-docker:
         name: build & push docker 🔥📸
         runs-on: [self-hosted,Linux,X64]
-        container: node:lts
         environment: prod
         steps:
             - name: Checkout ⚡️
