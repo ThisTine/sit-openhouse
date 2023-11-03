@@ -38,7 +38,7 @@ export function HomeView({ PageView }: HomeViewProps) {
 						<Image alt="location" src={Location} />
 						<p className="w-3/4 md:text-2xl lg:text-3xl xl:text-2xl 2xl:text-3xl">อาคารการเรียนรู้พหุวิทยาการ (LX Buliding) <br /> มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี </p>
 					</div>
-					<div className='mt-10 flex w-2/4 flex-col gap-10 text-[#3399CC] md:ml-8 md:text-4xl lg:ml-6 lg:text-4xl xl:text-3xl 2xl:text-6xl'>
+					<div className='mt-6 flex w-2/4 flex-col gap-10 text-[#3399CC] md:ml-8 md:text-4xl lg:ml-10 lg:text-4xl xl:text-3xl 2xl:text-6xl'>
 						<div className="hover:cursor-pointer" onClick={() =>changePage(1)}>
 							SIT OPEN HOUSE 2023
 							<p className="md:text-2xl xl:text-xl 2xl:text-3xl">งานเปิดบ้านเทคโนโลยีสารสนเท​ศ</p>
@@ -52,6 +52,9 @@ export function HomeView({ PageView }: HomeViewProps) {
 							<p className="md:text-2xl xl:text-xl 2xl:text-3xl">นิทรรศการแสดงผลงานนักศึกษา CS@SIT ชั้นปีที่ 4</p>
 						</div>
 					</div>
+					<div className="mt-7 font-bold text-white md:text-3xl xl:text-4xl 2xl:text-5xl">
+							27 พฤศจิกายน พ.ศ. 2566
+					</div>
 				</div>
 				<div className='md:hidden'>
 					<div className='mt-40 p-5 text-xl font-bold text-white'>
@@ -61,7 +64,7 @@ export function HomeView({ PageView }: HomeViewProps) {
 						<Image alt="location" src={Location} />
 						<p className="max-lg:text-base lg:text-2xl">อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)<br />  มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี </p>
 					</div>
-					<div className="flex flex-col gap-10 px-5 text-2xl text-[#3399CC]">
+					<div className="flex flex-col gap-8 px-3 text-2xl text-[#3399CC]">
 						<div className="hover:cursor-pointer" onClick={() =>changePage(1)}>
 							SIT OPEN HOUSE 2023
 							<p className="text-xl">งานเปิดบ้านเทคโนโลยีสารสนเท​ศ</p>
@@ -74,6 +77,9 @@ export function HomeView({ PageView }: HomeViewProps) {
 							CS PROJECT D-DAY EXHIBITION 
 							<p className="text-xl">นิทรรศการแสดงผลงานนักศึกษา CS@SIT ชั้นปีที่ 4</p>
 						</div>
+					</div>
+					<div className="mt-6 flex justify-center px-5 text-2xl font-bold text-white">
+						27 พฤศจิกายน พ.ศ. 2566
 					</div>
 				</div>
 			</div>
