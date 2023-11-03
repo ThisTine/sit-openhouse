@@ -18,17 +18,13 @@ import Cs from 'public/images/cs.jpg';
 
 const schedule = [
 	{
-		time: '10.00',
-		title: 'OPEN HOUSE'
+		time: '10.00', title: 'OPEN HOUSE'
 	},
 	{
-		time: '10.00',
-		title: 'ICT CHALLENGE'
+		time: '10.00', title: 'ICT CHALLENGE'
 	},
 	{
-		time: '10.00',
-		title: 'CS PROJECT D-DAY EXHIBITION',
-		phone: 'D-DAY'
+		time: '10.00', title: 'CS PROJECT D-DAY EXHIBITION', phone: 'D-DAY'
 	}
 ];
 
