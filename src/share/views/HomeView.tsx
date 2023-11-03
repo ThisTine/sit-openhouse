@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Filter from "public/images/bitmap.png";
 import Filter2 from "public/images/phone.png";
 import imageUrl from "public/images/HomePage.png";
@@ -6,19 +6,16 @@ import Ripper from "public/images/riperPaper.png";
 import RipperPhone from "public/images/riperPhone.png";
 import Location from "@/share/icon/Location.svg";
 
-const schedule = [
-	{
-		time: '10.00', title: 'OPEN HOUSE'
-	},
-	{
-		time: '10.00', title: 'ICT CHALLENGE'
-	},
-	{
-		time: '10.00', title: 'CS PROJECT D-DAY EXHIBITION', phone: 'D-DAY'
-	}
-];
+interface HomeViewProps {
+	PageView: (page: number) => void;
+}
 
-export function HomeView() {
+export function HomeView({ PageView }: HomeViewProps) {
+
+	const changePage = (page: any) => {
+		PageView(page);
+	};
+
 	return (
 		<div className='h-screen w-full bg-[#34312F]'>
 			<div className="fixed z-0 h-screen w-full">
@@ -42,15 +39,15 @@ export function HomeView() {
 						<p className="w-3/4 md:text-2xl lg:text-3xl xl:text-3xl">อาคารการเรียนรู้พหุวิทยาการ (LX Buliding) <br /> มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี </p>
 					</div>
 					<div className='mt-10 flex w-2/4 flex-col gap-10 text-[#3399CC] md:ml-8 md:text-4xl lg:ml-6 lg:text-4xl xl:text-6xl'>
-						<div>
+						<div className="hover:cursor-pointer" onClick={() =>changePage(1)}>
 							SIT OPEN HOUSE 2023
 							<p className="md:text-2xl xl:text-3xl">งานเปิดบ้านเทคโนโลยีสารสนเท​ศ</p>
 						</div>
-						<div>
+						<div className="hover:cursor-pointer" onClick={() => changePage(2)}>
 							ICT CHALLENGE
 							<p className="md:text-2xl xl:text-3xl">การแข่งขันตอบปัญหาวิชาการคอมพิวเตอร์ ฯ</p>
 						</div>
-						<div>
+						<div className="hover:cursor-pointer" onClick={() => changePage(3)}>
 							CS PROJECT D-DAY EXHIBITION 
 							<p className="md:text-2xl xl:text-3xl">นิทรรศการแสดงผลงานนักศึกษา CS@SIT ชั้นปีที่ 4</p>
 						</div>

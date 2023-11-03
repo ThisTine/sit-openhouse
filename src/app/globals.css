@@ -8,19 +8,19 @@
     width: 16px;
     height: 16px;
     background: #FF9B81;
-  }
+}
   
-  .swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active {
     width: 19px;
     height: 19px;
     background: #FA4515;
-  }
+}
 
-  .swiper-pagination {
+.swiper-pagination {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     padding: 20px;
     padding-right: 50px;
-  }
+}

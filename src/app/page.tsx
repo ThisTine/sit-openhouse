@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -49,14 +49,27 @@ const slider = [
 
 
 export default function App() {
+
+	const [swiper, setSwiper] = useState<any>();
+
+	const slideTo = (index: number) => {
+		if (swiper) {
+			swiper.slideTo(index);
+		}
+	};
+
+	const handleClick = (page: number) => {
+		slideTo(page);
+	};
+
 	return (
-		<Swiper modules={[Pagination]} pagination={{
+		<Swiper modules={[Pagination]} onSwiper={setSwiper} pagination={{
 			clickable: true,
 			bulletClass: 'swiper-pagination-bullet',
 			bulletActiveClass: 'swiper-pagination-bullet-active'
 		  }}>
 			<SwiperSlide>
-				<HomeView />
+				<HomeView PageView={handleClick} />
 			</SwiperSlide>
 			{
 				slider.map((slide, index) => {
