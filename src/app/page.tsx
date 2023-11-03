@@ -7,6 +7,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import './globals.css';
+
 // import required modules
 import { Pagination } from 'swiper/modules';
 
@@ -47,7 +49,11 @@ const slider = [
 
 export default function App() {
 	return (
-		<Swiper className="mySwiper" modules={[Pagination]} pagination={true}>
+		<Swiper modules={[Pagination]} pagination={{
+			clickable: true,
+			bulletClass: 'swiper-pagination-bullet',
+			bulletActiveClass: 'swiper-pagination-bullet-active'
+		  }}>
 			<SwiperSlide>
 				<HomeView />
 			</SwiperSlide>
