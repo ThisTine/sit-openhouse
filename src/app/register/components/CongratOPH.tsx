@@ -1,8 +1,7 @@
 import { Button } from '@mui/material';
-import Image from 'next/image';
 import React from 'react';
 
-const CongratICT = () => {
+const CongratOPH = () => {
 	return (
 		<div className='flex h-screen flex-col items-center justify-center bg-slate-600'>
 		
@@ -24,4 +23,4 @@ const CongratICT = () => {
 	);
 };
 
-export default CongratICT;
+export default CongratOPH;

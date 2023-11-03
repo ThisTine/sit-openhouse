@@ -26,7 +26,7 @@ const ConfirmModal = ({handleOnSubmit} : ConfirmModalProps) => {
 	return (
 		<div className="flex justify-end">
             
-			<Button className="h-12 w-32 bg-primary" onClick={handleOnSubmit(onSubmit)} variant="contained">ส่งข้อมูล</Button>
+			<Button className="h-12 w-32 bg-primary" onClick={handleOnSubmit(onSubmit)} variant="contained">ยืนยันการลงทะเบียน</Button>
 			<div >
 				<Modal
 					aria-describedby="modal-modal-description"
