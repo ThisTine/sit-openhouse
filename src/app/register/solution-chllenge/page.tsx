@@ -9,11 +9,19 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ictFormAddSchema } from "../schema/ictFormSchema";
 import { ICTChallengeForm } from "../model/formRegister";
+import { useState } from "react";
+import CongratICT from "../components/Congrat";
 const SolutionFormPage = () => {
 	const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver(ictFormAddSchema)});
-	const onSubmit = (data : ICTChallengeForm) => console.log(data);
+	// const [isSuccess, setIsSuccess] = useState(false);
+	//  function submited(){
+	// 	const onSubmit = (data : ICTChallengeForm) => {
+	// 		setIsSuccess(true);
+	// 		console.log(data);
+	// 	};
 	return (
-		<div style={{backgroundColor:"#34312F" , padding:'30px'}}>
+		//   ! isSuccess ? (
+		  <div style={{backgroundColor:"#34312F" , padding:'30px'}}>
 			<div className="p-5">
 				<div className="flex justify-between py-3">
 					<div>
@@ -49,8 +57,11 @@ const SolutionFormPage = () => {
 					<ConfirmModal handleOnSubmit = {handleSubmit}/>
 				</div>
 			</div>
-		</div>
+		</div> 
+			
+	// ) : ( <CongratICT/> )
 	);
 };
+// };
 
 export default SolutionFormPage;
