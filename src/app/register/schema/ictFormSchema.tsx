@@ -9,7 +9,7 @@ export const ictFormAddSchema: ObjectSchema<ICTChallengeForm> = object().shape({
 	ajarnName: string().required("กรุณาใส่ชื่ออาจารย์"),
 	ajarnSurname: string().required("กรุณาใส่นามสกุลอาจารย์"),
 	ajarnphoneNum: string().required("กรุณาใส่เบอร์โทรศัพท์"),
-	ajarnEmail: string().email().required("กรุณาใส่อีเมล"),
+	ajarnEmail: string().email("กรุณาใส่ email ที่ถูกต้อง").required("กรุณาใส่อีเมล"),
 	ajarnPosition: string().required("กรุณาใส่ตำแหน่ง")
 });
 
@@ -18,7 +18,7 @@ export const ophFormAddSchema: ObjectSchema<StudentOpenhouseForm> = object().sha
 	studentSurname: string().required("กรุณาใส่นามสกุล"),
 	studentPhoneNum: string().required("กรุณาใส่เบอร์โทรศัพท์"),
 	studentEmail: string().required("กรุณาใส่อีเมล"),
-	studentSchoolName: string().required("กรุณาใส่ชื่อโรงเรียน"),
+	studentSchoolName: string().email("กรุณาใส่ email ที่ถูกต้อง").required("กรุณาใส่ชื่อโรงเรียน"),
 	studentSchoolAddress: string().required("กรุณาใส่ที่อยู่โรงเรียน")
 
 });
