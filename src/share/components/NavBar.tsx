@@ -17,11 +17,11 @@ const NavBar = () => {
 
 	return (
 		<div>
-			<div className='fixed top-0 z-10 flex w-full items-center max-md:hidden'>
-				<div className='min-xl:pl-10 m-5 xl:pl-20'>
+			<div className='fixed top-0 z-10 flex w-full items-center max-sm:hidden'>
+				<div className='min-xl:pl-10 m-5 xl:pl-24'>
 					<Image alt="KMUTTWITSIT" height="60" src={Logo} width="192"/>
 				</div>
-				<div className="min-xl:text-lg flex w-4/6 justify-center gap-20 text-white xl:text-xl">
+				<div className="flex w-4/6 justify-center gap-16 text-xl text-white">
 					<Link href="/">
 						<p className={path == "/" ? 'font-bold': 'opacity-70'} >หน้าหลัก</p>
 					</Link>
@@ -33,7 +33,7 @@ const NavBar = () => {
 					</Link>
 				</div>
 			</div>
-			<div className='fixed top-0 z-10 flex w-full items-center justify-between pl-8 md:hidden'>
+			<div className='fixed top-0 z-10 flex w-full items-center justify-between pl-8 sm:hidden'>
 				<div onClick={handleClick}>
 					<Image alt="Hamburger" className={`pt-3 ${isOpen? 'hidden' : ''}`} src={Hamburger} />
 				</div>
