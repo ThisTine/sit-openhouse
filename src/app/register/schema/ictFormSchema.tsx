@@ -1,8 +1,6 @@
 import { ObjectSchema,object, string } from "yup";
 import { ICTChallengeForm, StudentOpenhouseForm } from "../model/formRegister";
 
-const IS_PHONE = /^\+?[0-9\s.-]+$/;
-
 export const ictFormAddSchema: ObjectSchema<ICTChallengeForm> = object().shape({
 	teamName: string().required("กรุณาใส่ชื่อทีม"),
 	schoolName: string().required("กรุณาใส่ชื่อโรงเรียน"),
@@ -10,9 +8,7 @@ export const ictFormAddSchema: ObjectSchema<ICTChallengeForm> = object().shape({
 	ajarnPrefix: string().required("กรุณาใส่คำนำหน้า"),
 	ajarnName: string().required("กรุณาใส่ชื่ออาจารย์"),
 	ajarnSurname: string().required("กรุณาใส่นามสกุลอาจารย์"),
-	ajarnphoneNum: string().matches(IS_PHONE, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด')
-		.max(10, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด')
-		.min(10, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด').required('กรุณากรอกข้อมูลเบอร์โทรศัพท์'),
+	ajarnphoneNum: string().required("กรุณาใส่เบอร์โทรศัพท์"),
 	ajarnEmail: string().email("กรุณาใส่ email ที่ถูกต้อง").required("กรุณาใส่อีเมล"),
 	ajarnPosition: string().required("กรุณาใส่ตำแหน่ง"),
 	
@@ -49,9 +45,7 @@ export const ictFormAddSchema: ObjectSchema<ICTChallengeForm> = object().shape({
 export const ophFormAddSchema: ObjectSchema<StudentOpenhouseForm> = object().shape({
 	studentName: string().required("กรุณาใส่ชื่อ"),
 	studentSurname: string().required("กรุณาใส่นามสกุล"),
-	studentPhoneNum: string().matches(IS_PHONE, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด')
-		.max(10, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด')
-		.min(10, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด').required('กรุณากรอกข้อมูลเบอร์โทรศัพท์'),
+	studentPhoneNum: string().required("กรุณาใส่เบอร์โทรศัพท์"),
 	studentEmail: string().required("กรุณาใส่อีเมล"),
 	studentSchoolName: string().email("กรุณาใส่ email ที่ถูกต้อง").required("กรุณาใส่ชื่อโรงเรียน"),
 	studentSchoolAddress: string().required("กรุณาใส่ที่อยู่โรงเรียน")
