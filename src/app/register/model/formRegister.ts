@@ -18,6 +18,17 @@ export interface StudentOpenhouseForm {
   studentSchoolName: string;
   studentSchoolAddress: string;
 }
+export interface ICTChallangeMemberForm {
+  prefixMember : string;
+  memberName : string;
+  memberSurName: string;
+  gradeMember : string;
+  phoneMember : string;
+  emailMember : string;
+  facebookMember : string;
+  lineMember : string;
+}
+
 export interface Iprefix {
   label: string;
   value: string;
