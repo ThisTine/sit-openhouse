@@ -18,8 +18,7 @@ const ConfirmModal = ({handleOnSubmit} : ConfirmModalProps) => {
 	const handleClose = () => setOpen(false);
 
 	const onSubmit = (data : ICTChallengeForm) => {
-		handleOpen();
-		console.log(data);
+		const ReaultPayLoad
 	};
 	
 	const [isSuccess, setIsSuccess] = useState(false);
