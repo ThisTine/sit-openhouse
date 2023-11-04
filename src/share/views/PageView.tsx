@@ -66,7 +66,7 @@ const PageView = ({ imageUrl, title, subtitle, details, location, showButton, sh
 					slide ? "max-lg:inset-y-40 lg:translate-x-0" : "max-lg:inset-y-full lg:translate-x-full"
 				}`}
 			>
-				<div className="h-[80%] w-full overflow-y-scroll pb-20 max-lg:px-10 max-lg:pt-14 lg:pt-16">
+				<div className="w-full overflow-y-scroll pb-20 max-lg:h-[80%] max-lg:px-10 max-lg:pt-14 lg:h-full lg:pt-16">
 					{ moreDetails }
 				</div>
 			</div>
