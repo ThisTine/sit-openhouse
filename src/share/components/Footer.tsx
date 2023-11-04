@@ -63,38 +63,47 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className="flex w-[100%] justify-center lg:hidden">
-				<div className="mx-16 grid grid-cols-2 gap-2 border-b-2 border-inherit pb-4 max-sm:mx-6">
-					<div className="col-span-2 pb-2 text-center text-2xl font-bold text-gray-200">
-						<h1>Contect</h1>
+				<div className="mx-16 grid grid-cols-2 gap-2 border-b-2 border-inherit pb-6 max-sm:mx-6">
+					<div className="col-span-2 pb-2 text-center text-3xl font-bold text-gray-200">
+						<h1>Contact</h1>
 					</div>
 					<div>
 						<h1 className="text-base font-bold text-gray-200">Open House@SIT</h1>
-						<div className="my-2 flex place-items-center gap-2 text-gray-200">
+						<div className="my-2 flex gap-2 text-gray-200">
 							<Image alt='Phone logo' src={Phone} />
-							<p>063-4469879 (พี่สก็อต)</p>
+							<div>
+								<p>063-4469879</p>
+								<p>(พี่สก็อต)</p>
+							</div>
 						</div>
 					</div>
 					<div>
 						<h1 className="text-base font-bold text-gray-200">ICT@SIT</h1>
-						<div className="my-2 flex place-items-center gap-2 text-gray-200">
+						<div className="my-2 flex gap-2 text-gray-200">
 							<Image alt='Phone logo' src={Phone} />
-							<p>02-470-9882 (พี่รุ่ง)</p>
+							<div>
+								<p>02-470-9882</p>
+								<p>(พี่รุ่ง)</p>
+							</div>
 						</div>
 					</div>
 					<div>
 						<h1 className="text-base font-bold text-gray-200">D-Day@SIT</h1>
-						<div className="my-2 flex place-items-center gap-2 text-gray-200">
+						<div className="my-2 flex gap-2 text-gray-200">
 							<Image alt='Phone logo' src={Phone} />
-							<p>02-470-9832 (พี่นิคกี้)</p>
+							<div>
+								<p>02-470-9832</p>
+								<p>(พี่นิคกี้)</p>
+							</div>
 						</div>
 					</div>
 					<div className="font-bold text-gray-200">
 						<h1>126 ถนนประชาอุทิศ แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140.</h1>
 					</div>
-					<div className="col-span-2 flex justify-center gap-8">
-						<Image alt='facebook logo' className="w-[40px]" src={Facebook}/>
-						<Image alt='mail logo' className="w-[40px]" src={Mail} />
-						<Image alt='line logo' className="w-[40px]" src={Line} />
+					<div className="col-span-2 flex justify-center gap-8 pt-4">
+						<Image alt='facebook logo' className="w-[35px]" src={Facebook}/>
+						<Image alt='mail logo' className="w-[35px]" src={Mail} />
+						<Image alt='line logo' className="w-[35px]" src={Line} />
 					</div>
 				</div>
 			</div>
