@@ -30,7 +30,8 @@ const slider = [
 		title: "OPEN HOUSE@SIT",
 		location: "ชั้น 1 และ 10 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
 		showButton: true,
-		moreDetails: <OpenHousePage />
+		moreDetails: <OpenHousePage />,
+		buttonText: "เปิดรับสมัครเร็ว ๆ นี้"
 	},
 	{
 		details: "รายละเอียดเพิ่มเติม...",
@@ -68,7 +69,7 @@ export default function App() {
 	};
 
 	return (
-		<Swiper modules={[Pagination]} onSwiper={setSwiper} pagination={{
+		<Swiper className='swiper-backface-hidden' modules={[Pagination]} onSwiper={setSwiper} pagination={{
 			clickable: true,
 			bulletClass: 'swiper-pagination-bullet',
 			bulletActiveClass: 'swiper-pagination-bullet-active'
@@ -81,6 +82,7 @@ export default function App() {
 					return (
 						<SwiperSlide key={index}>
 							<PageView 
+							  buttonText={slide.buttonText}
 							  details={slide.details}
 							  imageUrl={slide.imageUrl}
 							  location={slide.location}

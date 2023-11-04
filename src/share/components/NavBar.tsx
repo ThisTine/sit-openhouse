@@ -17,7 +17,7 @@ const NavBar = () => {
 
 	return (
 		<div>
-			<div className='fixed top-0 z-10 flex w-full items-center max-sm:hidden'>
+			<div className='fixed top-0 z-10 flex w-full items-center bg-gradient-to-b from-[rgba(0,0,0,0.8)] max-sm:hidden'>
 				<div className='min-xl:pl-10 m-5 xl:pl-24'>
 					<Image alt="KMUTTWITSIT" height="60" src={Logo} width="192"/>
 				</div>
@@ -33,7 +33,7 @@ const NavBar = () => {
 					</Link>
 				</div>
 			</div>
-			<div className='fixed top-0 z-10 flex w-full items-center justify-between pl-8 sm:hidden'>
+			<div className='fixed top-0 z-10 flex w-full items-center justify-between bg-gradient-to-b from-[rgba(0,0,0,0.8)] pl-8 sm:hidden'>
 				<div onClick={handleClick}>
 					<Image alt="Hamburger" className={`pt-3 ${isOpen? 'hidden' : ''}`} src={Hamburger} />
 				</div>
