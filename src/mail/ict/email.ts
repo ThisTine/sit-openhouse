@@ -1,4 +1,5 @@
-<!doctype html>
+/* eslint-disable max-lines */
+export const ICT_EMAIL = `<!doctype html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -415,4 +416,4 @@
       </tr>
     </table>
   </body>
-</html>
+</html>`;
