@@ -12,8 +12,6 @@ const Column: FC<{
 	return (
 		<div className="mt-1 flex w-1/3  min-w-[150px] max-w-[250px] flex-col space-y-1 text-black">
 			{data!.map((data, index: number) => {
-				const th = data!.th;
-				const en = data!.en;
 				return (
 					<div className="w-full" key={index}>
 						<div
@@ -29,12 +27,17 @@ const Column: FC<{
 									: ""
 							}}>
 							{lang === "th"
-								? th?.map((data: string, index: number) => {
-									return <h3 key={index}>{data}</h3>;
-								  })
-								: en?.map((data: string, index: number) => {
-									return <h3 key={index}>{data}</h3>;
-								  })}
+								? data.th?.map(
+									(data: string, index: number) => {
+										return <h3 key={index}>{data}</h3>;
+									}
+								  )
+								: data.en?.map(
+									(data: string, index: number) => {
+										return <h3 key={index}>{data}</h3>;
+									}
+								  )}
+							{data.location ? <h3>{ "@ " + data.location }</h3> : null }
 							{hover == index && data?.th ? (
 								<TimeModal
 									end={data?.end}
