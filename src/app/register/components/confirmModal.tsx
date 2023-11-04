@@ -3,7 +3,6 @@ import { Box, Button, Modal } from '@mui/material';
 import React, { useState } from 'react';
 import { UseFormHandleSubmit } from 'react-hook-form';
 import { ICTChallengeForm } from '../model/formRegister';
-import { ISolutionChllengeRequest } from '../../../share/types/solutionChllengeRequest';
 interface ConfirmModalProps {
 	handleOnSubmit : UseFormHandleSubmit<ICTChallengeForm,undefined>;
 }
@@ -11,7 +10,6 @@ interface ConfirmModalProps {
 
 const ConfirmModal = ({handleOnSubmit} : ConfirmModalProps) => {
 	const [open, setOpen] = useState(false);
-	const [formRequest, setFormRequest] = useState<ISolutionChllengeRequest>();
 	const handleOpen = () => {
 		setOpen(true);
 
@@ -21,61 +19,8 @@ const ConfirmModal = ({handleOnSubmit} : ConfirmModalProps) => {
 
 	const onSubmit = (data : ICTChallengeForm) => {
 		handleOpen();
-		const resultRequest : ISolutionChllengeRequest = {
-			teamName: data.teamName,
-			schoolName: data.schoolName,
-			schoolAddress: data.schoolAddress,
-
-			firstPersonPrefix : data.prefixMember1,
-			firstPersonFirstname : data.nameMember1,
-			firstPersonLastname : data.surnameMember1,
-			firstPersonGrade : data.gradeMember1,
-			firstPersonTel : data.phoneNumMember1,
-			firstPersonEmail : data.emailMember1,
-			firstPersonFacebook : data.facebookMember1,
-			firstPersonLineId : data.lineMember1,
-
-			secondPersonPrefix : data.prefixMember2,
-			secondPersonFirstname : data.nameMember2,
-			secondPersonLastname : data.surnameMember2,
-			secondPersonGrade : data.gradeMember2,
-			secondPersonTel : data.phoneNumMember2,
-			secondPersonEmail : data.emailMember2,
-			secondPersonFacebook : data.facebookMember2,
-			secondPersonLineId : data.lineMember2,
-
-			thirdPersonPrefix : data.prefixMember3,
-			thirdPersonFirstname : data.nameMember3,
-			thirdPersonLastname : data.surnameMember3,
-			thirdPersonGrade : data.gradeMember3,
-			thirdPersonTel : data.phoneNumMember3,
-			thirdPersonEmail : data.emailMember3,
-			thirdPersonFacebook : data.facebookMember3,
-			thirdPersonLineId : data.lineMember3,
-			
-			advisorPersonPrefix : data.ajarnPrefix,
-			advisorPersonFirstname : data.ajarnName,
-			advisorPersonLastname : data.ajarnSurname,
-			advisorPersonTel : data.ajarnphoneNum,
-			advisorPersonEmail : data.ajarnEmail,
-			advisorPosition : data.ajarnPosition
-
-		};
-
-		setFormRequest(resultRequest);
+		console.log(data);
 	};
-
-	const handleOnconfirm = () => {
-		handleClose();
-		// const result = fetch("/api/register/solution-challenge", {
-		// 	body: JSON.stringify(formRequest),
-		// 	headers: {
-		// 		"Content-Type": "application/json"
-		// 	}
-		// });
-		console.log(formRequest);
-	};
-
 	
 	const [isSuccess, setIsSuccess] = useState(false);
 	return (
@@ -102,7 +47,7 @@ const ConfirmModal = ({handleOnSubmit} : ConfirmModalProps) => {
 								backgroundColor: '#9c1e1e',
 								boxShadow: 'none'
 							}}} variant='contained'>cancel</Button>
-							<Button className="h-12 w-32 bg-primary text-white" onClick={handleOnconfirm} variant='contained'>confirm</Button>
+							<Button className="h-12 w-32 bg-primary text-white" onClick={()=>{setIsSuccess(true);}} variant='contained'>confirm</Button>
 						</Box>
 					</Box>
 				</Modal>
