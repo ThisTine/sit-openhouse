@@ -1,4 +1,5 @@
-<!doctype html>
+/* eslint-disable max-lines */
+export const ICT_EMAIL = `<!doctype html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -33,6 +34,7 @@
         border-collapse: separate;
         mso-table-lspace: 0pt;
         mso-table-rspace: 0pt;
+        color: #000000;
         width: 100%; }
         table td {
           font-family: sans-serif;
@@ -346,26 +348,26 @@
               <!-- START MAIN CONTENT AREA -->
               <tr>
                 <td class="wrapper">
-                    <img src="./ict logo-min.png"/>
+                    <img src="cid:event-logo" />
                     <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
-                        <p>เรียนคุณสมร อรชร,</p>
-                        <p>ยืนยันการสมัคร SIT Solution Chllenge</p>
-                        <p>ทางเราได้บันทึกข้อมูลของท่านเข้าสู่ระบบแล้ว</p>
-                        <p>กรุณาคลิ้กลิงค์ด้านล่างเพื่อทำแบบทดสอบคัดเลือก แล้วทางเราจะแจ้งสถานะการคัดเลือกของท่านผ่านอีเมล์อีกครั้ง</p>
+                        <p>เรียนคุณ :ict-name:,</p>
+                        <p>ยืนยันการสมัคร ICT Chllenge 2023 ทางเราได้บันทึกข้อมูลของท่านเข้าสู่ระบบแล้ว</p>
+                        <p>กรุณาคลิ้กลิงค์ด้านล่างเพื่อทำแบบทดสอบความรู้พื้นฐานด้าน IT เพื่อคัดเลือกกลุ่มที่มีสิทธิ์เข้าแข่งขันรอบ 60 ทีม</p>
+                        <p>แล้วทางเราจะแจ้งสถานะผลการคัดเลือกให้ท่านทราบผ่านอีเมล์อีกครั้ง</p>
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
                             <tr>
                               <td align="center">
                                 <table   role="presentation" border="0" cellpadding="0" cellspacing="0">
-                                  <tbody>
+                                  <!-- <tbody>
                                     <tr>
                                     
                                       <p>รหัสเพื่อทำแบบทดสอบ</p>
                                       <h2>ABCDEF</h2>
                                   </tr>
-                                  </tbody>
+                                  </tbody> -->
                                 </table>
                               </td>
                             </tr>
@@ -374,7 +376,7 @@
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                   <tbody>
                                     <tr>
-                                      <td> <a href="https://openhouse2023.sit.kmutt.ac.th" target="_blank">คลิ้กเพื่อเปิดแบบทดสอบ</a> </td>
+                                      <td> <a href=":ict-test-url:" target="_blank">คลิ้กเพื่อเปิดแบบทดสอบ</a> </td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -400,8 +402,8 @@
               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td class="content-block">
-                    <span class="apple-link">ในกรณีที่ท่านมีปัญหาในการเข้าสู่ระบบ</span>
-                    <br> โปรดติดต่อ SIT@KMUTT ได้ทาง <a href="tel:0634468979">063-4469879</a>.
+                    <span class="apple-link">ในกรณีที่ท่านพบปัญหาในการเข้าสู่ระบบ</span>
+                    <br> โปรดติดต่อ SIT@KMUTT ได้ทาง ได้ทาง Line : <b>@SIT KMUTT</b>.
                   </td>
                 </tr>
               </table>
@@ -414,4 +416,4 @@
       </tr>
     </table>
   </body>
-</html>
+</html>`;

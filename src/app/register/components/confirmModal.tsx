@@ -26,7 +26,7 @@ const ConfirmModal = ({handleOnSubmit} : ConfirmModalProps) => {
 	return (
 		<div className="flex justify-end">
             
-			<Button className="h-12 w-32 bg-primary" onClick={handleOnSubmit(onSubmit)} variant="contained">ส่งข้อมูล</Button>
+			<Button className="h-12 bg-primary" onClick={handleOnSubmit(onSubmit)} variant="contained">ยืนยันการลงทะเบียน</Button>
 			<div >
 				<Modal
 					aria-describedby="modal-modal-description"
@@ -43,11 +43,11 @@ const ConfirmModal = ({handleOnSubmit} : ConfirmModalProps) => {
                 กรุณาตรวจสอบความถูกต้องให้ครบถ้วนก่อนกดยืนยัน หากกดยืนยันแล้วจะไม่สามารถแก้ไขข้อมูลการสมัครได้
 						</h4>
 						<Box display="flex" flexDirection="row" gap="5px" height="60px" justifyContent="flex-end" margin="20px">
-							<Button className="h-12 w-32 bg-primary text-white" onClick={()=>{setIsSuccess(true);}} variant='contained'>confirm</Button>
 							<Button className='h-12 w-32 bg-red-700 text-white' onClick={handleClose} sx={{'&:hover': {
 								backgroundColor: '#9c1e1e',
 								boxShadow: 'none'
 							}}} variant='contained'>cancel</Button>
+							<Button className="h-12 w-32 bg-primary text-white" onClick={()=>{setIsSuccess(true);}} variant='contained'>confirm</Button>
 						</Box>
 					</Box>
 				</Modal>

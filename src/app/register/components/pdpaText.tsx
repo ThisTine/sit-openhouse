@@ -1,3 +1,4 @@
+import React from "react";
 const PdpaText = () => {
 	return(
 		<div className="p-10">
