@@ -30,8 +30,8 @@ const Ict_Challenge = () => {
 				</ul>
 			</div>
 			<div>
-				<Link className="flex items-center gap-2 underline max-md:place-self-center lg:text-base" href="/"><Image alt="download icon" src={Download} /> <p>download ใบขออนุญาตโรงเรียนและกฎกติกาการแข่งขัน</p></Link>
-				<Link className="flex items-center gap-2 underline max-md:place-self-center lg:text-base" href="/"><Image alt="download icon" src={Download} /> <p>download ใบขออนุญาตโรงเรียนและกฎกติกาการแข่งขัน</p></Link>
+				<Link className="flex items-center gap-2 underline max-md:place-self-center lg:text-base" href="/"><Image alt="download icon" src={Download} /> <p>download กฎกติกาการแข่งขัน</p></Link>
+				<Link className="flex items-center gap-2 underline max-md:place-self-center lg:text-base" href="/"><Image alt="download icon" src={Download} /> <p>download ใบขออนุญาตลาเรียน</p></Link>
 			</div>
 		</div>
 	);
