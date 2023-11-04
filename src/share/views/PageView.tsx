@@ -19,10 +19,11 @@ interface PageProps {
 	showButton?: boolean;
 	showLicense?: boolean;
 	moreDetails : JSX.Element;
+	buttonText?: string;
 }
 
 
-const PageView = ({ imageUrl, title, subtitle, details, location, showButton, showLicense,moreDetails }: PageProps) => {
+const PageView = ({ imageUrl, title, subtitle, details, location, showButton, showLicense,moreDetails,buttonText }: PageProps) => {
 
 	const [slide, setSlide] = useState(false);
 
@@ -53,7 +54,7 @@ const PageView = ({ imageUrl, title, subtitle, details, location, showButton, sh
 						{subtitle}
 					</p>
 					<p className="cursor-pointer pb-32 underline" onClick={toggleSidebar}>{details}</p>
-					{showButton ? <Button onClick={() => {}}>สมัครเลย!</Button> : <h1 className="text-2xl font-bold max-md:text-center md:text-4xl md:font-medium">ลงทะเบียนเข้าชมหน้างาน</h1>}
+					{showButton ? <Button disabled={buttonText?true:false} onClick={() => {}}>{buttonText?buttonText:"สมัครเลย!"}</Button> : <h1 className="text-2xl font-bold max-md:text-center md:text-4xl md:font-medium">ลงทะเบียนเข้าชมหน้างาน</h1>}
 					{showLicense ? <Link className="flex items-center gap-2 underline max-md:place-self-center lg:text-base" href="https://kmutt.me/ictchallenge2023" target="blank"><Image alt="download icon" src={Download} /> <p>download ใบขออนุญาตโรงเรียนและกฎกติกาการแข่งขัน</p></Link> : null}
 				</div>
 				<div className={`fixed left-5 top-5 flex place-items-center gap-2 max-lg:ml-5 max-lg:mt-16 lg:ml-16 lg:mt-16 ${slide ? "" : "hidden"}`}>
