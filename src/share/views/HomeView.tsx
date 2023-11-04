@@ -64,7 +64,7 @@ export function HomeView({ PageView }: HomeViewProps) {
 						<Image alt="location" src={Location} />
 						<p className="max-lg:text-base lg:text-2xl">อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)<br />  มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี </p>
 					</div>
-					<div className="flex flex-col gap-8 px-3 text-2xl text-[#3399CC]">
+					<div className="flex flex-col gap-5 px-3 text-2xl text-[#3399CC]">
 						<div className="hover:cursor-pointer" onClick={() =>changePage(1)}>
 							SIT OPEN HOUSE 2023
 							<p className="text-xl">งานเปิดบ้านเทคโนโลยีสารสนเท​ศ</p>
