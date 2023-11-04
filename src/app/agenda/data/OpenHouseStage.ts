@@ -6,95 +6,86 @@ const OpenHouseStage: Agenda[] = [
 		height: 79
 	},
 	{
-		th: ["เริ่มงาน เล่าเกี่ยวกับ KMUTT"],
-		en: ["Opening Ceremony"],
+		th: ["ดำเนินรายการหัวข้อเรื่อง KMUTT", "และหลักสูตรใน SIT"],
+		en: ["Talk show about KMUTT", "and SIT's curriculum"],
 		start: 830,
-		end: 845,
-		height: 34
+		end: 900,
+		height: 75
 	},
 	{
 		th: ["สัมภาษณ์ซุ้มกิจกรรม"],
 		en: ["Interview with activity booths"],
-		start: 845,
-		end: 900,
-		height: 34
-	},
-	{
-		th: ["พิธีกรให้ข้อมูลเกี่ยวกับ SIT"],
-		en: ["Information about SIT"],
 		start: 900,
-		end: 915,
-		height: 34
+		end: 920,
+		height: 55
 	},
 	{
-		th: ["กิจกรรมตอบคำถาม"],
-		en: ["Question and Answer"],
-		start: 915,
-		end: 945,
-		height: 70
-	},
-	{
-		th: ["MUSIC"],
-		en: ["MUSIC"],
-		start: 945,
+		th: ["รายการตอบคำถามชิงรางวัล"],
+		en: ["Question and Answer Game"],
+		start: 920,
 		end: 1000,
-		height: 34
+		height: 80
 	},
 	{
 		th: ["SIT MUSIC"],
 		en: ["SIT MUSIC"],
 		start: 1000,
-		end: 1015,
-		height: 34
+		end: 1040,
+		height: 90
+	},
+	{
+		start: 1040,
+		end: 1100,
+		height: 50
 	},
 	{
 		th: ["แนะนำกิจกรรมสาขา"],
 		en: ["SIT Session talk"],
-		start: 1015,
-		end: 1100,
-		height: 105
-	},
-	{
-		th: ["SIT Alumni Talk"],
-		en: ["SIT Alumni Talk"],
 		start: 1100,
-		end: 1200,
-		height: 143
+		end: 1130,
+		height: 76
 	},
 	{
 		th: ["พักเที่ยง"],
 		en: ["Lunch Break"],
-		start: 1200,
-		end: 1245,
-		height: 105
+		start: 1130,
+		end: 1300,
+		height: 216
 	},
 	{
-		th: ["Booths Tour"],
-		en: ["Booths Tour"],
-		start: 1245,
-		end: 1330,
-		height: 105
+		th: ["SIT MC"],
+		en: ["SIT MC"],
+		start: 1300,
+		end: 1315,
+		height: 40
 	},
 	{
-		th: ["กิจกรรมตอบคำถาม"],
-		en: ["Question and Answer"],
-		start: 1330,
-		end: 1400,
-		height: 75
+		th: ["การสัมภาษณ์ซุ้มกิจกรรม"],
+		en: ["Interview with activity booths"],
+		start: 1315,
+		end: 1345,
+		height: 70
 	},
 	{
 		th: ["SIT MUSIC"],
 		en: ["SIT MUSIC"],
-		start: 1400,
-		end: 1445,
-		height: 100
+		start: 1345,
+		end: 1415,
+		height: 56
 	},
 	{
-		th: ["กิจกรรมสันทนาการ"],
-		en: ["Entertainment Activity"],
+		th: ["เวทีพูดคุยเรื่อง", "คณะเทคโนโลยีสารสนเทศ"],
+		en: ["SIT Talk"],
 		start: 1445,
 		end: 1515,
-		height: 85
+		height: 150
+	},
+	{
+		th: ["SIT MUSIC"],
+		en: ["SIT MUSIC"],
+		start: 1515,
+		end: 1600,
+		height: 110
 	}
 ];
 
