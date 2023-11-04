@@ -12,6 +12,7 @@ import TeamMemberForm from "./teamMemberForm";
 import React, { useState } from "react";
 import { ICTChallengeForm, Igrade, Iprefix } from "../model/formRegister";
 import { Control, Controller, FieldErrors } from "react-hook-form";
+import AjarnIctForm from "./ajarnForm";
 
 interface ITeamInfoFormProps {
   prefix: Iprefix[];
@@ -29,7 +30,7 @@ const TeamInfoForm = ({
 	return (
 		<div className="p-8">
 			<div className="col-span-4">
-				<h1 className="text-xl text-primary">โรงเรียน</h1>
+				<h1 className="text-3xl text-primary">โรงเรียน</h1>
 			</div>
 			<div className="grid grid-cols-6 gap-4">
 				<div className="col-span-6 py-5 md:col-span-3">
@@ -93,6 +94,8 @@ const TeamInfoForm = ({
 						</div>
 					)}
 				/>
+				<p className="text-gray-4">{`** กรุณาใส่ข้อมูลให้ครบ เลขที่ ซอย/ถนน แขวง/ตําบล เขต/อําเภอ จังหวัด รหัสไปรษณีย์ ที่อยู่ในการจัดส่งเกียรติบัตร 
+    (หากเป็นที่อยู่เดียวกับโรงเรียน ให้ระบุว่า "ที่อยู่เดียวกับโรงเรียน")`}</p>
 			</div>
 			<TeamMemberForm grade={grade} prefix={prefix} />
 			<h2 className="text-xl text-primary">อาจารย์ที่ปรึกษาทีม</h2>

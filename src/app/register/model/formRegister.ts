@@ -8,6 +8,33 @@ export interface ICTChallengeForm {
   ajarnphoneNum: string;
   ajarnEmail: string;
   ajarnPosition: string;
+
+  prefixMember1: string
+  nameMember1: string;
+  surnameMember1: string;
+  gradeMember1: string;
+  phoneNumMember1: string;
+  emailMember1: string;
+  facebookMember1?: string;
+  lineMember1?: string;
+
+  prefixMember2:string
+  nameMember2: string;
+  surnameMember2: string;
+  gradeMember2: string;
+  phoneNumMember2: string;
+  emailMember2: string;
+  facebookMember2?: string;
+  lineMember2?: string;
+
+  prefixMember3:string
+  nameMember3: string;
+  surnameMember3: string;
+  gradeMember3: string;
+  phoneNumMember3: string;
+  emailMember3: string;
+  facebookMember3?: string;
+  lineMember3?: string;
 }
 
 export interface StudentOpenhouseForm {
