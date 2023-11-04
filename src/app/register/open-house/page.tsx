@@ -5,11 +5,12 @@ import { prefix } from '../constant/formConst';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
 import ConfirmModal from '../components/confirmModal';
+import CongratOPH from '../components/CongratOPH';
 
 const openhouseRegisterPage = () => {
 	//  const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver()});
 	return (
-		//  <CongratOPH/> 
+		//   <CongratOPH/> 
 		//   ! isSuccess ? (
 		  <div style={{backgroundColor:"#34312F" , padding:'30px'}}>
 			<div className="p-5">

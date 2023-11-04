@@ -20,6 +20,7 @@ const SolutionFormPage = () => {
 	// 		console.log(data);
 	// 	};
 	return (
+		// <CongratICT/>
 		//   ! isSuccess ? (
 		  <div style={{backgroundColor:"#34312F" , padding:'30px'}}>
 			<div className="p-5">
