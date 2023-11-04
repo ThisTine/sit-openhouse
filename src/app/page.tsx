@@ -18,6 +18,9 @@ import Ict from 'public/images/ICT2022_3.jpg';
 import OpenHouse from 'public/images/openHouse.jpg';
 import Cs from 'public/images/cs.jpg';
 import { HomeView } from '@/share/views/HomeView';
+import OpenHousePage from '@/share/components/OpenHouse';
+import IctChallenge from '@/share/components/Ict_Challenge';
+import CsDday from '@/share/components/Cs_Dday';
 
 const slider = [
 	{
@@ -27,14 +30,7 @@ const slider = [
 		title: "OPEN HOUSE@SIT",
 		location: "ชั้น 1 และ 10 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
 		showButton: true,
-		//write a jsx element here
-		moreDetails: () => {
-			return (
-				<div>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt exercitationem saepe deserunt labore! Reprehenderit quasi quo, quae modi corporis voluptates ad ut, nemo quaerat facilis ullam sunt quidem? Vero quibusdam et, velit recusandae quas quisquam cumque aperiam modi vel exercitationem veritatis nesciunt nam incidunt officia! Repellendus facilis voluptatem laudantium, blanditiis, nam voluptatum ex quo quos vel ipsa aspernatur qui aperiam reprehenderit in alias voluptate obcaecati culpa! Ab vitae saepe facere dignissimos voluptates, blanditiis alias omnis commodi. Commodi consectetur labore et numquam dolor porro totam ipsa fugiat natus? Dolor quibusdam magni, provident perferendis vero, dolores minus voluptates eum ad corrupti cupiditate.</p>
-				</div>
-			);
-		}
+		moreDetails: <OpenHousePage />
 	},
 	{
 		details: "รายละเอียดเพิ่มเติม...",
@@ -44,28 +40,16 @@ const slider = [
 		location: "Auditorium ชั้น 3 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
 		showButton: true,
 		showLicense: true,
-		moreDetails: () => {
-			return (
-				<div>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In facilis nemo excepturi autem voluptate culpa natus provident optio. Accusamus animi quam doloremque fuga cumque alias. Aperiam obcaecati odit illum, quod vitae praesentium doloribus impedit repellat eos asperiores veniam necessitatibus fuga molestiae temporibus nisi quas debitis eaque aut? Vero qui officia earum totam beatae fuga enim quasi fugiat ullam nam sit ea delectus animi doloribus quia cupiditate debitis, sint atque minima error? Ea similique ipsam inventore laborum iusto aliquam dolorem, pariatur quam omnis id culpa quos iure sequi consectetur consequatur atque distinctio dolores laudantium neque voluptas repudiandae quibusdam minus nobis aspernatur!</p>
-				</div>
-			);
-		}
+		moreDetails: <IctChallenge />
 	},
 	{
 		details: "รายละเอียดเพิ่มเติม...",
 		imageUrl: Cs,
-		subtitle: "นิทรรศการจัดแสดงผลงานของนักศึกษาชั้นปีที่ 4 หลักสูตรวิทยาการคอมพิวเตอร์ (หลักสูตรภาษาอังกฤษ) คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี รวบรวมผลงานหลากหลายประเภทกว่า 16 ชิ้น จากความต้องการในกระดาษสู่ผลงานที่ใช้งานได้จริง ",
+		subtitle: "นิทรรศการจัดแสดงผลงานของนักศึกษาชั้นปีที่ 4 หลักสูตรวิทยาการคอมพิวเตอร์ (หลักสูตรภาษาอังกฤษ) คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี รวบรวมผลงานหลากหลายประเภทกว่า 16 ชิ้น จากความต้องการในกระดาษสู่ผลงานที่ใช้งานได้จริง",
 		title: "CS PROJECT D-DAY EXHIBITION 2023",
 		location: "ชั้น 3 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
 		ShadowRoot: false,
-		moreDetails: () => {
-			return (
-				<div>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dolorum dignissimos aspernatur nulla dicta accusamus saepe. Corporis ducimus repellat tempore. Mollitia, neque laboriosam dolores aut repellat suscipit ipsum quidem asperiores ipsam accusantium? Quas, ratione libero. Ducimus molestias ipsam repellendus, tempora, fugit qui facilis corporis illo consectetur, iste eligendi? Aspernatur debitis voluptas, itaque iusto facere ratione distinctio, obcaecati exercitationem ipsa eligendi harum asperiores, omnis nisi? Libero, eligendi incidunt inventore unde commodi sequi. Quas nostrum fugiat suscipit distinctio id ullam excepturi sit delectus aliquid at provident odio alias voluptatum pariatur officiis nihil, laborum quae recusandae nam veritatis! Adipisci corrupti repellat aut eum!</p>
-				</div>
-			);
-		}
+		moreDetails: <CsDday />
 	}
 ];
 
