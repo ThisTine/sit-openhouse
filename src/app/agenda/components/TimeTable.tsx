@@ -2,7 +2,11 @@ import { FC } from "react";
 import { th, en } from "../text";
 import AllTable from "./AllTable";
 
-const TimeTable: FC<{ lang: string; filter: number }> = ({ lang, filter }) => {
+const TimeTable: FC<{
+	lang: string;
+	filter: number;
+	handleFilterSelect: (filter: number) => void;
+}> = ({ lang, filter, handleFilterSelect }) => {
 	return (
 		//Main div
 		<div className="mb-20 flex w-screen flex-col items-center justify-center">
@@ -18,30 +22,33 @@ const TimeTable: FC<{ lang: string; filter: number }> = ({ lang, filter }) => {
 				{/* Category */}
 				<div
 					className={
-						"flex w-1/3 min-w-[100px] max-w-[250px] flex-col items-center justify-center rounded " +
+						"flex w-1/3 min-w-[100px] max-w-[250px] flex-col items-center justify-center rounded cursor-pointer " +
 						(filter === 0 || filter === 3
 							? "bg-[#3399CC]"
 							: "bg-[#495057]")
-					}>
+					}
+					onClick={() => handleFilterSelect(3)}>
 					<h3>CS Project D-Day</h3>
 					<h4>{lang === "th" ? th.ddayLocation : en.ddayLocation}</h4>
 				</div>
 				<div
 					className={
-						"flex w-1/3 min-w-[100px] max-w-[250px] flex-col items-center justify-center rounded " +
+						"flex w-1/3 min-w-[100px] max-w-[250px] flex-col items-center justify-center rounded cursor-pointer " +
 						(filter === 0 || filter === 2
 							? "bg-[#3399CC]"
 							: "bg-[#495057]")
-					}>
+					}
+					onClick={() => handleFilterSelect(2)}>
 					<h3>ICT Challenge</h3>
 				</div>
 				<div
 					className={
-						"flex w-1/3 min-w-[100px] max-w-[250px] flex-col items-center justify-center rounded " +
+						"flex w-1/3 min-w-[100px] max-w-[250px] flex-col items-center justify-center rounded cursor-pointer " +
 						(filter === 0 || filter === 1
 							? "bg-[#3399CC]"
 							: "bg-[#495057]")
-					}>
+					}
+					onClick={() => handleFilterSelect(1)}>
 					<h3>Open House 2023 (Stage)</h3>
 					<h4>
 						{lang === "th"
@@ -51,11 +58,12 @@ const TimeTable: FC<{ lang: string; filter: number }> = ({ lang, filter }) => {
 				</div>
 				<div
 					className={
-						"flex w-1/3 min-w-[100px] max-w-[250px] flex-col items-center justify-center rounded " +
+						"flex w-1/3 min-w-[100px] max-w-[250px] flex-col items-center justify-center rounded cursor-pointer " +
 						(filter === 0 || filter === 1
 							? "bg-[#3399CC]"
 							: "bg-[#495057]")
-					}>
+					}
+					onClick={() => handleFilterSelect(1)}>
 					<h3>Open House 2023 (Workshop)</h3>
 				</div>
 			</div>
