@@ -25,8 +25,8 @@ export interface ICTChallangeMemberForm {
   gradeMember : string;
   phoneMember : string;
   emailMember : string;
-  facebookMember : string;
-  lineMember : string;
+  facebookMember? : string;
+  lineMember? : string;
 }
 
 export interface Iprefix {
