@@ -66,7 +66,7 @@ const RenderDesktop: FC<{
 			</div>
 			{/* Agenda */}
 			<div className="flex items-start justify-start px-10 pt-10">
-				<TimeTable {...{ lang, filter }} />
+				<TimeTable {...{ lang, filter, handleFilterSelect }} />
 			</div>
 		</div>
 	);
