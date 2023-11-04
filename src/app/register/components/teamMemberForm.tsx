@@ -3,6 +3,7 @@ import { ICTChallengeForm, Igrade, Iprefix } from "../model/formRegister";
 import IctMember1Form from "./ictMember1";
 import IctMember2Form from "./ictMember2";
 import IctMember3Form from "./ictMember3";
+import React from "react";
 
 export interface IteamMemberFormProps {
 	formControl : Control<ICTChallengeForm,any>

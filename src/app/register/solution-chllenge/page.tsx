@@ -1,6 +1,5 @@
 'use client';
 // Page for Register Form
-import TeamInfoForm from "@/app/register/components/teamInfoForm";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import {Button} from "@mui/material";
 import ConfirmModal from "../components/confirmModal";
@@ -10,7 +9,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { ictFormAddSchema } from "../schema/ictFormSchema";
 import { ICTChallengeForm } from "../model/formRegister";
 import { useState } from "react";
-import CongratICT from "../components/CongratICT";
+import React from "react";
+import TeamInfoForm from "../components/teamInfoForm";
 const SolutionFormPage = () => {
 	const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver(ictFormAddSchema)});
 	// const [isSuccess, setIsSuccess] = useState(false);
