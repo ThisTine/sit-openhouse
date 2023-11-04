@@ -28,7 +28,7 @@ export async function POST(request: Request) {
 
 		const template =  await getEmailTemplate({
 			event:"ICT",
-			to:req.firstPersonEmail,
+			to:[req.firstPersonEmail, req.secondPersonEmail, req.thirdPersonEmail, req.advisorPersonEmail],
 			name:req.firstPersonFirstname
 		});
 
