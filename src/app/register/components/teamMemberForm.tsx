@@ -15,7 +15,7 @@ export interface IteamMemberFormProps {
 const TeamMemberForm = ({prefix,grade,formControl,formErrors} : IteamMemberFormProps) =>{
 	return(
 		<div>
-			<h2 className="text-lg text-primary">สมาชิกในทีม</h2>
+			<h2 className="text-3xl text-primary">สมาชิกในทีม</h2>
 			<IctMember1Form formControl={formControl} formErrors={formErrors} grade={grade} prefix={prefix}/>
 			<IctMember2Form formControl={formControl} formErrors={formErrors} grade={grade} prefix={prefix}/>
 			<IctMember3Form formControl={formControl} formErrors={formErrors} grade={grade} prefix={prefix}/>

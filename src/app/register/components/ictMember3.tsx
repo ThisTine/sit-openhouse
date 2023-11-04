@@ -7,10 +7,10 @@ const IctMember3Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 		<div>
 			<div className="my-3">
 				<div className="flex gap-4">
-					<div className="rounded-lg bg-primary p-2 text-white opacity-50">คนที่ 3</div>
+					<div className="rounded-lg bg-primary p-2 text-white opacity-100">คนที่ 3</div>
 				</div>
 			</div>
-			<h2 className="text-primary">ข้อมูลส่วนตัว</h2>
+			<h2 className="text-xl text-primary">ข้อมูลส่วนตัว</h2>
 			
 			
 			<div className="grid grid-cols-7 gap-4">
@@ -104,7 +104,7 @@ const IctMember3Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 				</div>
 			</div>
 			<div>
-				<h2 className="text-base text-primary">ช่องทางการติดต่อ</h2>
+				<h2 className="text-xl text-primary">ช่องทางการติดต่อ</h2>
 				<div className="grid grid-cols-6 gap-4">
 					<div className="col-span-6 py-5 md:col-span-3">
 						<Controller

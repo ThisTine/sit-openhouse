@@ -1,10 +1,10 @@
-/* eslint-disable max-lines */
 "use client"; 
 import { Box, MenuItem, Select, TextField, TextareaAutosize, Typography } from "@mui/material";
 import TeamMemberForm from "./teamMemberForm";
 import React, { useState } from "react";
 import { ICTChallengeForm, Igrade, Iprefix } from "../model/formRegister";
 import { Control, Controller, FieldErrors } from "react-hook-form";
+import AjarnIctForm from "./ajarnForm";
 
 interface ITeamInfoFormProps {
     prefix : Iprefix[]
@@ -17,7 +17,7 @@ const TeamInfoForm = ({prefix,grade,formControl,formErrors}: ITeamInfoFormProps)
 	return (
 		<div className="p-8">
 			<div className="col-span-4">
-				<h1 className="text-xl text-primary">โรงเรียน</h1>
+				<h1 className="text-3xl text-primary">โรงเรียน</h1>
 			</div>
 			<div className="grid grid-cols-6 gap-4">
 				<div className="col-span-6 py-5 md:col-span-3">
@@ -75,133 +75,11 @@ const TeamInfoForm = ({prefix,grade,formControl,formErrors}: ITeamInfoFormProps)
 						</div>
 					)}
 				/>
+				<p className="text-gray-4">{`** กรุณาใส่ข้อมูลให้ครบ เลขที่ ซอย/ถนน แขวง/ตําบล เขต/อําเภอ จังหวัด รหัสไปรษณีย์ ที่อยู่ในการจัดส่งเกียรติบัตร 
+    (หากเป็นที่อยู่เดียวกับโรงเรียน ให้ระบุว่า "ที่อยู่เดียวกับโรงเรียน")`}</p>
 			</div>
 			<TeamMemberForm formControl={formControl} formErrors={formErrors} grade={grade} prefix={prefix}/>
-			<h2 className="text-xl text-primary">อาจารย์ที่ปรึกษาทีม</h2>
-			<div className="grid grid-cols-7 gap-4">
-				<div className="col-span-7 py-5  md:col-span-1">
-					<h2 className="text-gray-4">คำนำหน้า *</h2>
-					<Controller control={formControl} name="ajarnPrefix" render={({ field: { onChange, ...rest }})=>(
-						<div>
-							<Select
-								fullWidth
-								size="medium"
-								{...rest}
-								className="rounded-lg bg-white"
-								error={!!formErrors.ajarnPrefix}
-								onChange={(e,data)=>{
-									onChange(e,data);
-								}}
-							>
-								{prefix.map((item)=>(
-									<MenuItem  key={item.value} value={item.value}>{item.label}</MenuItem>
-								))}
-							</Select>
-							<div className="text-red-500">{formErrors.ajarnPrefix?.message}</div>
-						</div>
-					)}/>
-				</div>
-				
-				<div className="col-span-7 py-5 md:col-span-3">
-					<Controller
-						control={formControl}
-						name="ajarnName"
-						render={({ field }) => (
-							<div>
-								<h2 className="text-gray-4">ชื่อจริง *</h2>
-								<TextField
-									fullWidth
-									size="medium"
-									{...field}
-									className="rounded-lg bg-white"
-									error={!!formErrors.ajarnName}
-								 />
-								 <div className="text-red-600">{formErrors.ajarnName?.message}</div>
-							</div>
-						)}
-					/>
-				</div>
-				<div className="col-span-7 py-5 md:col-span-3">
-					<Controller
-						control={formControl}
-						name="ajarnSurname"
-						render={({ field }) => (
-							<div>
-								<h2 className="text-gray-4">นามสกุล *</h2>
-								<TextField
-									fullWidth
-									size="medium"
-									{...field}
-									className="rounded-lg bg-white"
-									error={!!formErrors.ajarnSurname}
-								 />
-								 <div className="text-red-600">{formErrors.ajarnSurname?.message}</div>
-							</div>
-						)}
-					/>
-				</div>
-			</div>
-			<div className="grid grid-cols-6 gap-4">
-				<div className="col-span-6 py-5 md:col-span-3">
-					<Controller
-						control={formControl}
-						name="ajarnphoneNum"
-						render={({ field }) => (
-							<div>
-								<h2 className="text-gray-4">เบอร์โทร *</h2>
-								<TextField
-									fullWidth
-									size="medium"
-									{...field}
-									className="rounded-lg bg-white"
-									error={!!formErrors.ajarnphoneNum}
-								 />
-								 <div className="text-red-600">{formErrors.ajarnphoneNum?.message}</div>
-							</div>
-						)}
-					/>
-				</div>
-				<div className="col-span-6 py-5 md:col-span-3">
-					<Controller
-						control={formControl}
-						name="ajarnEmail"
-						render={({ field }) => (
-							<div>
-								<h2 className="text-gray-4">Email (Gmail เท่านั้น) *</h2>
-								<TextField
-									fullWidth
-									size="medium"
-									{...field}
-									className="rounded-lg bg-white"
-									error={!!formErrors.ajarnEmail}
-								 />
-								 <div className="text-red-600">{formErrors.ajarnEmail?.message}</div>
-							</div>
-						)}
-					/>
-				</div>
-			</div>
-			<Controller
-				control={formControl}
-				name="ajarnPosition"
-				render={({ field }) => (
-					<div>
-						<h2 className="text-gray-4">กลุ่มสาระการเรียนรู้ที่สังกัด หรือตําแหน่งปัจจุบัน *</h2>
-						<div className="grid grid-cols-6 gap-4">
-							<div className="col-span-6 md:col-span-4">
-								<TextField
-									fullWidth
-									size="medium"
-									{...field}
-									className="rounded-lg bg-white"
-									error={!!formErrors.ajarnPosition}
-								 />
-							</div>
-						</div>
-								 <div className="text-red-600">{formErrors.ajarnPosition?.message}</div>
-					</div>
-				)}
-			/>
+			<AjarnIctForm formControl={formControl} formErrors={formErrors} prefix={prefix}/>
 		</div>
 	);
 };
