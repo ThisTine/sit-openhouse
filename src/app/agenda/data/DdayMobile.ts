@@ -5,7 +5,8 @@ const DdayMobile: Agenda[] = [
 		start: 830,
 		end: 845,
 		th: ["ลงทะเบียน"],
-		en: ["Registration"]
+		en: ["Registration"],
+		location: "LX 3rd floor"
 	},
 	{
 		start: 930,
@@ -18,7 +19,8 @@ const DdayMobile: Agenda[] = [
 		start: 845,
 		end: 1600,
 		th: ["เดินชมงานตามอัธยาศัย"],
-		en: ["Attend the event at your leisure"]
+		en: ["Attend the event at your leisure"],
+		location: "LX 3rd floor"
 	},
 	{
 		start: 1545,

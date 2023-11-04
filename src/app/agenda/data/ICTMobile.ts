@@ -33,7 +33,8 @@ const ICTMobile: Agenda[] = [
 		start: 1300,
 		end: 1600,
 		th: ["การแข่งขันรอบชิงชนะเลิศ"],
-		en: ["Final Round"]
+		en: ["Final Round"],
+		location: "Auditorium, LX 3rd floor"
 	}
 ];
 
