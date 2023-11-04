@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -7,21 +7,93 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import './globals.css';
+
 // import required modules
 import { Pagination } from 'swiper/modules';
 
+// import Ict from '@/share/views/Ict';
+import PageView from '@/share/views/PageView';
+import Ict from 'public/images/ICT2022_3.jpg';
+import OpenHouse from 'public/images/openHouse.jpg';
+import Cs from 'public/images/cs.jpg';
+import { HomeView } from '@/share/views/HomeView';
+import OpenHousePage from '@/share/components/OpenHouse';
+import IctChallenge from '@/share/components/Ict_Challenge';
+import CsDday from '@/share/components/Cs_Dday';
+
+const slider = [
+	{
+		details: "รายละเอียดเพิ่มเติม...",
+		imageUrl: OpenHouse,
+		subtitle: "งานเปิดบ้านคณะเทคโนโลยีสารสนเทศ ครั้งแรกในรอบ 5 ปีกับงานเปิดบ้านเพื่อน้อง ๆ  มัธยมปลายที่สนใจในคณะเทคโนโลยีสารสนเทศ และสาขาทั้งหมดภายในคณะมาทำความรู้จักกันได้ผ่าน เวิร์คช็อปสุดพิเศษจากรุ่นพี่ SIT, ช่วงการบรรยายสุดพิเศษจากวิทยากรรับเชิญ, บูทประจำสาขา และกิจกรรมอื่นๆอีกมากมาย",
+		title: "OPEN HOUSE@SIT",
+		location: "ชั้น 1 และ 10 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
+		showButton: true,
+		moreDetails: <OpenHousePage />
+	},
+	{
+		details: "รายละเอียดเพิ่มเติม...",
+		imageUrl: Ict,
+		subtitle: "ลับสมองประลองปัญญา กับการแข่งขันตอบปัญหาวิชาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ ICT Challenge 2023 เวทีสำหรับน้อง ๆ ระดับมัธยมปลายที่มีความสนใจทางด้านคอมพิวเตอร์และต้องการทดสอบความสามารถตนเองที่จะมาไขปัญหาทางด้านไอที พร้อมชิงรางวัลทุนการศึกษากว่า 10,000 บาท",
+		title: "ICT CHALLENGE 2023",
+		location: "Auditorium ชั้น 3 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
+		showButton: true,
+		showLicense: true,
+		moreDetails: <IctChallenge />
+	},
+	{
+		details: "รายละเอียดเพิ่มเติม...",
+		imageUrl: Cs,
+		subtitle: "นิทรรศการจัดแสดงผลงานของนักศึกษาชั้นปีที่ 4 หลักสูตรวิทยาการคอมพิวเตอร์ (หลักสูตรภาษาอังกฤษ) คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี รวบรวมผลงานหลากหลายประเภทกว่า 16 ชิ้น จากความต้องการในกระดาษสู่ผลงานที่ใช้งานได้จริง",
+		title: "CS PROJECT D-DAY EXHIBITION 2023",
+		location: "ชั้น 3 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
+		ShadowRoot: false,
+		moreDetails: <CsDday />
+	}
+];
+
 export default function App() {
+
+	const [swiper, setSwiper] = useState<any>();
+
+	const slideTo = (index: number) => {
+		if (swiper) {
+			swiper.slideTo(index);
+		}
+	};
+
+	const handleClick = (page: number) => {
+		slideTo(page);
+	};
+
 	return (
-		<Swiper className="mySwiper" modules={[Pagination]} pagination={true}>
+		<Swiper modules={[Pagination]} onSwiper={setSwiper} pagination={{
+			clickable: true,
+			bulletClass: 'swiper-pagination-bullet',
+			bulletActiveClass: 'swiper-pagination-bullet-active'
+		  }}>
 			<SwiperSlide>
-				<div className="h-screen w-full bg-gray-800" />
+				<HomeView PageView={handleClick} />
 			</SwiperSlide>
-			<SwiperSlide>
-				<div className="h-screen w-full bg-gray-600" />
-			</SwiperSlide>
-			<SwiperSlide>
-				<div className="h-screen w-full bg-gray-400" />
-			</SwiperSlide>
+			{
+				slider.map((slide, index) => {
+					return (
+						<SwiperSlide key={index}>
+							<PageView 
+							  details={slide.details}
+							  imageUrl={slide.imageUrl}
+							  location={slide.location}
+							  moreDetails={slide.moreDetails}
+							  showButton={slide.showButton}
+							  showLicense={slide.showLicense}
+							  subtitle={slide.subtitle}
+							  title={slide.title}
+							/>
+						</SwiperSlide>
+					);
+				})
+			}
 		</Swiper>
 	);
 }
