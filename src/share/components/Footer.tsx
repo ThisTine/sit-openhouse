@@ -100,7 +100,7 @@ const Footer = () => {
 					<div className="font-bold text-gray-200">
 						<h1>126 ถนนประชาอุทิศ แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140.</h1>
 					</div>
-          <div className="col-span-2 flex justify-center gap-8 pt-4">
+					<div className="col-span-2 flex justify-center gap-8 pt-4">
 						<Image alt='facebook logo' className="w-[35px]" src={Facebook}/>
 						<Image alt='mail logo' className="w-[35px]" src={Mail} />
 						<Image alt='line logo' className="w-[35px]" src={Line} />
