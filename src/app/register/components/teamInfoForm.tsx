@@ -7,13 +7,18 @@ import { Control, Controller, FieldErrors } from "react-hook-form";
 import AjarnIctForm from "./ajarnForm";
 
 interface ITeamInfoFormProps {
-    prefix : Iprefix[]
-    grade : Igrade[]
-	formControl : Control<ICTChallengeForm,any>
-	formErrors : FieldErrors<ICTChallengeForm>
+  prefix: Iprefix[];
+  grade: Igrade[];
+  formControl: Control<ICTChallengeForm, any>;
+  formErrors: FieldErrors<ICTChallengeForm>;
 }
 
-const TeamInfoForm = ({prefix,grade,formControl,formErrors}: ITeamInfoFormProps) => {
+const TeamInfoForm = ({
+	prefix,
+	grade,
+	formControl,
+	formErrors
+}: ITeamInfoFormProps) => {
 	return (
 		<div className="p-8">
 			<div className="col-span-4">
@@ -33,8 +38,10 @@ const TeamInfoForm = ({prefix,grade,formControl,formErrors}: ITeamInfoFormProps)
 									{...field}
 									className="rounded-lg bg-white"
 									error={!!formErrors.teamName}
-								 />
-								 <div className="text-red-600">{formErrors.teamName?.message}</div>
+								/>
+								<div className="text-red-600">
+									{formErrors.teamName?.message}
+								</div>
 							</div>
 						)}
 					/>
@@ -52,8 +59,10 @@ const TeamInfoForm = ({prefix,grade,formControl,formErrors}: ITeamInfoFormProps)
 									{...field}
 									className="rounded-lg bg-white"
 									error={!!formErrors.schoolName}
-								 />
-								 <div className="text-red-600">{formErrors.schoolName?.message}</div>
+								/>
+								<div className="text-red-600">
+									{formErrors.schoolName?.message}
+								</div>
 							</div>
 						)}
 					/>
@@ -70,8 +79,10 @@ const TeamInfoForm = ({prefix,grade,formControl,formErrors}: ITeamInfoFormProps)
 								minRows={5}
 								{...field}
 								className="w-full rounded-lg bg-white p-3"
-								 />
-								 <div className="text-red-600">{formErrors.schoolAddress?.message}</div>
+							/>
+							<div className="text-red-600">
+								{formErrors.schoolAddress?.message}
+							</div>
 						</div>
 					)}
 				/>

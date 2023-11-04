@@ -1,35 +1,35 @@
 name: CI
 
 on:
-    pull_request: 
-        branches: 
-            - "*"
+  pull_request:
+    branches:
+      - "*"
 
 jobs:
-    lint:
-        name: Check lint ⚡️
-        runs-on: ubuntu-latest
-        container: node:lts
-        steps:
-            - name: Checkout 🚣
-              uses: actions/checkout@v2
-            - name: install packages 👇
-              run: npm i
-            - name: run lint ✅❌👉👈
-              run: npm run lint
+  lint:
+    name: Check lint ⚡️
+    runs-on: ubuntu-latest
+    container: node:lts
+    steps:
+      - name: Checkout 🚣
+        uses: actions/checkout@v2
+      - name: install packages 👇
+        run: npm i
+      - name: run lint ✅❌👉👈
+        run: npm run lint
 
-    check-build:
-        name: 🐳 Check Build 
-        runs-on: ubuntu-latest
-        timeout-minutes: 5
-        container: node:lts
-        steps:
-          - name: 🎤 Checkout
-            uses: actions/checkout@v3
+  check-build:
+    name: 🐳 Check Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    container: node:lts
+    steps:
+      - name: 🎤 Checkout
+        uses: actions/checkout@v3
 
-          - name: ⌚ Compile production build
-            run: |
-              npm i
-              npm run build
-          - name: 🥺 Finish leaw na
-            run: echo "# Finish leaw na! :stuck_out_tongue_closed_eyes:" >> $GITHUB_STEP_SUMMARY
+      - name: ⌚ Compile production build
+        run: |
+          npm i
+          npm run build
+      - name: 🥺 Finish leaw na
+        run: echo "# Finish leaw na! :stuck_out_tongue_closed_eyes:" >> $GITHUB_STEP_SUMMARY
