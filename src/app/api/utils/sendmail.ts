@@ -1,6 +1,7 @@
 import nodemailer from 'nodemailer';
 import { promises as fs } from 'fs';
 import Mail from 'nodemailer/lib/mailer';
+import { ICT_EMAIL } from '@/mail/ict/email';
 
 export interface IMailMetadata {
     to: string
@@ -9,7 +10,7 @@ export interface IMailMetadata {
 }
 
 export const getEmailTemplate = async ({event,to,name} : IMailMetadata)=>{
-	const ICT_MAIL = await fs.readFile( process.cwd() + "/src/mail/ict/email.html", "utf8");
+	const ICT_MAIL = ICT_EMAIL;
 	
 	let htmlTemplate;
 	let logo;
