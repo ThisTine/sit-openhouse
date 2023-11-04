@@ -76,7 +76,7 @@ const TeamInfoForm = ({prefix,grade,formControl,formErrors}: ITeamInfoFormProps)
 					)}
 				/>
 			</div>
-			<TeamMemberForm grade={grade} prefix={prefix}/>
+			<TeamMemberForm formControl={formControl} formErrors={formErrors} grade={grade} prefix={prefix}/>
 			<h2 className="text-xl text-primary">อาจารย์ที่ปรึกษาทีม</h2>
 			<div className="grid grid-cols-7 gap-4">
 				<div className="col-span-7 py-5  md:col-span-1">
