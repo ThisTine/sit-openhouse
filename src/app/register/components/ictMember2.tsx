@@ -3,8 +3,8 @@ import { Controller } from "react-hook-form";
 import { IteamMemberFormProps } from "./teamMemberForm";
 import React from "react";
 
-const IctMember2Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormProps) =>{
-	return(
+const IctMember2Form = ({ grade, prefix, formControl, formErrors }: IteamMemberFormProps) => {
+	return (
 		<div>
 			<div className="my-3">
 				<div className="flex gap-4">
@@ -12,12 +12,12 @@ const IctMember2Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 				</div>
 			</div>
 			<h2 className="text-xl text-primary">ข้อมูลส่วนตัว</h2>
-			
-			
+
+
 			<div className="grid grid-cols-7 gap-4">
 				<div className="col-span-7 py-5 md:col-span-1">
 					<h2 className="text-gray-4">คำนำหน้า*</h2>
-					<Controller control={formControl} name="prefixMember2" render={({ field: { onChange, ...rest }})=>(
+					<Controller control={formControl} name="prefixMember2" render={({ field: { onChange, ...rest } }) => (
 						<div>
 							<Select
 								fullWidth
@@ -25,19 +25,19 @@ const IctMember2Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 								{...rest}
 								className="rounded-lg bg-white"
 								error={!!formErrors.prefixMember2}
-								onChange={(e,data)=>{
-									onChange(e,data);
+								onChange={(e, data) => {
+									onChange(e, data);
 								}}
 							>
-								{prefix.map((item)=>(
-									<MenuItem  key={item.value} value={item.value}>{item.label}</MenuItem>
+								{prefix.map((item) => (
+									<MenuItem key={item.value} value={item.value}>{item.label}</MenuItem>
 								))}
 							</Select>
 							<div className="text-red-500">{formErrors.prefixMember2?.message}</div>
 						</div>
-					)}/>
+					)} />
 				</div>
-				
+
 				<div className="col-span-7 py-5 md:col-span-3">
 					<Controller
 						control={formControl}
@@ -51,8 +51,8 @@ const IctMember2Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 									{...field}
 									className="rounded-lg bg-white"
 									error={!!formErrors.nameMember2}
-								 />
-								 <div className="text-red-600">{formErrors.nameMember2?.message}</div>
+								/>
+								<div className="text-red-600">{formErrors.nameMember2?.message}</div>
 							</div>
 						)}
 					/>
@@ -70,19 +70,19 @@ const IctMember2Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 									{...field}
 									className="rounded-lg bg-white"
 									error={!!formErrors.surnameMember2}
-								 />
-								 <div className="text-red-600">{formErrors.surnameMember2?.message}</div>
+								/>
+								<div className="text-red-600">{formErrors.surnameMember2?.message}</div>
 							</div>
 						)}
 					/>
 				</div>
 			</div>
-			
+
 			<div className="py-5">
 				<h2 className="text-gray-4">ระดับชั้นที่กำลังศึกษาอยู่*</h2>
 				<div className="grid grid-cols-6 gap-4">
 					<div className="col-span-6 md:col-span-2">
-						<Controller control={formControl} name="gradeMember2" render={({ field: { onChange, ...rest }})=>(
+						<Controller control={formControl} name="gradeMember2" render={({ field: { onChange, ...rest } }) => (
 							<div>
 								<Select
 									fullWidth
@@ -90,17 +90,17 @@ const IctMember2Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 									{...rest}
 									className="rounded-lg bg-white"
 									error={!!formErrors.gradeMember2}
-									onChange={(e,data)=>{
-										onChange(e,data);
+									onChange={(e, data) => {
+										onChange(e, data);
 									}}
 								>
-									{grade.map((item)=>(
-										<MenuItem  key={item.value} value={item.value}>{item.label}</MenuItem>
+									{grade.map((item) => (
+										<MenuItem key={item.value} value={item.value}>{item.label}</MenuItem>
 									))}
 								</Select>
 								<div className="text-red-500">{formErrors.gradeMember2?.message}</div>
 							</div>
-						)}/>
+						)} />
 					</div>
 				</div>
 			</div>
@@ -120,8 +120,8 @@ const IctMember2Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 										{...field}
 										className="rounded-lg bg-white"
 										error={!!formErrors.phoneNumMember2}
-								 />
-								 <div className="text-red-600">{formErrors.phoneNumMember2?.message}</div>
+									/>
+									<div className="text-red-600">{formErrors.phoneNumMember2?.message}</div>
 								</div>
 							)}
 						/>
@@ -132,21 +132,21 @@ const IctMember2Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 							name="emailMember2"
 							render={({ field }) => (
 								<div>
-									<h2 className="text-gray-4">Email (Gmail เท่านั้น) *</h2>
+									<h2 className="text-gray-4">Email *</h2>
 									<TextField
 										fullWidth
 										size="medium"
 										{...field}
 										className="rounded-lg bg-white"
 										error={!!formErrors.emailMember2}
-								 />
-								 <div className="text-red-600">{formErrors.emailMember2?.message}</div>
+									/>
+									<div className="text-red-600">{formErrors.emailMember2?.message}</div>
 								</div>
 							)}
 						/>
 					</div>
 				</div>
-				
+
 				<div className="grid grid-cols-6 gap-4">
 					<div className="col-span-6 py-5 md:col-span-3">
 						<Controller
@@ -160,7 +160,7 @@ const IctMember2Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 										size="medium"
 										{...field}
 										className="rounded-lg bg-white"
-								 />
+									/>
 								</div>
 							)}
 						/>
@@ -177,15 +177,15 @@ const IctMember2Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 										size="medium"
 										{...field}
 										className="rounded-lg bg-white"
-								 />
+									/>
 								</div>
 							)}
-						/>					
+						/>
 					</div>
 				</div>
 			</div>
 		</div>
-			
+
 	);
 };
 
