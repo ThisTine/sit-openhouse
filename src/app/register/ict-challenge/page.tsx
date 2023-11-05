@@ -14,8 +14,7 @@ import TeamInfoForm from "../components/teamInfoForm";
 import CongratICT from "../components/CongratICT";
 import PDPAagreementPage from "../components/pdpaAgreement";
 import FailRegister from "../components/FailRegister";
-import ConfirmModal_ICT from "../components/confirmModal_Ict";
-import ConfirmModalICT from "../components/confirmModal_Ict";
+import ConfirmModalICT from "../components/confirmModal_ICT";
 
 const SolutionFormPage = () => {
 	const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver(ictFormAddSchema)});
