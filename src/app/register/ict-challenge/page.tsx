@@ -2,7 +2,7 @@
 // Page for Register Form
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import {Button} from "@mui/material";
-import ConfirmModal from "../components/confirmModal_ICT";
+
 import { grade, prefix } from "../constant/formConst";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -14,6 +14,8 @@ import TeamInfoForm from "../components/teamInfoForm";
 import CongratICT from "../components/CongratICT";
 import PDPAagreementPage from "../components/pdpaAgreement";
 import FailRegister from "../components/FailRegister";
+import ConfirmModal_ICT from "../components/confirmModal_Ict";
+import ConfirmModalICT from "../components/confirmModal_Ict";
 
 const SolutionFormPage = () => {
 	const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver(ictFormAddSchema)});
@@ -50,7 +52,7 @@ const SolutionFormPage = () => {
 	      หากกดยืนยันแล้วจะไม่สามารถแก้ไขข้อมูลการสมัครได้</p>
 					</div>
 					<div>
-						<ConfirmModal handleOnSubmit = {handleSubmit} setPage = {setPage} />
+						<ConfirmModalICT handleOnSubmit={handleSubmit} setPage={setPage}/>
 					</div>
 				</div>
 			</div>

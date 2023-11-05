@@ -9,10 +9,13 @@ import CongratOPH from "../components/CongratOPH";
 import Activity from "../components/Activity";
 import { ophFormAddSchema } from "../schema/ictFormSchema";
 import StudentInfoForm from "../components/studentInfoForm";
+import ConfirmModal_OPH from "../components/confirmModal_OPH";
+import ConfirmModalOPH from "../components/confirmModal_OPH";
+import { registerPage } from "../model/formRegister";
 
 const OpenhouseRegisterPage = () => {
 	const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver(ophFormAddSchema)});
-
+	const [Page , setPage] = useState<registerPage>(registerPage.pdapaPage);
 	return (
 		//   <CongratOPH/>
 		<div style={{ backgroundColor: "#34312F", padding: "30px" }}>
@@ -56,9 +59,7 @@ const OpenhouseRegisterPage = () => {
 				</div>
 				<div />
 			</div>
-			<div className="flex justify-end">    
-				<Button className="h-12 bg-primary"  variant="contained">ยืนยันการลงทะเบียน</Button>
-			</div>
+			<ConfirmModalOPH handleOnSubmit={handleSubmit} setPage={setPage}/>
 		</div>
 	);
 };
