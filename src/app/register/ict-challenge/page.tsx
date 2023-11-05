@@ -32,18 +32,14 @@ const SolutionFormPage = () => {
 								<p className="text-xl text-text-primary">Back</p>
 							</Button>
 						</div>
-				
+
 					</div>
 					<div className="w-72 md:w-full">
 						<h1 className="text-3xl font-bold" style={{color:"#3399CC"}}>แบบฟอร์มลงทะเบียน ICT Challenge 2023 </h1>
 					</div>
 					<div>
 						<p className="py-3  text-gray-3">
-	  			ก่อนนี้เธอคงจะปวดร้าว ต้องฝืนอดทนว่าไม่รู้ตัว คงไม่มีทางหรอก 
-	  			แต่เธอแค่ไม่กล้าบอก ก่อนนี้โลกดูช่างสดใส ได้ฝืนอดทนไม่ให้รู้ตัว 
-	  			เธอนั้นสำคัญเท่าไรฉันแค่ไม่กล้าบอกให้รู้ ฮู้ คงต้องเข้าใจหากฉันไม่บอกไป
-	  			เธอคงฝืนทนอยู่อย่างนี้เหมือนเดิมอยู่อย่างนี้ คงไม่เปลี่ยนไปหากฉันยื้อต่อไป
-	  			ให้เธอหายไปจากตรงนี้ให้เธอหายไปไม่ย้อนคืน
+						การลงทะเบียนเข้าแข่งขัน ICT Challenge 2023 ผู้เข้าแข่งขันหนึ่งคนสามารถลงทะเบียนได้เพียงหนึ่งทีมเท่านั้น และให้ตัวแทนทีมเป็นคนกรอกข้อมูลเพียงคนเดียว โดยหลังจากส่งฟอร์มเรียบร้อย สมาชิกในทีมทุกท่านจะได้รับอีเมลยืนยันการสมัครและแบบทดสอบเพื่อคัดเลือก โดยต้องทำแบบทดสอบให้เสร็จสิ้นตามกำหนดเวลา และรอการประกาศผลทีมที่เข้ารอบต่อไป
 						</p>
 					</div>
 					<div className="relative my-3 rounded-xl bg-primary">
@@ -59,7 +55,7 @@ const SolutionFormPage = () => {
 						<ConfirmModal handleOnSubmit = {handleSubmit} setPage = {setPage} />
 					</div>
 				</div>
-			</div> 
+			</div>
 		);
 	}
 	else if (Page === registerPage.pdapaPage){
@@ -78,9 +74,9 @@ const SolutionFormPage = () => {
 			<FailRegister/>
 		);
 	}
-			
+
 	// ) : ( <CongratICT/> )
-	
+
 };
 // };
 
