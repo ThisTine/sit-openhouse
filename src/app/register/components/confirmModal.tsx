@@ -86,8 +86,6 @@ const ConfirmModal = ({handleOnSubmit,setPage} : ConfirmModalProps) => {
 		
 	};
 
-	
-	const [isSuccess, setIsSuccess] = useState(false);
 	return (
 		<div className="flex justify-end">
             
