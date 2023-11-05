@@ -47,6 +47,6 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    padding: 20px;
-    padding-right: 50px;
+    padding: 8px;
+    padding-right: 30px;
 }
