@@ -11,7 +11,7 @@ interface PDPAagreementPageProps {
     setPage : Dispatch<SetStateAction<registerPage>>;
 }
 const PDPAagreementPage = ({setPage} : PDPAagreementPageProps) => {
-	const router = useRouter()
+	const router = useRouter();
 	return (
 		<div style={{backgroundColor:"#34312F"}} >
 			<div className="p-5">
@@ -37,7 +37,7 @@ const PDPAagreementPage = ({setPage} : PDPAagreementPageProps) => {
 					</div>
 				</div>
 				<div className="my-5 flex flex-col gap-5  md:flex-row md:justify-between">
-					<Button onClick={()=> router.back()} className="h-12"  variant="outlined">ย้อนกลับ</Button>
+					<Button className="h-12" onClick={()=> router.back()}  variant="outlined">ย้อนกลับ</Button>
 					<Button className="h-12 bg-primary" onClick={()=>setPage(registerPage.ictFormPage)} variant="contained">ยอมรับและยื่นยันการลงทะเบียน</Button>
 				</div>
 			</div>
