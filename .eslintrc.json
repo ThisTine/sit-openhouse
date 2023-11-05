@@ -6,7 +6,7 @@
     "indent": ["error","tab"],
     "handle-callback-err": "error",
     "linebreak-style": ["error","unix"],
-    "max-lines": ["error",120],
+    "max-lines": ["error",250],
     "react/react-in-jsx-scope": "off",
     "react/prefer-stateless-function": "error",
     "react/button-has-type": "error",
@@ -40,5 +40,5 @@
     "react/self-closing-comp": "warn",
     "react/jsx-sort-props": "warn"
   },
-  "extends": ["next/core-web-vitals","plugin:react/recommended"]
+  "extends": ["next/core-web-vitals","plugin:react/recommended","plugin:tailwindcss/recommended"]
 }

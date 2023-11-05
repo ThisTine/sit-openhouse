@@ -1,5 +1,52 @@
 @tailwind base;
+:root {
+    --primary: gray;
+    --secondary: darkgray;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 14px;
+    border: 3px solid var(--primary);
+}
 @tailwind components;
 @tailwind utilities;
 
 /* CSS goes here */
+
+.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background: #FF9B81;
+}
+  
+.swiper-pagination-bullet-active {
+    width: 19px;
+    height: 19px;
+    background: #FA4515;
+}
+
+.swiper-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px;
+    padding-right: 30px;
+}

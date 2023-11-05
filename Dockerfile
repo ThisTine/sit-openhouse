@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml* ./
 RUN \
   if [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i --frozen-lockfile; \
-  else echo "Lockfile not found." && exit 1; \
+  else echo "Lockfile not found.❌" && exit 1; \
   fi
 
 FROM base AS builder
