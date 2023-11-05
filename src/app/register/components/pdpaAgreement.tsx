@@ -13,7 +13,7 @@ interface PDPAagreementPageProps {
 const PDPAagreementPage = ({setPage} : PDPAagreementPageProps) => {
 	const router = useRouter();
 	return (
-		<div style={{backgroundColor:"#34312F"}} >
+		<div style={{backgroundColor:"#34312F",height:"100vh"}} >
 			<div className="p-5">
 				<div className="mt-20 flex justify-between">
 					<div>
