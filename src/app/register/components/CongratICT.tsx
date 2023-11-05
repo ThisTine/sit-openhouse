@@ -18,9 +18,7 @@ const CongratICT = () => {
 						<h1 className="mb-10 text-base text-slate-800"  >
 						คุณได้ลงทะเบียนเข้าร่วมงาน ICT Challenge 2023 แล้ว โปรดตรวจสอบอีเมลของสมาชิกในทีม เพื่อทำแบบทดสอบรอบคัดเลือก 
 ภายในวันที่ 16 พฤศจิกายน พ.ศ. 2566 ภายในเวลา 23.59 น.
-							</h1>
-						</div>
-					
+						</h1>
 					</div>
 				</div>
 				<div className="flex  items-center justify-center">			
