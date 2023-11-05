@@ -23,9 +23,7 @@ const FailRegister = () => {
 				</div>	
 				
 			</div>
-		</div>
-		
-					
+		</div>					
 	);
 };
 
