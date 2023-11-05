@@ -18,7 +18,7 @@ const FailRegister = () => {
 					<div className="flex  items-center justify-center">
 						<Button
 							className="m-10 h-12 w-28 bg-primary text-white"
-							onClick={() => {}}
+							onClick={() => {window.location.reload();}}
 							variant="contained"
 						>
 							<ArrowBackIosNewIcon className="text-white" /> ย้อนกลับ

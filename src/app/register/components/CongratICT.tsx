@@ -2,8 +2,10 @@ import { Button } from '@mui/material';
 import React from 'react';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { useRouter } from 'next/navigation';
 
 const CongratICT = () => {
+	const router = useRouter();
 	return (
 		<div className='min-h-screen w-screen bg-[url("/Group_88.png")] bg-cover bg-fixed'>
 			<div className='min-h-screen w-screen bg-gradient-to-b from-gray-600/70 to-gray-600/50 pb-10'>
@@ -23,7 +25,7 @@ const CongratICT = () => {
 					</div>
 				</div>
 				<div className="flex  items-center justify-center">			
-					<Button className="m-10 h-12 w-28 bg-primary text-white" onClick={()=>{}} variant='contained'>เสร็จสิ้น <ArrowForwardIosIcon className="text-white" /></Button>				
+					<Button className="m-10 h-12 w-28 bg-primary text-white" onClick={()=>router.push("/")} variant='contained'>เสร็จสิ้น <ArrowForwardIosIcon className="text-white" /></Button>				
 				</div>
 			</div>
 		</div>				
