@@ -66,16 +66,18 @@ const TeamInfoForm = ({ prefix, grade, formControl, formErrors }: ITeamInfoFormP
 					render={({ field }) => (
 						<div>
 							<h2 className="text-gray-4 ">ที่อยู่โรงเรียน *</h2>
-							<TextareaAutosize
-								minRows={5}
+							<TextField
+								multiline
+								rows={5}
 								{...field}
-								className="w-full rounded-lg bg-white p-3"
+								className="w-full rounded-lg bg-white "
+								error={!!formErrors.schoolAddress}
 							/>
 							<div className="text-red-600">{formErrors.schoolAddress?.message}</div>
 						</div>
 					)}
 				/>
-				<p className="text-gray-4">{`** กรุณาใส่ข้อมูลให้ครบ เลขที่ ซอย/ถนน แขวง/ตําบล เขต/อําเภอ จังหวัด รหัสไปรษณีย์`}</p>
+				<p className="text-gray-4">** กรุณาใส่ข้อมูลให้ครบ เลขที่ ซอย/ถนน แขวง/ตําบล เขต/อําเภอ จังหวัด รหัสไปรษณีย์</p>
 			</div>
 			<TeamMemberForm formControl={formControl} formErrors={formErrors} grade={grade} prefix={prefix} />
 			<AjarnIctForm formControl={formControl} formErrors={formErrors} prefix={prefix} />
