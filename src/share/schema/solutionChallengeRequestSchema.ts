@@ -1,7 +1,7 @@
 import { ObjectSchema, object, string } from "yup";
 import { ISolutionChllengeRequest } from "@/share/types/solutionChllengeRequest";
 
-const gmailReg = new RegExp(/^[\w.+\-]+@gmail\.com$/);
+const gmailReg = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{1,6}$/);
 
 export const SolutionChallengeReuqestSchema:ObjectSchema<ISolutionChllengeRequest> = object({
 	teamName: string().required(),
