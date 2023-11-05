@@ -18,9 +18,9 @@ const PDPAagreementPage = () => {
 					<Image alt="sit-logo" height={200} src="/assets/sit_logo.png" width={200} />
 				</div>
 				<div>
-					<h2 className="my-5 text-xl text-primary">หนังสือยินยอมเพื่อขอใช้ประโยชน์
+					<h2 className="my-5 text-xl text-primary  md:text-5xl">หนังสือยินยอมเพื่อขอใช้ประโยชน์
                     ข้อมูลส่วนบุคคล</h2>
-					<div className="my-5 text-gray-3">
+					<div className="my-8 text-gray-3 md:flex">
 						<p>คณะเทคโนโลยีสารสนเทศ</p>
 						<p>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</p>
 					</div>
@@ -30,8 +30,8 @@ const PDPAagreementPage = () => {
 						<PdpaText/>
 					</div>
 				</div>
-				<div className="my-5 flex flex-col gap-5">
-					<Button className="h-12" fullWidth variant="outlined">ย้อนกลับ</Button>
+				<div className="my-5 flex flex-col gap-5  md:flex-row md:justify-between">
+					<Button className="h-12"  variant="outlined">ย้อนกลับ</Button>
 					<Button className="h-12 bg-primary" variant="contained">ยอมรับและยื่นยันการลงทะเบียน</Button>
 				</div>
 			</div>
