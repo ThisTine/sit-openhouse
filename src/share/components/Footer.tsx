@@ -28,7 +28,7 @@ const Footer = () => {
 							<div>
 								<div className="mb-6 flex place-items-center gap-2 text-gray-200">
 									<Image alt='mail logo' src={Mail} />
-									<p>Info@sit.ac.th</p>
+									<p>info@sit.kmutt.ac.th</p>
 								</div>
 								<h1 className="text-2xl font-bold">Open House</h1>
 								<div className="my-2 flex place-items-center gap-2 text-gray-200">
