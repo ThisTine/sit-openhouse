@@ -23,7 +23,10 @@ export async function POST(request: Request) {
 			...gReq
 		});
 
-		await fetch(url+'&'+params);
+		const info = await fetch(url+'&'+params);
+		if(!info.ok){
+			return Response.json({error:"Failed send form to API"},{status:400});
+		}
 		const emailList = [{email: req.firstPersonEmail,name: req.firstPersonFirstname},
 			{email: req.secondPersonEmail,name: req.secondPersonFirstname},
 			{email: req.thirdPersonEmail,name: req.thirdPersonFirstname}];
