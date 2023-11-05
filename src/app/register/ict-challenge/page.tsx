@@ -2,7 +2,7 @@
 // Page for Register Form
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import {Button} from "@mui/material";
-import ConfirmModal from "../components/confirmModal";
+import ConfirmModal from "../components/confirmModal_ICT";
 import { grade, prefix } from "../constant/formConst";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
