@@ -6,7 +6,7 @@ import { grade, prefix } from "../constant/formConst";
 import { UseFormHandleSubmit, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import CongratOPH from "../components/CongratOPH";
-import Activity from "../components/Activity";
+// import Activity from "../components/Activity";
 import studentInfoForm from "../components/studentInfoForm";
 import { ophFormAddSchema } from "../schema/ictFormSchema";
 import { StudentOpenhouseForm } from "../model/formRegister";
@@ -25,6 +25,7 @@ const openhouseRegisterPage = () => {
 							<p className="text-xl text-text-primary">Back</p>
 						</Button>
 					</div>
+				
 				</div>
 				<div className="w-72 md:w-full">
 					<h1 className="text-3xl font-bold" style={{ color: "#3399CC" }}>
@@ -45,7 +46,7 @@ const openhouseRegisterPage = () => {
 				<div className="relative my-3 rounded-xl bg-primary">
 					<div className="relative bottom-3 right-3 rounded-xl bg-gray-2">
 						{/* <studentInfoForm formControl={control} formErrors={errors} grade={grade} prefix={prefix}/> */}
-						<Activity />
+						{/* <Activity /> */}
 					</div>
 				</div>
 				<div className="m-2">

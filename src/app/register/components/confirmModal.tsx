@@ -2,14 +2,17 @@
 import { Box, Button, Modal } from '@mui/material';
 import React, { useState } from 'react';
 import { UseFormHandleSubmit } from 'react-hook-form';
-import { ICTChallengeForm } from '../model/formRegister';
+import { ICTChallengeForm, registerPage } from '../model/formRegister';
 import { ISolutionChllengeRequest } from '../../../share/types/solutionChllengeRequest';
+import { Dispatch } from 'react';
+import { SetStateAction } from 'react';
 interface ConfirmModalProps {
 	handleOnSubmit : UseFormHandleSubmit<ICTChallengeForm,undefined>;
+	setPage : Dispatch<SetStateAction<registerPage>>;
 }
 
 
-const ConfirmModal = ({handleOnSubmit} : ConfirmModalProps) => {
+const ConfirmModal = ({handleOnSubmit,setPage} : ConfirmModalProps) => {
 	const [open, setOpen] = useState(false);
 	const [formRequest, setFormRequest] = useState<ISolutionChllengeRequest>();
 	const handleOpen = () => {
@@ -65,19 +68,24 @@ const ConfirmModal = ({handleOnSubmit} : ConfirmModalProps) => {
 		setFormRequest(resultRequest);
 	};
 
-	const handleOnconfirm = () => {
+	const handleOnconfirm = async() => {
 		handleClose();
-		// const result = fetch("/api/register/solution-challenge", {
-		// 	body: JSON.stringify(formRequest),
-		// 	headers: {
-		// 		"Content-Type": "application/json"
-		// 	}
-		// });
-		console.log(formRequest);
+		const result = await fetch("/api/register/solution-challenge", {
+			body: JSON.stringify(formRequest),
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json"
+			}
+		});
+		if(result.status === 200){
+			setPage(registerPage.congratsIct);
+		}
+		else{
+			setPage(registerPage.failCongrats);
+		}
+		
 	};
 
-	
-	const [isSuccess, setIsSuccess] = useState(false);
 	return (
 		<div className="flex justify-end">
             

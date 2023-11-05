@@ -20,7 +20,9 @@ export const ictFormAddSchema: ObjectSchema<ICTChallengeForm> = object().shape({
 	nameMember1 : string().required("กรุณาใส่ชื่อ"),
 	surnameMember1 : string().required("กรุณาใส่นามสกุล"),
 	gradeMember1 : string().required("กรุณาใส่ชั้นปี"),
-	phoneNumMember1 : string().required("กรุณาใส่เบอร์โทรศัพท์"),
+	phoneNumMember1 : string().matches(IS_PHONE, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด')
+		.max(10, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด')
+		.min(10, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด').required('กรุณากรอกข้อมูลเบอร์โทรศัพท์'),
 	emailMember1 : string().email("กรุณาใส่ email ที่ถูกต้อง").required("กรุณาใส่อีเมล"),
 	facebookMember1 : string(),
 	lineMember1 : string(),
@@ -29,7 +31,9 @@ export const ictFormAddSchema: ObjectSchema<ICTChallengeForm> = object().shape({
 	nameMember2 : string().required("กรุณาใส่ชื่อ"),
 	surnameMember2 : string().required("กรุณาใส่นามสกุล"),
 	gradeMember2 : string().required("กรุณาใส่ชั้นปี"),
-	phoneNumMember2 : string().required("กรุณาใส่เบอร์โทรศัพท์"),
+	phoneNumMember2 : string().matches(IS_PHONE, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด')
+		.max(10, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด')
+		.min(10, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด').required('กรุณากรอกข้อมูลเบอร์โทรศัพท์'),
 	emailMember2 : string().email("กรุณาใส่ email ที่ถูกต้อง").required("กรุณาใส่อีเมล"),	
 	facebookMember2 : string(),
 	lineMember2 : string(),
@@ -38,7 +42,9 @@ export const ictFormAddSchema: ObjectSchema<ICTChallengeForm> = object().shape({
 	nameMember3 : string().required("กรุณาใส่ชื่อ"),
 	surnameMember3 : string().required("กรุณาใส่นามสกุล"),
 	gradeMember3 : string().required("กรุณาใส่ชั้นปี"),
-	phoneNumMember3 : string().required("กรุณาใส่เบอร์โทรศัพท์"),
+	phoneNumMember3 : string().matches(IS_PHONE, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด')
+		.max(10, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด')
+		.min(10, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด').required('กรุณากรอกข้อมูลเบอร์โทรศัพท์'),
 	emailMember3 : string().email("กรุณาใส่ email ที่ถูกต้อง").required("กรุณาใส่อีเมล"),
 	facebookMember3 : string(),
 	lineMember3 : string()
@@ -58,5 +64,5 @@ export const ophFormAddSchema: ObjectSchema<StudentOpenhouseForm> = object().sha
 	studentGrade: string().required("กรุณาใส่ชั้นปี"),
 	studentFacebook: string(),
 	studentEmail: string().email("กรุณาใส่ email ที่ถูกต้อง").required("กรุณาใส่อีเมล"),
-
+	StudentLine: string()
 });
