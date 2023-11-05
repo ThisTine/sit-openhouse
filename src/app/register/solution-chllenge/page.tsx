@@ -25,7 +25,7 @@ const SolutionFormPage = () => {
 				<div className="p-5">
 					<div className="flex justify-between py-3">
 						<div>
-							<Button>
+							<Button onClick={()=>setPage(registerPage.pdapaPage)}>
 								<ArrowBackIosNewIcon className="text-white" />
 								<p className="text-xl text-text-primary">Back</p>
 							</Button>
@@ -54,7 +54,7 @@ const SolutionFormPage = () => {
 	      หากกดยืนยันแล้วจะไม่สามารถแก้ไขข้อมูลการสมัครได้</p>
 					</div>
 					<div>
-						<ConfirmModal handleOnSubmit = {handleSubmit} />
+						<ConfirmModal handleOnSubmit = {handleSubmit} setPage = {setPage} />
 					</div>
 				</div>
 			</div> 
@@ -63,6 +63,12 @@ const SolutionFormPage = () => {
 	else if (Page === registerPage.pdapaPage){
 		return(
 			<PDPAagreementPage setPage={setPage}/>
+		);
+	}
+
+	else if (Page === registerPage.congratsIct){
+		return(
+			<CongratICT/>
 		);
 	}
 			
