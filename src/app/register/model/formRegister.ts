@@ -46,7 +46,7 @@ export interface StudentOpenhouseForm {
   studentSchoolAddress: string;
   studentGrade: string;
   studentPrefix: string;
-  facebook?: string;
+  studentFacebook?: string;
   StudentLine?: string;
 }
 

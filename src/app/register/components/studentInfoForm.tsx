@@ -160,7 +160,7 @@ const studentInfoForm = ({
 				<div className="col-span-6 py-5 md:col-span-3">
 					<Controller
 						control={formControl}
-						name="facebook"
+						name="studentFacebook"
 						render={({ field }) => (
 							<div>
 								<h2 className="text-gray-4">Facebook (ไม่บังคับ)</h2>
@@ -169,9 +169,9 @@ const studentInfoForm = ({
 									size="medium"
 									{...field}
 									className="rounded-lg bg-white"
-									error={!!formErrors.facebook}
+									error={!!formErrors.studentFacebook}
 								 />
-								 <div className="text-red-600">{formErrors.facebook?.message}</div>
+								 <div className="text-red-600">{formErrors.studentFacebook?.message}</div>
 							</div>
 						)}
 					/>
