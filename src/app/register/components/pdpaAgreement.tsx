@@ -6,19 +6,21 @@ import PdpaText from "./pdpaText";
 import { Dispatch } from "react";
 import { SetStateAction } from "react";
 import { registerPage } from "../model/formRegister";
+import { useRouter } from 'next/navigation';
 interface PDPAagreementPageProps {
     setPage : Dispatch<SetStateAction<registerPage>>;
 }
 const PDPAagreementPage = ({setPage} : PDPAagreementPageProps) => {
+	const router = useRouter();
 	return (
 		<div style={{backgroundColor:"#34312F"}} >
 			<div className="p-5">
 				<div className="mt-20 flex justify-between">
 					<div>
-						<Button>
+						{/* <Button onClick={()=> router.back()}>
 							<ArrowBackIosNewIcon className="text-white" />
 							<p className="text-xl text-text-primary">Back</p>
-						</Button>
+						</Button> */}
 					</div>
 				</div>
 				<div>
@@ -35,7 +37,7 @@ const PDPAagreementPage = ({setPage} : PDPAagreementPageProps) => {
 					</div>
 				</div>
 				<div className="my-5 flex flex-col gap-5  md:flex-row md:justify-between">
-					<Button className="h-12"  variant="outlined">ย้อนกลับ</Button>
+					<Button className="h-12" onClick={()=> router.back()}  variant="outlined">ย้อนกลับ</Button>
 					<Button className="h-12 bg-primary" onClick={()=>setPage(registerPage.ictFormPage)} variant="contained">ยอมรับและยื่นยันการลงทะเบียน</Button>
 				</div>
 			</div>
