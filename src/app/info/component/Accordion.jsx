@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
+import { ExpandMoreOutlined } from '@mui/icons-material';
 
 const Accordions = ({ title, content }) => {
 	return (
@@ -16,10 +17,12 @@ const Accordions = ({ title, content }) => {
 		>
 			<AccordionSummary
 				aria-controls="panel1a-content"
-				// expandIcon={<ExpandMoreIcon/>}
+				expandIcon={<ExpandMoreOutlined className='text-white'/>}
 				id="panel1a-header"
-			>
-				<div className='text-2xl'>{title}</div>
+			>	
+				<div className='flex w-full justify-between'>
+					<div className='text-2xl'>{title}</div>
+				</div>
 			</AccordionSummary>
 			<AccordionDetails>
 				<Typography>{content}</Typography>
