@@ -52,8 +52,11 @@ export const ophFormAddSchema: ObjectSchema<StudentOpenhouseForm> = object().sha
 	studentPhoneNum: string().matches(IS_PHONE, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด')
 		.max(10, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด')
 		.min(10, 'กรุณากรอกข้อมูลเบอร์โทรศัพท์ทั้ง 10 หลักไม่มีขีด').required('กรุณากรอกข้อมูลเบอร์โทรศัพท์'),
-	studentEmail: string().required("กรุณาใส่อีเมล"),
 	studentSchoolName: string().email("กรุณาใส่ email ที่ถูกต้อง").required("กรุณาใส่ชื่อโรงเรียน"),
-	studentSchoolAddress: string().required("กรุณาใส่ที่อยู่โรงเรียน")
+	studentSchoolAddress: string().required("กรุณาใส่ที่อยู่โรงเรียน"),
+	studentPrefix: string().required("กรุณาใส่คำนำหน้า"),
+	studentGrade: string().required("กรุณาใส่ชั้นปี"),
+	studentFacebook: string(),
+	studentEmail: string().email("กรุณาใส่ email ที่ถูกต้อง").required("กรุณาใส่อีเมล"),
 
 });

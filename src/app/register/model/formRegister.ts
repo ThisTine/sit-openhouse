@@ -44,6 +44,10 @@ export interface StudentOpenhouseForm {
   studentEmail: string;
   studentSchoolName: string;
   studentSchoolAddress: string;
+  studentGrade: string;
+  studentPrefix: string;
+  facebook?: string;
+  StudentLine?: string;
 }
 
 export interface Iprefix {

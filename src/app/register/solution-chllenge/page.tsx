@@ -7,7 +7,6 @@ import { grade, prefix } from "../constant/formConst";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ictFormAddSchema } from "../schema/ictFormSchema";
-import { ICTChallengeForm } from "../model/formRegister";
 import { useState } from "react";
 import React from "react";
 import TeamInfoForm from "../components/teamInfoForm";
@@ -63,6 +62,5 @@ const SolutionFormPage = () => {
 	// ) : ( <CongratICT/> )
 	);
 };
-// };
 
 export default SolutionFormPage;
