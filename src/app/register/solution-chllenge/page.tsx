@@ -7,18 +7,13 @@ import { grade, prefix } from "../constant/formConst";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ictFormAddSchema } from "../schema/ictFormSchema";
-import { ICTChallengeForm } from "../model/formRegister";
+import { ICTChallengeForm, registerPage } from "../model/formRegister";
 import { useState } from "react";
 import React from "react";
 import TeamInfoForm from "../components/teamInfoForm";
 const SolutionFormPage = () => {
 	const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver(ictFormAddSchema)});
-	// const [isSuccess, setIsSuccess] = useState(false);
-	//  function submited(){
-	// 	const onSubmit = (data : ICTChallengeForm) => {
-	// 		setIsSuccess(true);
-	// 		console.log(data);
-	// 	};
+	const [Page , setPage] = useState<registerPage>();
 	return (
 		// <CongratICT/>
 		//   ! isSuccess ? (
@@ -55,7 +50,7 @@ const SolutionFormPage = () => {
 	      หากกดยืนยันแล้วจะไม่สามารถแก้ไขข้อมูลการสมัครได้</p>
 				</div>
 				<div>
-					<ConfirmModal handleOnSubmit = {handleSubmit}/>
+					<ConfirmModal handleOnSubmit = {handleSubmit} />
 				</div>
 			</div>
 		</div> 

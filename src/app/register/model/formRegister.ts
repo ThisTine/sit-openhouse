@@ -9,7 +9,7 @@ export interface ICTChallengeForm {
   ajarnEmail: string;
   ajarnPosition: string;
 
-  prefixMember1: string
+  prefixMember1: string;
   nameMember1: string;
   surnameMember1: string;
   gradeMember1: string;
@@ -18,7 +18,7 @@ export interface ICTChallengeForm {
   facebookMember1?: string;
   lineMember1?: string;
 
-  prefixMember2:string
+  prefixMember2: string;
   nameMember2: string;
   surnameMember2: string;
   gradeMember2: string;
@@ -27,7 +27,7 @@ export interface ICTChallengeForm {
   facebookMember2?: string;
   lineMember2?: string;
 
-  prefixMember3:string
+  prefixMember3: string;
   nameMember3: string;
   surnameMember3: string;
   gradeMember3: string;
@@ -54,4 +54,13 @@ export interface Iprefix {
 export interface Igrade {
   label: string;
   value: string;
+}
+
+export const enum registerPage {
+  pdapaPage = "pdpaPage",
+  ictFormPage = "ictFormPage",
+  openHousePage = "openHousePage",
+  congratsIct = "congratsIct",
+  congratsOpenHouse = "congratsOpenhouse",
+  failCongrats = "failCongrats"
 }

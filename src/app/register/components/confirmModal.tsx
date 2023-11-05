@@ -2,7 +2,7 @@
 import { Box, Button, Modal } from '@mui/material';
 import React, { useState } from 'react';
 import { UseFormHandleSubmit } from 'react-hook-form';
-import { ICTChallengeForm } from '../model/formRegister';
+import { ICTChallengeForm, registerPage } from '../model/formRegister';
 interface ConfirmModalProps {
 	handleOnSubmit : UseFormHandleSubmit<ICTChallengeForm,undefined>;
 }
