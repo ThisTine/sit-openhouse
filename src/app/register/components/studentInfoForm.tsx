@@ -19,6 +19,7 @@ const StudentInfoForm = ({
 		<div className="p-8">
 			<div className="col-span-4">
 				<h1 className="text-3xl text-primary">ข้อมูลนักเรียน</h1>
+				<h2 className="py-3 text-xl text-primary">ข้อมูลส่วนตัว</h2>
 			</div>
 			<div className="grid grid-cols-7 gap-4">
 				<div className="col-span-7 py-5  md:col-span-1">
@@ -42,9 +43,7 @@ const StudentInfoForm = ({
 							<div className="text-red-500">{formErrors.studentPrefix?.message}</div>
 						</div>
 					)}/>
-				</div>
-			</div>
-			<div className="grid grid-cols-6 gap-4">
+				</div>			
 				<div className="col-span-6 py-5 md:col-span-3">
 					<Controller
 						control={formControl}
@@ -182,7 +181,7 @@ const StudentInfoForm = ({
 						name="StudentLine"
 						render={({ field }) => (
 							<div>
-								<h2 className="text-gray-4">Line ID (ไม่บังคับ) *</h2>
+								<h2 className="text-gray-4">Line ID (ไม่บังคับ)</h2>
 								<TextField
 									fullWidth
 									size="medium"
@@ -196,30 +195,32 @@ const StudentInfoForm = ({
 					/>
 				</div>
 			</div>
-			<div className="py-5">
-				<div className="px-1">
-					<Controller
-						control={formControl}
-						name="studentSchoolName"
-						render={({ field }) => (
-							<div>
-								<h2 className="text-gray-4">ชื่อโรงเรียน *</h2>
-								<div className="grid grid-cols-6 gap-4">
-									<div className="col-span-6 md:col-span-4">
-										<TextField
-											fullWidth
-											size="medium"
-											{...field}
-											className="rounded-lg bg-white"
-											error={!!formErrors.studentSchoolName}
+			<h2 className="py-3 text-xl text-primary">โรงเรียน</h2>
+			
+			<div className="grid grid-cols-2 gap-4">
+				<Controller
+					control={formControl}
+					name="studentSchoolName"
+					render={({ field }) => (
+						<div>
+							<h2 className="text-gray-4">ชื่อโรงเรียน *</h2>
+							<div className="grid grid-cols-4 gap-4">
+								<div className="col-span-6 md:col-span-4">
+									<TextField
+										fullWidth
+										size="medium"
+										{...field}
+										className="rounded-lg bg-white"
+										error={!!formErrors.studentSchoolName}
 								 />
-									</div>
 								</div>
-								 <div className="text-red-600">{formErrors.studentSchoolName?.message}</div>
 							</div>
-						)}
-					/>
-				</div>
+								 <div className="text-red-600">{formErrors.studentSchoolName?.message}</div>
+						</div>
+					)}
+				/>
+			</div>
+			<div className='py-5'>
 				<Controller
 					control={formControl}
 					name="studentSchoolAddress"
@@ -240,9 +241,9 @@ const StudentInfoForm = ({
 				<p className="text-gray-4">{`** กรุณาใส่ข้อมูลให้ครบ เลขที่ ซอย/ถนน แขวง/ตําบล เขต/อําเภอ จังหวัด รหัสไปรษณีย์ ที่อยู่ในการจัดส่งเกียรติบัตร 
     (หากเป็นที่อยู่เดียวกับโรงเรียน ให้ระบุว่า "ที่อยู่เดียวกับโรงเรียน")`}</p>
 			</div>
-			
 		</div>
+			
+		
 	);
 };
-
 export default StudentInfoForm;

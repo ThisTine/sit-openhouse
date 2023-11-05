@@ -8,7 +8,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import CongratOPH from "../components/CongratOPH";
 import Activity from "../components/Activity";
 import { ophFormAddSchema } from "../schema/ictFormSchema";
-import { StudentOpenhouseForm } from "../model/formRegister";
 import StudentInfoForm from "../components/studentInfoForm";
 
 const OpenhouseRegisterPage = () => {
@@ -57,8 +56,10 @@ const OpenhouseRegisterPage = () => {
 				</div>
 				<div />
 			</div>
+			<div className="flex justify-end">    
+				<Button className="h-12 bg-primary"  variant="contained">ยืนยันการลงทะเบียน</Button>
+			</div>
 		</div>
-	
 	);
 };
 
