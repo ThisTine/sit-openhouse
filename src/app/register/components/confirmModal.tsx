@@ -72,11 +72,12 @@ const ConfirmModal = ({handleOnSubmit,setPage} : ConfirmModalProps) => {
 		handleClose();
 		const result = await fetch("/api/register/solution-challenge", {
 			body: JSON.stringify(formRequest),
+			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
 			}
 		});
-		if(result){
+		if(result.status === 200){
 			setPage(registerPage.congratsIct);
 		}
 		else{
