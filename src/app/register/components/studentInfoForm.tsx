@@ -44,7 +44,7 @@ const StudentInfoForm = ({
 						</div>
 					)}/>
 				</div>			
-				<div className="col-span-6 py-5 md:col-span-3">
+				<div className="col-span-7 py-5 md:col-span-3">
 					<Controller
 						control={formControl}
 						name="studentName"
@@ -65,7 +65,7 @@ const StudentInfoForm = ({
 						)}
 					/>
 				</div>
-				<div className="col-span-6 py-5 md:col-span-3">
+				<div className="col-span-7 py-5 md:col-span-3">
 					<Controller
 						control={formControl}
 						name="studentSurname"
@@ -196,30 +196,28 @@ const StudentInfoForm = ({
 				</div>
 			</div>
 			<h2 className="py-3 text-xl text-primary">โรงเรียน</h2>
-			
-			<div className="grid grid-cols-2 gap-4">
-				<Controller
-					control={formControl}
-					name="studentSchoolName"
-					render={({ field }) => (
-						<div>
-							<h2 className="text-gray-4">ชื่อโรงเรียน *</h2>
-							<div className="grid grid-cols-4 gap-4">
-								<div className="col-span-6 md:col-span-4">
-									<TextField
-										fullWidth
-										size="medium"
-										{...field}
-										className="rounded-lg bg-white"
-										error={!!formErrors.studentSchoolName}
+			<Controller
+				control={formControl}
+				name="studentSchoolName"
+				render={({ field }) => (
+					<div>
+						<h2 className="text-gray-4">ชื่อโรงเรียน *</h2>
+						<div className='grid grid-cols-4'>
+							<div className="col-span-7 md:col-span-2">
+								<TextField
+									fullWidth
+									size="medium"
+									{...field}
+									className="rounded-lg bg-white"
+									error={!!formErrors.studentSchoolName}
 								 />
-								</div>
-							</div>
-								 <div className="text-red-600">{formErrors.studentSchoolName?.message}</div>
+							</div>	
 						</div>
-					)}
-				/>
-			</div>
+								 <div className="text-red-600">{formErrors.studentSchoolName?.message}</div>
+					</div>
+				)}
+			/>
+			
 			<div className='py-5'>
 				<Controller
 					control={formControl}
