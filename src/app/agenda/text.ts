@@ -4,8 +4,8 @@ export const th = {
 	time: "เวลา",
 	place: "สถานที่",
 	ddayLocation: "@LX Building 3rd floor",
-	openhouseWorkshopLocation: "@LX Building 10 & 12 floor",
-	ictLocation: "@LX Building 3 floor",
+	openhouseWorkshopLocation: "@LX Building 10th & 12th floor",
+	ictLocation: "@LX Building 3rd floor",
 	openhouseStageLocation: "@LX Building 1st floor"
 };
 
