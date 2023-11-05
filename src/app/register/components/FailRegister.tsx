@@ -27,7 +27,7 @@ const FailRegister = () => {
 				onClick={() => {}}
 				variant="contained"
 			>
-        เสร็จสิ้น <ArrowBackIosNewIcon className="text-white" />
+				<ArrowBackIosNewIcon className="text-white" /> ย้อนกลับ
 			</Button>
 		</div>
 	);
