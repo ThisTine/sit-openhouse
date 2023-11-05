@@ -41,7 +41,8 @@ const slider = [
 		location: "Auditorium ชั้น 3 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
 		showButton: true,
 		showLicense: true,
-		moreDetails: <IctChallenge />
+		moreDetails: <IctChallenge />,
+		href: "/register/ict-challenge"
 	},
 	{
 		details: "รายละเอียดเพิ่มเติม...",
@@ -84,6 +85,7 @@ export default function App() {
 							<PageView 
 							  buttonText={slide.buttonText}
 							  details={slide.details}
+							  href={slide.href}
 							  imageUrl={slide.imageUrl}
 							  location={slide.location}
 							  moreDetails={slide.moreDetails}
