@@ -1,6 +1,8 @@
 import { ObjectSchema, object, string } from "yup";
 import { ICTChallengeForm, StudentOpenhouseForm } from "../model/formRegister";
 
+const IS_PHONE = /^\+?[0-9\s.-]+$/;
+
 export const ictFormAddSchema: ObjectSchema<ICTChallengeForm> = object().shape({
 	teamName: string().required("กรุณาใส่ชื่อทีม"),
 	schoolName: string().required("กรุณาใส่ชื่อโรงเรียน"),
@@ -48,6 +50,9 @@ export const ophFormAddSchema: ObjectSchema<StudentOpenhouseForm> = object().sha
 	studentPhoneNum: string().required("กรุณาใส่เบอร์โทรศัพท์").matches(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/, 'กรุณาตรวจสอบความถูกต้องอีกครั้ง'),
 	studentEmail: string().required("กรุณาใส่อีเมล").matches(/^[\w-.]+@([\w-]+.)+[\w-]{2,4}$/, 'กรุณาตรวจสอบความถูกต้องอีกครั้ง'),
 	studentSchoolName: string().required("กรุณาใส่ชื่อโรงเรียน"),
-	studentSchoolAddress: string().required("กรุณาใส่ที่อยู่โรงเรียน")
-
+	studentSchoolAddress: string().required("กรุณาใส่ที่อยู่โรงเรียน"),
+	studentPrefix: string().required("กรุณาใส่คำนำหน้า"),
+	studentGrade: string().required("กรุณาใส่ชั้นปี"),
+	studentFacebook: string(),
+	StudentLine: string()
 });
