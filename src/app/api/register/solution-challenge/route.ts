@@ -24,18 +24,22 @@ export async function POST(request: Request) {
 		});
 
 		await fetch(url+'&'+params);
-		
+		const emailList = [{email: req.firstPersonEmail,name: req.firstPersonFirstname},
+			{email: req.secondPersonEmail,name: req.secondPersonFirstname},
+			{email: req.thirdPersonEmail,name: req.thirdPersonFirstname}];
 
-		const template =  await getEmailTemplate({
-			event:"ICT",
-			to:[req.firstPersonEmail, req.secondPersonEmail, req.thirdPersonEmail, req.advisorPersonEmail],
-			name:req.firstPersonFirstname
-		});
-
-		await sendmail(template);
-
+		for(let name of emailList){
+			const template =  await getEmailTemplate({
+				event:"ICT",
+				to: name.email,
+				name: name.name
+			});
+	
+			await sendmail(template);
+				
+		}
 		return Response.json(req);
-		
+
 	}catch(err){
 		return Response.json(err,{status:400});
 	}
