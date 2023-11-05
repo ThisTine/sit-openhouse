@@ -40,6 +40,7 @@ const TimeTable: FC<{
 					}
 					onClick={() => handleFilterSelect(2)}>
 					<h3>ICT Challenge</h3>
+					<h4>{th.ictLocation}</h4>
 				</div>
 				<div
 					className={
@@ -50,11 +51,7 @@ const TimeTable: FC<{
 					}
 					onClick={() => handleFilterSelect(1)}>
 					<h3>Open House 2023 (Stage)</h3>
-					<h4>
-						{lang === "th"
-							? th.openhouseLocation
-							: en.openhouseLocation}
-					</h4>
+					<h4>{th.openhouseStageLocation}</h4>
 				</div>
 				<div
 					className={
@@ -65,6 +62,7 @@ const TimeTable: FC<{
 					}
 					onClick={() => handleFilterSelect(1)}>
 					<h3>Open House 2023 (Workshop)</h3>
+					<h4>{th.openhouseWorkshopLocation}</h4>
 				</div>
 			</div>
 			{/* Agenda */}

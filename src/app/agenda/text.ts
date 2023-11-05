@@ -3,8 +3,10 @@ export const th = {
 	all: "ทั้งหมด",
 	time: "เวลา",
 	place: "สถานที่",
-	ddayLocation: "ณ LX ชั้น 3",
-	openhouseLocation: "ณ LX ชั้น 1"
+	ddayLocation: "@LX Building 3rd floor",
+	openhouseWorkshopLocation: "@LX Building 10 & 12 floor",
+	ictLocation: "@LX Building 3 floor",
+	openhouseStageLocation: "@LX Building 1st floor"
 };
 
 export const en = {
@@ -12,6 +14,6 @@ export const en = {
 	all: "All",
 	time: "Time",
 	place: "Place",
-	ddayLocation: "At LX 3rd floor",
-	openhouseLocation: "At LX 1st floor"
+	ddayLocation: "@LX Building 3rd floor",
+	openhouseLocation: "@Building LX 1st floor"
 };
