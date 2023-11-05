@@ -11,16 +11,15 @@ interface PDPAagreementPageProps {
 }
 const PDPAagreementPage = ({setPage} : PDPAagreementPageProps) => {
 	return (
-		<div style={{backgroundColor:"#34312F"}}>
+		<div style={{backgroundColor:"#34312F"}} >
 			<div className="p-5">
-				<div className="flex justify-between py-3">
+				<div className="mt-20 flex justify-between">
 					<div>
 						<Button>
 							<ArrowBackIosNewIcon className="text-white" />
 							<p className="text-xl text-text-primary">Back</p>
 						</Button>
 					</div>
-					<Image alt="sit-logo" height={200} src="/assets/sit_logo.png" width={200} />
 				</div>
 				<div>
 					<h2 className="my-5 text-xl text-primary  md:text-5xl">หนังสือยินยอมเพื่อขอใช้ประโยชน์
