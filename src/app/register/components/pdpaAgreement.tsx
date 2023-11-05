@@ -38,7 +38,7 @@ const PDPAagreementPage = ({setPage} : PDPAagreementPageProps) => {
 				</div>
 				<div className="my-5 flex flex-col gap-5  md:flex-row md:justify-between">
 					<Button className="h-12" onClick={()=> router.back()}  variant="outlined">ย้อนกลับ</Button>
-					<Button className="h-12 bg-primary" onClick={()=>setPage(registerPage.ictFormPage)} variant="contained">ยอมรับและยื่นยันการลงทะเบียน</Button>
+					<Button className="h-12 bg-primary" onClick={()=>setPage(registerPage.ictFormPage)} variant="contained">ยอมรับและยืนยันการลงทะเบียน</Button>
 				</div>
 			</div>
 		</div>);

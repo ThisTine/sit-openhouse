@@ -22,7 +22,7 @@ const Ict_Challenge = () => {
 			</div>
 			<p>สมัครได้ตั้งแต่วันนี้ - 16 พฤศจิกายน 2566</p>
 			<div>
-				<p>อ่านรายละเอียดเพิ่มเติมได้ที่  https://kmutt.me/ictchallenge2023 สอบถามรายละเอียดได้ที่  024709882</p>
+				<p>อ่านรายละเอียดเพิ่มเติมได้ที่  https://kmutt.me/ictchallenge2023 สอบถามรายละเอียดได้ที่  02-470-9832</p>
 				<ul>
 					<li>Line@: @SIT.KMUTT</li>
 					<li>FB: SIT.Family</li>

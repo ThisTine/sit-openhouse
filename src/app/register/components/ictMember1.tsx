@@ -12,8 +12,8 @@ const IctMember1Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 				</div>
 			</div>
 			<h2 className="text-xl text-primary">ข้อมูลส่วนตัว</h2>
-			
-			
+
+
 			<div className="grid grid-cols-7 gap-4">
 				<div className="col-span-7 py-5 md:col-span-1">
 					<h2 className="text-gray-4">คำนำหน้า*</h2>
@@ -37,7 +37,7 @@ const IctMember1Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 						</div>
 					)}/>
 				</div>
-				
+
 				<div className="col-span-7 py-5 md:col-span-3">
 					<Controller
 						control={formControl}
@@ -77,7 +77,7 @@ const IctMember1Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 					/>
 				</div>
 			</div>
-			
+
 			<div className="py-5">
 				<h2 className="text-gray-4">ระดับชั้นที่กำลังศึกษาอยู่*</h2>
 				<div className="grid grid-cols-6 gap-4">
@@ -132,7 +132,7 @@ const IctMember1Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 							name="emailMember1"
 							render={({ field }) => (
 								<div>
-									<h2 className="text-gray-4">Email (Gmail เท่านั้น) *</h2>
+									<h2 className="text-gray-4">Email *</h2>
 									<TextField
 										fullWidth
 										size="medium"
@@ -146,7 +146,7 @@ const IctMember1Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 						/>
 					</div>
 				</div>
-				
+
 				<div className="grid grid-cols-6 gap-4">
 					<div className="col-span-6 py-5 md:col-span-3">
 						<Controller
@@ -180,12 +180,12 @@ const IctMember1Form = ({grade,prefix,formControl,formErrors}: IteamMemberFormPr
 								 />
 								</div>
 							)}
-						/>					
+						/>
 					</div>
 				</div>
 			</div>
 		</div>
-			
+
 	);
 };
 

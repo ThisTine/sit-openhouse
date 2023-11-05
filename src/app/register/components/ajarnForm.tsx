@@ -4,19 +4,19 @@ import { Select, MenuItem, TextField } from "@mui/material";
 import React from "react";
 
 export interface AjarnIctFormProps {
-	formControl : Control<ICTChallengeForm,any>
-	formErrors : FieldErrors<ICTChallengeForm>
-	prefix : Iprefix[]
+	formControl: Control<ICTChallengeForm, any>
+	formErrors: FieldErrors<ICTChallengeForm>
+	prefix: Iprefix[]
 }
 
-const AjarnIctForm = ({formControl,formErrors,prefix} : AjarnIctFormProps) =>{
-	return(
+const AjarnIctForm = ({ formControl, formErrors, prefix }: AjarnIctFormProps) => {
+	return (
 		<div>
 			<h2 className="my-10 text-3xl text-primary">อาจารย์ที่ปรึกษาทีม</h2>
 			<div className="grid grid-cols-7 gap-4">
 				<div className="col-span-7 py-5  md:col-span-1">
 					<h2 className="text-gray-4">คำนำหน้า *</h2>
-					<Controller control={formControl} name="ajarnPrefix" render={({ field: { onChange, ...rest }})=>(
+					<Controller control={formControl} name="ajarnPrefix" render={({ field: { onChange, ...rest } }) => (
 						<div>
 							<Select
 								fullWidth
@@ -24,19 +24,19 @@ const AjarnIctForm = ({formControl,formErrors,prefix} : AjarnIctFormProps) =>{
 								{...rest}
 								className="rounded-lg bg-white"
 								error={!!formErrors.ajarnPrefix}
-								onChange={(e,data)=>{
-									onChange(e,data);
+								onChange={(e, data) => {
+									onChange(e, data);
 								}}
 							>
-								{prefix.map((item)=>(
-									<MenuItem  key={item.value} value={item.value}>{item.label}</MenuItem>
+								{prefix.map((item) => (
+									<MenuItem key={item.value} value={item.value}>{item.label}</MenuItem>
 								))}
 							</Select>
 							<div className="text-red-500">{formErrors.ajarnPrefix?.message}</div>
 						</div>
-					)}/>
+					)} />
 				</div>
-				
+
 				<div className="col-span-7 py-5 md:col-span-3">
 					<Controller
 						control={formControl}
@@ -50,8 +50,8 @@ const AjarnIctForm = ({formControl,formErrors,prefix} : AjarnIctFormProps) =>{
 									{...field}
 									className="rounded-lg bg-white"
 									error={!!formErrors.ajarnName}
-								 />
-								 <div className="text-red-600">{formErrors.ajarnName?.message}</div>
+								/>
+								<div className="text-red-600">{formErrors.ajarnName?.message}</div>
 							</div>
 						)}
 					/>
@@ -69,8 +69,8 @@ const AjarnIctForm = ({formControl,formErrors,prefix} : AjarnIctFormProps) =>{
 									{...field}
 									className="rounded-lg bg-white"
 									error={!!formErrors.ajarnSurname}
-								 />
-								 <div className="text-red-600">{formErrors.ajarnSurname?.message}</div>
+								/>
+								<div className="text-red-600">{formErrors.ajarnSurname?.message}</div>
 							</div>
 						)}
 					/>
@@ -90,8 +90,8 @@ const AjarnIctForm = ({formControl,formErrors,prefix} : AjarnIctFormProps) =>{
 									{...field}
 									className="rounded-lg bg-white"
 									error={!!formErrors.ajarnphoneNum}
-								 />
-								 <div className="text-red-600">{formErrors.ajarnphoneNum?.message}</div>
+								/>
+								<div className="text-red-600">{formErrors.ajarnphoneNum?.message}</div>
 							</div>
 						)}
 					/>
@@ -102,15 +102,15 @@ const AjarnIctForm = ({formControl,formErrors,prefix} : AjarnIctFormProps) =>{
 						name="ajarnEmail"
 						render={({ field }) => (
 							<div>
-								<h2 className="text-gray-4">Email (Gmail เท่านั้น) *</h2>
+								<h2 className="text-gray-4">Email *</h2>
 								<TextField
 									fullWidth
 									size="medium"
 									{...field}
 									className="rounded-lg bg-white"
 									error={!!formErrors.ajarnEmail}
-								 />
-								 <div className="text-red-600">{formErrors.ajarnEmail?.message}</div>
+								/>
+								<div className="text-red-600">{formErrors.ajarnEmail?.message}</div>
 							</div>
 						)}
 					/>
@@ -130,10 +130,10 @@ const AjarnIctForm = ({formControl,formErrors,prefix} : AjarnIctFormProps) =>{
 									{...field}
 									className="rounded-lg bg-white"
 									error={!!formErrors.ajarnPosition}
-								 />
+								/>
 							</div>
 						</div>
-								 <div className="text-red-600">{formErrors.ajarnPosition?.message}</div>
+						<div className="text-red-600">{formErrors.ajarnPosition?.message}</div>
 					</div>
 				)}
 			/>

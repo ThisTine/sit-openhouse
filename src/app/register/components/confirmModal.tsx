@@ -106,10 +106,11 @@ const ConfirmModal = ({handleOnSubmit,setPage} : ConfirmModalProps) => {
                 กรุณาตรวจสอบความถูกต้องให้ครบถ้วนก่อนกดยืนยัน หากกดยืนยันแล้วจะไม่สามารถแก้ไขข้อมูลการสมัครได้
 						</h4>
 						<Box display="flex" flexDirection="row" gap="5px" height="60px" justifyContent="flex-end" margin="20px">
-							<Button className='h-12 w-32 bg-red-700 text-white' onClick={handleClose} sx={{'&:hover': {
-								backgroundColor: '#9c1e1e',
-								boxShadow: 'none'
-							}}} variant='contained'>cancel</Button>
+							<Button className='h-12 w-32 bg-red-700 text-white' onClick={handleClose} sx={	{backgroundColor:'#9c1e1e',
+								'&:hover': {
+									backgroundColor: '#9c1e1e',
+									boxShadow: 'none'
+								}}} variant='contained'>cancel</Button>
 							<Button className="h-12 w-32 bg-primary text-white" onClick={handleOnconfirm} variant='contained'>confirm</Button>
 						</Box>
 					</Box>
