@@ -106,8 +106,7 @@ export function HomeView({ PageView }: HomeViewProps) {
 				</div>
 				<div className="sm:hidden">
 					<div className="mt-40 p-5 text-xl font-bold text-white">
-						กลับมาอีกครั้ง กับ 3
-						EVENTS แห่งปีจากคณะเทคโนโลยีสารสนเทศที่ทุกคนรอคอย
+						กลับมาอีกครั้ง กับ 3 กิจกรรมแห่งปีจากคณะเทคโนโลยีสารสนเทศที่ทุกคนรอคอย
 					</div>
 					<div className="mb-5 ml-5 flex gap-5 text-white">
 						<Image alt="location" src={Location} />
