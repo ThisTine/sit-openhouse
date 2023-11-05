@@ -70,6 +70,11 @@ const OpenhouseRegisterPage = () => {
 			<PDPAagreementPageOPH setPage={setPage}/>
 		);
 	}
+	else if(Page === registerPage.congratsOpenHouse){
+		return(
+			<CongratOPH/>
+		);
+	}
 };
 
 export default OpenhouseRegisterPage;

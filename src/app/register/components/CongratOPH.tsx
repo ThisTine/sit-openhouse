@@ -2,8 +2,10 @@ import { Button } from '@mui/material';
 import React from 'react';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import {useRouter} from 'next/navigation';
 
 const CongratOPH = () => {
+	const router = useRouter();
 	return (
 		<div className='flex h-screen flex-col items-center justify-center bg-slate-600'>
 			<div className='flex justify-center align-middle'>
@@ -19,7 +21,7 @@ const CongratOPH = () => {
 					</div>
 				</div>
 			</div>
-			<Button className="m-10 h-12 w-32 bg-primary text-white"  variant='contained'>เสร็จสิ้น <ArrowForwardIosIcon className="text-white" /></Button>
+			<Button className="m-10 h-12 w-32 bg-primary text-white"  onClick={()=>router.push("/")} variant='contained'>เสร็จสิ้น <ArrowForwardIosIcon className="text-white" /></Button>
 							
 		</div>
 	);
