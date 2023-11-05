@@ -12,9 +12,9 @@ import { useState } from "react";
 import React from "react";
 import TeamInfoForm from "../components/teamInfoForm";
 import CongratICT from "../components/CongratICT";
-import PDPAagreementPage from "../components/pdpaAgreement";
 import FailRegister from "../components/FailRegister";
 import ConfirmModalICT from "../components/confirmModal_ICT";
+import PDPAagreementPageICT from "../components/pdpaAgreementICT";
 
 const SolutionFormPage = () => {
 	const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver(ictFormAddSchema)});
@@ -59,7 +59,7 @@ const SolutionFormPage = () => {
 	}
 	else if (Page === registerPage.pdapaPage){
 		return(
-			<PDPAagreementPage setPage={setPage}/>
+			<PDPAagreementPageICT setPage={setPage}/>
 		);
 	}
 
