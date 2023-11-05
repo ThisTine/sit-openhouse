@@ -83,5 +83,5 @@ export const solutionChallengeRequestMapper:ISolutionChllengeRequest= {
 	advisorPersonLastname: "entry.805988373",
 	advisorPersonTel: "entry.1964139087",
 	advisorPersonEmail: "entry.1542676626",
-	advisorPosition: "entry.1542676626"
+	advisorPosition: "entry.75846424"
 };

@@ -14,7 +14,7 @@ const FailRegister = () => {
 						<h1 className="mb-10  text-base text-slate-800">พบข้อผิดพลาดในการลงทะเบียน กรุณาลองใหม่อีกครั้ง</h1>
 						<Button
 							className="m-10 h-12 w-28 bg-primary text-white"
-							onClick={() => {}}
+							onClick={() => {window.location.reload();}}
 							variant="contained"
 						>
 							<ArrowBackIosNewIcon className="text-white" /> ย้อนกลับ
