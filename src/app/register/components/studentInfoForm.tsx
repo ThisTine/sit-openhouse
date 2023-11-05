@@ -9,7 +9,7 @@ interface ITeamInfoFormProps {
 	formControl : Control<StudentOpenhouseForm,any>
 	formErrors : FieldErrors<StudentOpenhouseForm>
 }
-const studentInfoForm = ({
+const StudentInfoForm = ({
 	prefix,
 	grade,
 	formControl,
@@ -245,4 +245,4 @@ const studentInfoForm = ({
 	);
 };
 
-export default studentInfoForm;
+export default StudentInfoForm;

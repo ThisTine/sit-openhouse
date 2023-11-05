@@ -7,12 +7,12 @@ import { UseFormHandleSubmit, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import CongratOPH from "../components/CongratOPH";
 import Activity from "../components/Activity";
-import studentInfoForm from "../components/studentInfoForm";
 import { ophFormAddSchema } from "../schema/ictFormSchema";
 import { StudentOpenhouseForm } from "../model/formRegister";
+import StudentInfoForm from "../components/studentInfoForm";
 
-const openhouseRegisterPage = () => {
-	// const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver(ophFormAddSchema)});
+const OpenhouseRegisterPage = () => {
+	const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver(ophFormAddSchema)});
 
 	return (
 		//   <CongratOPH/>
@@ -45,7 +45,7 @@ const openhouseRegisterPage = () => {
 				</div>
 				<div className="relative my-3 rounded-xl bg-primary">
 					<div className="relative bottom-3 right-3 rounded-xl bg-gray-2">
-						{/* <studentInfoForm formControl={control} formErrors={errors} grade={grade} prefix={prefix}/> */}
+						<StudentInfoForm formControl={control} formErrors={errors} grade={grade} prefix={prefix}/>
 						<Activity />
 					</div>
 				</div>
@@ -62,4 +62,4 @@ const openhouseRegisterPage = () => {
 	);
 };
 
-export default openhouseRegisterPage;
+export default OpenhouseRegisterPage;
