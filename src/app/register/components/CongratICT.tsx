@@ -7,10 +7,10 @@ const CongratICT = () => {
 	return (
 		<div className='min-h-screen w-screen bg-[url("/Group_88.png")] bg-cover bg-fixed'>
 			<div className='min-h-screen w-screen bg-gradient-to-b from-gray-600/70 to-gray-600/50 pb-10'>
-				<div className="flex min-h-screen flex-col items-center justify-center">	
+				<div className="flex flex-col items-center justify-center pt-28 md:px-11">	
 					<div className="relative mx-7 rounded-xl bg-primary">
 						<div className="relative bottom-3 right-3  rounded-xl bg-gray-2 px-11 py-16 text-center md:p-40">
-							<CheckCircleOutlineIcon className="text-9xl" style={{color:'61BF00'}} />
+							<CheckCircleOutlineIcon style={{color:'61BF00' , width:'100px' ,height:'100px'}} />
 							<h1 className="text-3xl font-bold text-primary" >
 						ลงทะเบียนสำเร็จ
 							</h1>
