@@ -7,7 +7,7 @@ import { grade, prefix } from "../constant/formConst";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ictFormAddSchema } from "../schema/ictFormSchema";
-import { ICTChallengeForm, registerPage } from "../model/formRegister";
+import { registerPage } from "../model/formRegister";
 import { useState } from "react";
 import React from "react";
 import TeamInfoForm from "../components/teamInfoForm";
@@ -19,8 +19,6 @@ const SolutionFormPage = () => {
 	const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver(ictFormAddSchema)});
 	const [Page , setPage] = useState<registerPage>(registerPage.pdapaPage);
 
-	// <CongratICT/>
-	//   ! isSuccess ? (
 	if(Page === registerPage.ictFormPage) {
 		return(
 			<div style={{backgroundColor:"#34312F" , padding:'30px'}}>
@@ -78,8 +76,6 @@ const SolutionFormPage = () => {
 			<FailRegister/>
 		);
 	}
-			
-	// ) : ( <CongratICT/> )
 	
 };
 
