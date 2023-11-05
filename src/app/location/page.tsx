@@ -7,11 +7,6 @@ import  Accordion  from './component/Accordion';
 import React from 'react';
 
 
-const items = [
-	{ title: 'Accordion 1', content: 'Content for Accordion 1' },
-	{ title: 'Accordion 2', content: 'Content for Accordion 2' },
-	{ title: 'Accordion 3', content: 'Content for Accordion 3' }
-];
 const locationPage = () => {
 	return (
 		<div>
@@ -19,13 +14,13 @@ const locationPage = () => {
 			<div className='h-screen w-screen  bg-[url("/background.png")] bg-cover bg-fixed '>
 				<div className='h-screen  w-screen bg-gradient-to-b from-black/70 to-gray-600/50' >
 
-					<div className='flex flex-col items-center justify-center p-8 md:p-10 lg:p-12' >
-						<h1 className='p-10 text-3xl text-primary md:text-4xl lg:text-6xl'>ข้อมูลเพิ่มเติม</h1>
+					<div className='flex flex-col items-center justify-center pt-16 md:pt-24 lg:pt-28' >
+						<h1 className='p-10 text-3xl font-semibold text-primary md:text-4xl lg:text-5xl'>ข้อมูลเพิ่มเติม</h1>
 						
 					</div>
-					<div className='flex flex-col'>
+					<div className="flex flex-1 items-center justify-center">
 						<Card/>
-					
+
 					</div>
 		
 
