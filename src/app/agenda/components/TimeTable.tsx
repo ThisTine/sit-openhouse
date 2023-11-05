@@ -28,7 +28,7 @@ const TimeTable: FC<{
 							: "bg-[#495057]")
 					}
 					onClick={() => handleFilterSelect(3)}>
-					<h3>CS Project D-Day</h3>
+					<h3 className="font-bold">CS Project D-Day</h3>
 					<h4>{lang === "th" ? th.ddayLocation : en.ddayLocation}</h4>
 				</div>
 				<div
@@ -39,7 +39,8 @@ const TimeTable: FC<{
 							: "bg-[#495057]")
 					}
 					onClick={() => handleFilterSelect(2)}>
-					<h3>ICT Challenge</h3>
+					<h3 className="font-bold">ICT Challenge</h3>
+					<h4>{th.ictLocation}</h4>
 				</div>
 				<div
 					className={
@@ -49,12 +50,8 @@ const TimeTable: FC<{
 							: "bg-[#495057]")
 					}
 					onClick={() => handleFilterSelect(1)}>
-					<h3>Open House 2023 (Stage)</h3>
-					<h4>
-						{lang === "th"
-							? th.openhouseLocation
-							: en.openhouseLocation}
-					</h4>
+					<h3 className="font-bold">Open House 2023 (Stage)</h3>
+					<h4>{th.openhouseStageLocation}</h4>
 				</div>
 				<div
 					className={
@@ -64,7 +61,8 @@ const TimeTable: FC<{
 							: "bg-[#495057]")
 					}
 					onClick={() => handleFilterSelect(1)}>
-					<h3>Open House 2023 (Workshop)</h3>
+					<h3 className="font-bold">Open House 2023 (Workshop)</h3>
+					<h4>{th.openhouseWorkshopLocation}</h4>
 				</div>
 			</div>
 			{/* Agenda */}

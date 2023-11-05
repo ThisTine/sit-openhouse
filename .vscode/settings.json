@@ -2,6 +2,8 @@
     "files.autoSave": "afterDelay",
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "eslint.enable": true,
-    "eslint.format.enable": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+  
 }

@@ -8,18 +8,11 @@ const ICTChallenge: Agenda[] = [
 		height: 155
 	},
 	{
-		th: ["คณะบดีกล่าวเปิดงาน"],
-		en: ["Dean's Opening Speech"],
+		th: ["พิธีเปิด"],
+		en: ["Opening Ceremony"],
 		start: 900,
-		end: 915,
-		height: 34
-	},
-	{
-		th: ["พิธีกรแจ้งกำหนดการ"],
-		en: ["Agenda Announcement"],
-		start: 915,
 		end: 930,
-		height: 34
+		height: 72
 	},
 	{
 		th: ["ผู้เข้าแข่งขันเข้าห้องแข่งขัน"],

@@ -19,6 +19,7 @@ export const getEmailTemplate = async ({event,to,name} : IMailMetadata)=>{
 		logo = process.cwd()+"/src/mail/ict/ict-logo-min.png";
 		htmlTemplate = ICT_MAIL.replace(":ict-name:",name);
 		htmlTemplate = htmlTemplate.replace(":ict-test-url:",process.env.ICT_TEST_URL+"");
+		htmlTemplate = htmlTemplate.replace(":ict-test-pwd:",process.env.ICT_TEST_PWD+"");
 		subject = "ยืนยันการสมัคร ICT Chllenge";
 	}
 	if(Array.isArray(to)){

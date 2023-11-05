@@ -41,12 +41,17 @@ const openHouseWorkshop: Agenda[] = [
 		height: 175
 	},
 	{
-		th: ["Workshop สาขา IT", "ทำเว็บ Portfolio แบบบ้านๆ"],
+		start: 1415,
+		end: 1430,
+		height: 30
+	},
+	{
+		th: ["Workshop สาขา IT", "Let's Explore Web Dev Journey"],
 		en: ["Workshop IT", "Make your own Portfolio website"],
 		location: "LX 10/5",
-		start: 1415,
+		start: 1430,
 		end: 1545,
-		height: 215
+		height: 195
 	}
 ];
 

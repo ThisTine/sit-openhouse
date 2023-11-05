@@ -29,7 +29,7 @@ const RenderMobile: FC<{
 			<div className="flex max-h-[100px] min-h-[40px] flex-row items-center justify-around px-3">
 				<div
 					className={
-						"flex flex-col h-fit py-1 items-center justify-center rounded-full px-2 text-white " +
+						"flex flex-col h-fit py-1 items-center justify-center rounded px-2 text-white " +
 						(filter === 0 ? "bg-[#F03D3E]" : "") +
 						" cursor-pointer"
 					}
@@ -43,7 +43,7 @@ const RenderMobile: FC<{
 				</div>
 				<div
 					className={
-						"flex flex-col h-fit py-1 items-center justify-center rounded-full px-2 text-white " +
+						"flex flex-col h-fit py-1 items-center justify-center rounded px-2 text-white " +
 						(filter === 1 ? "bg-[#F03D3E]" : "") +
 						" cursor-pointer"
 					}
@@ -57,7 +57,7 @@ const RenderMobile: FC<{
 				</div>
 				<div
 					className={
-						"flex flex-col h-fit py-1 items-center justify-center rounded-full px-2 text-white " +
+						"flex flex-col h-fit py-1 items-center justify-center rounded px-2 text-white " +
 						(filter === 2 ? "bg-[#F03D3E]" : "") +
 						" cursor-pointer"
 					}
