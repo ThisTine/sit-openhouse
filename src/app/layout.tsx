@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
-import {  Roboto_Flex, Noto_Sans_Thai } from 'next/font/google';
+import { Roboto_Flex, Noto_Sans_Thai } from 'next/font/google';
 import './globals.css';
 import NavBar from '@/share/components/NavBar';
 import Footer from '@/share/components/Footer';
+import { Suspense } from 'react';
 
-const roboto = Roboto_Flex({subsets:["latin"]});
-const noto = Noto_Sans_Thai({subsets:["latin"]});
+const roboto = Roboto_Flex({ subsets: ["latin"] });
+const noto = Noto_Sans_Thai({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: 'SIT Openhouse | ICT Chllenge | D-Day',
@@ -14,19 +15,26 @@ export const metadata: Metadata = {
 	 🗂 CS Project D-Day 2023 งานแสดงผลงานนักศึกษาหลักสูตร comsci inter ชั้นปีที่ 4`
 };
 
+const Sus = () => {
+	return <> <div className='h-screen w-full bg-[#34312F]'> </div> </>;
+};
+
 export default function RootLayout({
 	children
 }: {
-  children: React.ReactNode
+	children: React.ReactNode
 }) {
+	
 	return (
 		<html lang="en">
-			<body style={{fontFamily: `${roboto.style.fontFamily}, ${noto.style.fontFamily}`}}>
-				<NavBar/>
+			<body style={{ fontFamily: `${roboto.style.fontFamily}, ${noto.style.fontFamily}` }}>
+				<NavBar />
 				<main className='min-h-screen min-w-full'>
-					{children}
+					<Suspense fallback={<Sus/>}>
+						{children}
+					</Suspense>
 				</main>
-				<Footer/>
+				<Footer />
 			</body>
 		</html>
 	);
