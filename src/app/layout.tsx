@@ -20,12 +20,13 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode
 }) {
+	
 	return (
 		<html lang="en">
 			<body style={{ fontFamily: `${roboto.style.fontFamily}, ${noto.style.fontFamily}` }}>
 				<NavBar />
 				<main className='min-h-screen min-w-full'>
-					<Suspense fallback={<>suspense</>}>
+					<Suspense fallback={<> </>}>
 						{children}
 					</Suspense>
 				</main>

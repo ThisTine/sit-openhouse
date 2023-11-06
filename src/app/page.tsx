@@ -85,11 +85,11 @@ export default function App() {
 	});
 
 	return (
-		<Swiper className='swiper-backface-hidden' modules={[Pagination]} onSwiper={setSwiper} pagination={{
+		<Swiper className='swiper-backface-hidden' modules={[Pagination]} onActiveIndexChange={activeSwiper} onSwiper={setSwiper} pagination={{
 			clickable: true,
 			bulletClass: 'swiper-pagination-bullet',
 			bulletActiveClass: 'swiper-pagination-bullet-active'
-		}} onActiveIndexChange={activeSwiper}>
+		}}>
 			<SwiperSlide>
 				<HomeView PageView={handleClick} />
 			</SwiperSlide>

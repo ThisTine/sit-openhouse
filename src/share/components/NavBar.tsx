@@ -45,7 +45,7 @@ const NavBar = () => {
 					<Image alt="Hamburger" className={`pt-3 ${isOpen ? 'hidden' : ''}`} src={Hamburger} />
 				</div>
 				<div className='m-5'>
-					<Image alt="KMUTTWITSIT" height="60" src={Logo} onClick={() => backToHome()} width="192" />
+					<Image alt="KMUTTWITSIT" height="60" onClick={() => backToHome()} src={Logo} width="192" />
 				</div>
 			</div>
 			<div className={isOpen ? 'visible fixed z-10 w-full translate-y-0 bg-[#3399CC] opacity-100 transition-all duration-500 ease-in-out' : 'invisible fixed z-10 w-full -translate-y-full opacity-0 transition-all duration-500 ease-in-out'}>
