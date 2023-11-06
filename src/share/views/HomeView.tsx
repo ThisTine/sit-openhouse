@@ -70,7 +70,7 @@ export function HomeView({ PageView }: HomeViewProps) {
 					</div>
 					<div className="mt-6 flex w-2/4 flex-col gap-10 text-[#3399CC] sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
 						<div
-							className="hover:cursor-pointer hover:text-sky-400"
+							className="duration-200 hover:cursor-pointer hover:text-sky-400"
 							onClick={() => changePage(1)}
 						>
 							<p className="font-semibold">SIT OPEN HOUSE 2023</p>
@@ -79,7 +79,7 @@ export function HomeView({ PageView }: HomeViewProps) {
 							</p>
 						</div>
 						<div
-							className="hover:cursor-pointer hover:text-sky-400"
+							className="duration-200 hover:cursor-pointer hover:text-sky-400"
 							onClick={() => changePage(2)}
 						>
 							<p className="font-semibold">ICT CHALLENGE 2023</p>
@@ -88,7 +88,7 @@ export function HomeView({ PageView }: HomeViewProps) {
 							</p>
 						</div>
 						<div
-							className="hover:cursor-pointer hover:text-sky-400"
+							className="duration-200 hover:cursor-pointer hover:text-sky-400"
 							onClick={() => changePage(3)}
 						>
 							<p className="font-semibold">CS PROJECT D-DAY EXHIBITION 2023</p>
