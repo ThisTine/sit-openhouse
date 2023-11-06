@@ -15,6 +15,10 @@ export const metadata: Metadata = {
 	 🗂 CS Project D-Day 2023 งานแสดงผลงานนักศึกษาหลักสูตร comsci inter ชั้นปีที่ 4`
 };
 
+const Sus = () => {
+	return <> <div className='h-screen w-full bg-[#34312F]'> </div> </>;
+};
+
 export default function RootLayout({
 	children
 }: {
@@ -26,7 +30,7 @@ export default function RootLayout({
 			<body style={{ fontFamily: `${roboto.style.fontFamily}, ${noto.style.fontFamily}` }}>
 				<NavBar />
 				<main className='min-h-screen min-w-full'>
-					<Suspense fallback={<> </>}>
+					<Suspense fallback={<Sus/>}>
 						{children}
 					</Suspense>
 				</main>
