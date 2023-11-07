@@ -11,36 +11,36 @@ import Back from "@/share/icon/Back.png";
 
 
 interface PageProps {
-    imageUrl: StaticImageData;
-    title: string;
-    subtitle: string;
-    details: string;
+	imageUrl: StaticImageData;
+	title: string;
+	subtitle: string;
+	details: string;
 	location?: string;
 	showButton?: boolean;
 	showLicense?: boolean;
-	moreDetails : JSX.Element;
+	moreDetails: JSX.Element;
 	buttonText?: string;
 	href?: string;
 }
 
 
-const PageView = ({ imageUrl, title, subtitle, details, location, showButton, showLicense,moreDetails,buttonText,href }: PageProps) => {
+const PageView = ({ imageUrl, title, subtitle, details, location, showButton, showLicense, moreDetails, buttonText, href }: PageProps) => {
 
 	const [slide, setSlide] = useState(false);
 
 	const toggleSidebar = () => {
-	  setSlide(!slide);
+		setSlide(!slide);
 	};
-  
+
 
 	return (
 		<div>
 			<div className="fixed z-0 h-screen w-full">
-				<Image alt="bg" layout="fill" objectFit="cover" src={imageUrl} />
+				<Image alt="bg" className="h-full" layout="fill" objectFit="cover" src={imageUrl} />
 			</div>
 			<div className="z-10">
-				<Image alt="filter" className="max-md:hidden" layout="fill" objectFit="cover" src={Filter} />
-				<Image alt="filter" className="md:hidden" layout="fill" objectFit="cover" src={Filter2} />
+				<Image alt="filter" className="h-full max-md:hidden" layout="fill" objectFit="cover" src={Filter} />
+				<Image alt="filter" className="h-full md:hidden" layout="fill" objectFit="cover" src={Filter2} />
 			</div>
 			<div className="relative z-20 grid h-screen w-full grid-cols-1 items-center max-lg:px-10 lg:grid-cols-2">
 				<div className={`grid gap-4 text-white transition-opacity duration-500 lg:pl-28 ${slide ? "opacity-0" : "opacity-100"}`}>
@@ -55,7 +55,7 @@ const PageView = ({ imageUrl, title, subtitle, details, location, showButton, sh
 						{subtitle}
 					</p>
 					<p className="cursor-pointer pb-32 underline" onClick={toggleSidebar}>{details}</p>
-					{showButton ? <Button disabled={buttonText?true:false} href={href} onClick={() => {}}>{buttonText?buttonText:"สมัครเลย!"}</Button> : <h1 className="text-2xl font-bold max-md:text-center md:text-4xl md:font-medium">ลงทะเบียนเข้าชมหน้างาน</h1>}
+					{showButton ? <Button disabled={buttonText ? true : false} href={href} onClick={() => { }}>{buttonText ? buttonText : "สมัครเลย!"}</Button> : <h1 className="text-2xl font-bold max-md:text-center md:text-4xl md:font-medium">ลงทะเบียนเข้าชมหน้างาน</h1>}
 					{showLicense ? <Link className="flex items-center gap-2 underline max-md:place-self-center lg:text-base" href="https://kmutt.me/ictchallenge2023" target="blank"><Image alt="download icon" src={Download} /> <p>download ใบขออนุญาตโรงเรียนและกฎกติกาการแข่งขัน</p></Link> : null}
 				</div>
 				<div className={`fixed left-5 top-5 flex place-items-center gap-2 max-lg:ml-5 max-lg:mt-16 lg:ml-16 lg:mt-16 ${slide ? "" : "hidden"}`}>
@@ -64,12 +64,11 @@ const PageView = ({ imageUrl, title, subtitle, details, location, showButton, sh
 				</div>
 			</div>
 			<div
-				className={`fixed right-0 top-0 z-40 h-full bg-[#34312F] text-white duration-300 ease-in-out max-lg:w-full max-lg:rounded-t-2xl lg:w-[65vw] lg:rounded-l-2xl lg:p-10 lg:pl-20 ${
-					slide ? "max-lg:inset-y-40 lg:translate-x-0" : "max-lg:inset-y-full lg:translate-x-full"
+				className={`fixed right-0 top-0 z-40 h-full bg-[#34312F] text-white duration-300 ease-in-out max-lg:w-full max-lg:rounded-t-2xl lg:w-[65vw] lg:rounded-l-2xl lg:p-10 lg:pl-20 ${slide ? "max-lg:inset-y-40 lg:translate-x-0" : "max-lg:inset-y-full lg:translate-x-full"
 				}`}
 			>
 				<div className="w-full overflow-y-scroll pb-20 max-lg:h-[80%] max-lg:px-10 max-lg:pt-14 lg:h-full lg:pt-16">
-					{ moreDetails }
+					{moreDetails}
 				</div>
 			</div>
 		</div>
