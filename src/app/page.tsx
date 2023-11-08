@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { use, useContext, useEffect, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -21,6 +21,7 @@ import { HomeView } from '@/share/views/HomeView';
 import OpenHousePage from '@/share/components/OpenHouse';
 import IctChallenge from '@/share/components/Ict_Challenge';
 import CsDday from '@/share/components/Cs_Dday';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 const slider = [
 	{
@@ -60,7 +61,7 @@ export default function App() {
 	const [swiper, setSwiper] = useState<any>();
 
 	const slideTo = (index: number) => {
-		if (swiper) {
+		if (swiper && swiper.initialized) {
 			swiper.slideTo(index);
 		}
 	};
@@ -69,12 +70,26 @@ export default function App() {
 		slideTo(page);
 	};
 
+	const router = useRouter();
+	const path = usePathname();
+	const param = new URLSearchParams(useSearchParams());
+
+	const activeSwiper = (swiper: any) => {
+		// set new value to param
+		param.set('page', swiper.activeIndex.toString() === 'NaN' ? '0' : swiper.activeIndex.toString());
+		router.replace(path + '?' + param.toString());
+	};
+
+	useEffect(() => {
+		slideTo(parseInt(param.get('page') as string));
+	});
+
 	return (
-		<Swiper className='swiper-backface-hidden' modules={[Pagination]} onSwiper={setSwiper} pagination={{
+		<Swiper className='swiper-backface-hidden' modules={[Pagination]} onActiveIndexChange={activeSwiper} onSwiper={setSwiper} pagination={{
 			clickable: true,
 			bulletClass: 'swiper-pagination-bullet',
 			bulletActiveClass: 'swiper-pagination-bullet-active'
-		  }}>
+		}}>
 			<SwiperSlide>
 				<HomeView PageView={handleClick} />
 			</SwiperSlide>
@@ -82,17 +97,17 @@ export default function App() {
 				slider.map((slide, index) => {
 					return (
 						<SwiperSlide key={index}>
-							<PageView 
-							  buttonText={slide.buttonText}
-							  details={slide.details}
-							  href={slide.href}
-							  imageUrl={slide.imageUrl}
-							  location={slide.location}
-							  moreDetails={slide.moreDetails}
-							  showButton={slide.showButton}
-							  showLicense={slide.showLicense}
-							  subtitle={slide.subtitle}
-							  title={slide.title}
+							<PageView
+								buttonText={slide.buttonText}
+								details={slide.details}
+								href={slide.href}
+								imageUrl={slide.imageUrl}
+								location={slide.location}
+								moreDetails={slide.moreDetails}
+								showButton={slide.showButton}
+								showLicense={slide.showLicense}
+								subtitle={slide.subtitle}
+								title={slide.title}
 							/>
 						</SwiperSlide>
 					);
