@@ -218,26 +218,25 @@ const StudentInfoForm = ({
 				)}
 			/>
 			
-			<div className='py-5'>
+			<div className="py-5">
 				<Controller
 					control={formControl}
 					name="studentSchoolAddress"
 					render={({ field }) => (
 						<div>
 							<h2 className="text-gray-4 ">ที่อยู่โรงเรียน *</h2>
-							<TextareaAutosize
-								minRows={5}
+							<TextField
+								multiline
+								rows={5}
 								{...field}
-								className="w-full rounded-lg bg-white p-3"
+								className="w-full rounded-lg bg-white "
+								error={!!formErrors.studentSchoolAddress}
 							/>
-							<div className="text-red-600">
-								{formErrors.studentSchoolAddress?.message}
-							</div>
+							<div className="text-red-600">{formErrors.studentSchoolAddress?.message}</div>
 						</div>
 					)}
 				/>
-				<p className="text-gray-4">{`** กรุณาใส่ข้อมูลให้ครบ เลขที่ ซอย/ถนน แขวง/ตําบล เขต/อําเภอ จังหวัด รหัสไปรษณีย์ ที่อยู่ในการจัดส่งเกียรติบัตร 
-    (หากเป็นที่อยู่เดียวกับโรงเรียน ให้ระบุว่า "ที่อยู่เดียวกับโรงเรียน")`}</p>
+				<p className="text-gray-4">** กรุณาใส่ข้อมูลให้ครบ เลขที่ ซอย/ถนน แขวง/ตําบล เขต/อําเภอ จังหวัด รหัสไปรษณีย์</p>
 			</div>
 		</div>
 			
