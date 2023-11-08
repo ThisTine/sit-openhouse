@@ -3,9 +3,9 @@ import { Box, Button, Modal } from '@mui/material';
 import React, { useState } from 'react';
 import { UseFormHandleSubmit } from 'react-hook-form';
 import { StudentOpenhouseForm, registerPage } from '../model/formRegister';
-import { ISolutionChllengeRequest } from '../../../share/types/solutionChllengeRequest';
 import { Dispatch } from 'react';
 import { SetStateAction } from 'react';
+import { IOpenHouseRequest } from '../../../share/types/openHouseRequest';
 interface ConfirmModalProps {
 	handleOnSubmit : UseFormHandleSubmit<StudentOpenhouseForm,undefined>;
 	setPage : Dispatch<SetStateAction<registerPage>>;
@@ -14,27 +14,44 @@ interface ConfirmModalProps {
 
 const ConfirmModalOPH = ({handleOnSubmit,setPage} : ConfirmModalProps) => {
 	const [open, setOpen] = useState(false);
-	const [formRequest, setFormRequest] = useState<StudentOpenhouseForm>();
+	const [formRequest, setFormRequest] = useState<IOpenHouseRequest>();
 	const handleOpen = () => {
 		setOpen(true);
-
-
 	};
 	const handleClose = () => setOpen(false);
 
 	const onSubmit = (data : StudentOpenhouseForm) => {
 		handleOpen();
-		
-
-		//map data to request
-
-		setFormRequest(data);
+		const resultRequest: IOpenHouseRequest = {
+			prefix: data.studentPrefix,
+			firstname: data.studentName,
+			lastname: data.studentSurname,
+			grade: data.studentGrade,
+			tel: data.studentPhoneNum,
+			email: data.studentEmail,
+			facebook: data.studentFacebook,
+			lineId: data.StudentLine,
+			schoolName: data.studentSchoolName,
+			schoolAddress: data.studentSchoolAddress,
+			activity: data.activity
+		};
+		setFormRequest(resultRequest);
 	};
 
 	const handleOnconfirm = async() => {
 		handleClose();
-		console.log(formRequest);
-		setPage(registerPage.congratsOpenHouse);
+		const result = await fetch('/api/register/open-house', {
+			body: JSON.stringify(formRequest),
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});
+		if (result.status === 200) {
+			setPage(registerPage.congratsOpenHouse);
+		} else {
+			setPage(registerPage.failCongrats);
+		}
 	};
 
 	return (

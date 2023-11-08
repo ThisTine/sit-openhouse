@@ -1,22 +1,35 @@
 "use client";
 import React, { useState } from "react";
+import Checkbox from '@mui/material/Checkbox';
+import { red } from "@mui/material/colors";
 
 const Activity = () => {
-	const [checked, setchecked] = useState(false);
-	const handleChecked = () => {
-		setchecked(!checked);
+	const [checked1, setChecked1] = useState(false);
+	const [checked2, setChecked2] = useState(false);
+	const [checked3, setChecked3] = useState(false);
+
+	const handleChecked1 = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setChecked1(event.target.checked);
 	};
+
+	const handleChecked2 = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setChecked2(event.target.checked);
+	};
+
+	const handleChecked3 = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setChecked3(event.target.checked);
+	};
+
+
 	return (
 		<div className="p-8">
 			<div className="col-span-4">
 				<h1 className="text-xl text-primary">กิจกรรมที่สนใจเข้าร่วม</h1>
 				<div className="relative rounded-xl bg-primary p-3">
 					<div>
-						<input
-							className="mx-1 accent-red-500"
-							onChange={handleChecked}
-							type="checkbox"
-						/>
+						<Checkbox checked={checked1} onChange={handleChecked1} sx={{color:'white','&.Mui-checked': {
+							color: red[500]
+						}}} />
 						<label className="text-white">
               Get to Know me ‘DSI’ | 10.30 -11.30 น. ( จำกัด 40 ที่นั่ง )
 						</label>
@@ -28,11 +41,9 @@ const Activity = () => {
 				</div>
         	<div className="relative my-2 rounded-xl bg-primary p-3">
 					<div>
-						<input
-							className="mx-1 accent-red-500"
-							onChange={handleChecked}
-							type="checkbox"
-						/>
+						<Checkbox checked={checked2} onChange={handleChecked2} sx={{color:'white','&.Mui-checked': {
+							color: red[500]
+						}}} />
 						<label className="text-white">
             Easy & Fun Java | 13.00 - 14.00 น. ( จำกัด 50 ที่นั่ง )
 						</label>
@@ -46,11 +57,9 @@ const Activity = () => {
 				</div>
 				<div className="relative my-2 rounded-xl bg-primary p-3">
 					<div>
-						<input
-							className="mx-1 accent-red-500"
-							onChange={handleChecked}
-							type="checkbox"
-						/>
+						<Checkbox checked={checked3} onChange={handleChecked3} sx={{color:'white','&.Mui-checked': {
+							color: red[500]
+						}}} />
 						<label className="text-white">
               Let&rsquo;s Explore Web Dev Journey | 14.15 - 15.15 น. ( จำกัด 50 ที่นั่ง )
 						</label>

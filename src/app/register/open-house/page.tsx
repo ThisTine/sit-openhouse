@@ -19,7 +19,6 @@ const OpenhouseRegisterPage = () => {
 	const [Page , setPage] = useState<registerPage>(registerPage.pdapaPage);
 	if(Page === registerPage.openHousePage){
 		return (
-			//   <CongratOPH/>
 			<div style={{ backgroundColor: "#34312F", padding: "30px" }}>
 				<div className="p-5">
 					<div className="flex justify-between py-3">
