@@ -75,8 +75,6 @@ const SolutionFormPage = () => {
 	}
 	
 
-	// ) : ( <CongratICT/> )
-
 };
 
 export default SolutionFormPage;

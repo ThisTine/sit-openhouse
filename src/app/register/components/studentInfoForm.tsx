@@ -2,7 +2,7 @@
 import React from 'react';
 import { Igrade, Iprefix, StudentOpenhouseForm } from '../model/formRegister';
 import { Control, Controller, FieldErrors } from "react-hook-form";
-import { MenuItem, Select, TextField, TextareaAutosize } from '@mui/material';
+import { MenuItem, Select, TextField } from '@mui/material';
 interface ITeamInfoFormProps {
     prefix : Iprefix[]
     grade : Igrade[]

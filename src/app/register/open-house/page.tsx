@@ -13,6 +13,7 @@ import ConfirmModal_OPH from "../components/confirmModal_OPH";
 import ConfirmModalOPH from "../components/confirmModal_OPH";
 import { registerPage } from "../model/formRegister";
 import PDPAagreementPageOPH from "../components/pdpaAgreementOPH";
+import FailRegister from "../components/FailRegister";
 
 const OpenhouseRegisterPage = () => {
 	const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver(ophFormAddSchema)});
@@ -76,6 +77,11 @@ const OpenhouseRegisterPage = () => {
 	else if(Page === registerPage.congratsOpenHouse){
 		return(
 			<CongratOPH/>
+		);
+	}
+	else if(Page === registerPage.failCongrats){
+		return(
+			<FailRegister/>
 		);
 	}
 };
