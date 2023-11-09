@@ -3,6 +3,12 @@ import { IOpenHouseRequest, IOpenHouseRequestMapper, openHouseRequestMapper } fr
 import { IOpenHouseEmailTemplate, getEmailTemplate, sendmail } from "../../utils/sendmail";
 import {nanoid} from 'nanoid';
 
+const openHouseEventMapper = {
+	"Get to know me 'DSI'": "Get to know me 'DSI', 10:15-11:30 @LX 12/1",
+	"Easy & Fun java": "Easy & Fun java, 13:00-14:15 @LX 10/5",
+	"Let's Explore Web Dev Journey": "Let's Explore Web Dev Journey, 14:30-15:45 @LX 10/5"
+};
+
 export async function POST(request: Request) {
 	try{
 		const req =  await request.json() as IOpenHouseRequest;
@@ -28,9 +34,9 @@ export async function POST(request: Request) {
 			":open-name:": req.firstname,
 			":open-lastname:": req.lastname,
 			":open-pwd:": code,
-			":open-event-1:": req.activity[0] ?? '',
-			":open-event-2:": req.activity[1] ?? '',
-			":open-event-3:": req.activity[2] ?? ''
+			":open-event-1:": openHouseEventMapper[(req.activity[0] ?? '') as keyof typeof openHouseEventMapper] ?? '',
+			":open-event-2:": openHouseEventMapper[(req.activity[1] ?? '') as keyof typeof openHouseEventMapper] ?? '',
+			":open-event-3:": openHouseEventMapper[(req.activity[2] ?? '') as keyof typeof openHouseEventMapper] ?? ''
 		};
 		for(let activity of req['activity']){
 			params.append(openHouseRequestMapper['activity'],activity);
