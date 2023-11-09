@@ -1,4 +1,4 @@
-import { ObjectSchema, object, string } from "yup";
+import { AnyObject, ArraySchema, ObjectSchema, array, bool, object, string } from "yup";
 import { ICTChallengeForm, StudentOpenhouseForm } from "../model/formRegister";
 
 const IS_PHONE = /^\+?[0-9\s.-]+$/;

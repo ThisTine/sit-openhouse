@@ -12,7 +12,7 @@ interface ConfirmModalProps {
 }
 
 
-const ConfirmModal = ({handleOnSubmit,setPage} : ConfirmModalProps) => {
+const ConfirmModalICT = ({handleOnSubmit,setPage} : ConfirmModalProps) => {
 	const [open, setOpen] = useState(false);
 	const [formRequest, setFormRequest] = useState<ISolutionChllengeRequest>();
 	const handleOpen = () => {
@@ -119,4 +119,4 @@ const ConfirmModal = ({handleOnSubmit,setPage} : ConfirmModalProps) => {
 		</div>
 	);
 };
-export default ConfirmModal;
+export default ConfirmModalICT;

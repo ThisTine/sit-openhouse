@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation';
 interface PDPAagreementPageProps {
     setPage : Dispatch<SetStateAction<registerPage>>;
 }
-const PDPAagreementPage = ({setPage} : PDPAagreementPageProps) => {
+const PDPAagreementPageICT = ({setPage} : PDPAagreementPageProps) => {
 	const router = useRouter();
 	return (
 		<div className="md:h-screen" style={{backgroundColor:"#34312F"}} >
@@ -43,4 +43,4 @@ const PDPAagreementPage = ({setPage} : PDPAagreementPageProps) => {
 			</div>
 		</div>);
 };
-export default PDPAagreementPage;
+export default PDPAagreementPageICT;

@@ -5,11 +5,11 @@ export interface IOpenHouseRequest{
     grade: string
     tel: string
     email: string
-    facebook: string
-    lineId:string
+    facebook?: string
+    lineId?:string
     schoolName: string
     schoolAddress: string
-    activity: string[]
+    activity: Array<string>
 }
 
 export type IOpenHouseRequestMapper = Omit<IOpenHouseRequest,"activity"> & {activity: string,code: string}
