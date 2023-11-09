@@ -39,8 +39,9 @@ const OpenhouseRegisterPage = () => {
 							แบบฟอร์มลงทะเบียนเข้าร่วมกิจกรรม Open house
 						</h1>
 					</div>
-					{/* <div>
-					</div> */}
+					<div className="text-white">
+						ฟอร์มนี้สำหรับการลงทะเบียนเพื่อเข้าร่วม SIT Open House 2023 Workshop เท่านั้น ถ้าน้อง ๆ มางาน SIT OpenHouse 2023 โดยไม่ต้องการเข้าร่วม Workshop ก็สามารถมาเข้าร่วมงานได้โดยไม่ต้องลงทะเบียนในฟอร์มนี้ โดย Workshop โดย 1 คนสามารถเข้าร่วมกี่ Workshop ก็ได้ตามความสนใจ
+					</div>
 					<div className="relative my-3 rounded-xl bg-primary py-2">
 						<div className="relative bottom-3 right-3 rounded-xl bg-gray-2">
 							<StudentInfoForm formControl={control} formErrors={errors} grade={grade} prefix={prefix}/>
