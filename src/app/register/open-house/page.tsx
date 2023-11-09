@@ -39,18 +39,9 @@ const OpenhouseRegisterPage = () => {
 							แบบฟอร์มลงทะเบียนเข้าร่วมกิจกรรม Open house
 						</h1>
 					</div>
-					<div>
-						<p className="py-3  text-gray-3">
-							ก่อนนี้เธอคงจะปวดร้าว ต้องฝืนอดทนว่าไม่รู้ตัว คงไม่มีทางหรอก
-							แต่เธอแค่ไม่กล้าบอก ก่อนนี้โลกดูช่างสดใส ได้ฝืนอดทนไม่ให้รู้ตัว
-							เธอนั้นสำคัญเท่าไรฉันแค่ไม่กล้าบอกให้รู้ ฮู้
-							คงต้องเข้าใจหากฉันไม่บอกไป
-							เธอคงฝืนทนอยู่อย่างนี้เหมือนเดิมอยู่อย่างนี้
-							คงไม่เปลี่ยนไปหากฉันยื้อต่อไป
-							ให้เธอหายไปจากตรงนี้ให้เธอหายไปไม่ย้อนคืน
-						</p>
-					</div>
-					<div className="relative my-3 rounded-xl bg-primary">
+					{/* <div>
+					</div> */}
+					<div className="relative my-3 rounded-xl bg-primary py-2">
 						<div className="relative bottom-3 right-3 rounded-xl bg-gray-2">
 							<StudentInfoForm formControl={control} formErrors={errors} grade={grade} prefix={prefix}/>
 							<Activity setCsCheck={setCsCheck} setDsiCheck={setDsiCheck} setItCheck={setItCheck} />
