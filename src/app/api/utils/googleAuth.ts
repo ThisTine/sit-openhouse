@@ -2,10 +2,8 @@ import { GoogleAuth, auth } from 'google-auth-library';
 
 export const authFunc = ()=>{
 	const keysEnvVar = process.env['CREDS'] ?? '';
-	console.log(keysEnvVar);
     
 	const keys = JSON.parse(keysEnvVar);
-	console.log(keys);
 
 	const auth = new GoogleAuth({
 		credentials: keys,

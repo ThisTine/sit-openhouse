@@ -16,6 +16,11 @@ export const cellEncoder = {
 	"java": "'Controller'!B3",
 	"web":"'Controller'!B4"
 };
+export interface ISheetData {
+    dsi: number;
+    java: number;
+    web: number;
+};
 export const getSheetNum = async ()=>{
 	const auth = authFunc();
 	const service = google.sheets({version: 'v4', auth});
