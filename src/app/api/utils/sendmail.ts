@@ -2,6 +2,8 @@ import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 import { ICT_EMAIL } from '@/mail/ict/email';
 import {OPEN_HOUSE_EMAIL} from '@/mail/open-house/email';
+import icologo from '@/mail/ict/ict-logo-min.png';
+import openhouselogo from '@/mail/open-house/open-house-logo.png';
 
 export interface IMailMetadata {
     to: string | string[]
@@ -28,7 +30,7 @@ export const getEmailTemplate = async ({event,to,name,openHouseTemplate} : IMail
 	let from;
 	if(event === "ICT"){
 		from = `"ICT Challenge" <${process.env.MAIL_SENDER}>`;
-		logo = process.cwd()+"/src/mail/ict/ict-logo-min.png";
+		logo = icologo.src;
 		htmlTemplate = ICT_MAIL.replace(":ict-name:",name);
 		htmlTemplate = htmlTemplate.replace(":ict-test-url:",process.env.ICT_TEST_URL+"");
 		htmlTemplate = htmlTemplate.replace(":ict-test-pwd:",process.env.ICT_TEST_PWD+"");
@@ -36,7 +38,7 @@ export const getEmailTemplate = async ({event,to,name,openHouseTemplate} : IMail
 	}
 	if(event === "OPENHOUSE"){
 		from = `"SIT Openhouse" <${process.env.MAIL_SENDER}>`;
-		logo = process.cwd()+"/src/mail/open-house/open-house-logo.png";
+		logo = openhouselogo.src;
 		htmlTemplate = OPEN_HOUSE_EMAIL;
 		if(openHouseTemplate)
 			for(let k of Object.keys(openHouseTemplate)){
