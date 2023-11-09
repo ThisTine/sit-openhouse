@@ -32,7 +32,8 @@ const slider = [
 		location: "ชั้น 1 และ 10 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
 		showButton: true,
 		moreDetails: <OpenHousePage />,
-		buttonText: "เปิดรับสมัครเร็ว ๆ นี้"
+		// buttonText: "เปิดรับสมัครเร็ว ๆ นี้",
+		href: "/register/open-house"
 	},
 	{
 		details: "รายละเอียดเพิ่มเติม...",
@@ -98,7 +99,7 @@ export default function App() {
 					return (
 						<SwiperSlide key={index}>
 							<PageView
-								buttonText={slide.buttonText}
+								buttonText={(slide as any).buttonText}
 								details={slide.details}
 								href={slide.href}
 								imageUrl={slide.imageUrl}
