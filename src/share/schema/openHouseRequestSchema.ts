@@ -8,8 +8,8 @@ export const OpenHouseRequestSchema:ObjectSchema<IOpenHouseRequest> = object({
 	grade: string().required(),
 	tel: string().required(),
 	email: string().required(),
-	facebook: string().required(),
-	lineId: string().required(),
+	facebook: string(),
+	lineId: string(),
 	schoolName: string().required(),
 	schoolAddress: string().required(),
 	activity: array().of(string()).min(1).max(3).required() as ArraySchema<(string )[], AnyObject, "", "">

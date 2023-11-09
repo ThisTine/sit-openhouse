@@ -42,8 +42,8 @@ const ConfirmModalOPH = ({handleOnSubmit,setPage,itCheck,csCheck,dsiCheck} : Con
 			grade: data.studentGrade,
 			tel: data.studentPhoneNum,
 			email: data.studentEmail,
-			facebook: data.studentFacebook,
-			lineId: data.StudentLine,
+			facebook: data.studentFacebook ||"",
+			lineId: data.StudentLine || "",
 			schoolName: data.studentSchoolName,
 			schoolAddress: data.studentSchoolAddress,
 			activity: ActivityField
@@ -51,7 +51,7 @@ const ConfirmModalOPH = ({handleOnSubmit,setPage,itCheck,csCheck,dsiCheck} : Con
 		setFormRequest(resultRequest);
 	};
 
-	const handleOnconfirm = async() => {
+	const handleOnconfirm = async () => {
 		handleClose();
 		const result = await fetch('/api/register/open-house', {
 			body: JSON.stringify(formRequest),
@@ -64,7 +64,7 @@ const ConfirmModalOPH = ({handleOnSubmit,setPage,itCheck,csCheck,dsiCheck} : Con
 			setPage(registerPage.congratsOpenHouse);
 		} else {
 			setPage(registerPage.failCongrats);
-		}
+		};
 	};
 
 	return (
