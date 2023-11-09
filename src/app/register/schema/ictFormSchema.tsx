@@ -1,4 +1,4 @@
-import { AnyObject, ArraySchema, ObjectSchema, array, object, string } from "yup";
+import { AnyObject, ArraySchema, ObjectSchema, array, bool, object, string } from "yup";
 import { ICTChallengeForm, StudentOpenhouseForm } from "../model/formRegister";
 
 const IS_PHONE = /^\+?[0-9\s.-]+$/;
@@ -54,6 +54,5 @@ export const ophFormAddSchema: ObjectSchema<StudentOpenhouseForm> = object().sha
 	studentPrefix: string().required("กรุณาใส่คำนำหน้า"),
 	studentGrade: string().required("กรุณาใส่ชั้นปี"),
 	studentFacebook: string(),
-	StudentLine: string(),
-	activity: array().of(string()).min(1).max(3).required() as ArraySchema<(string )[], AnyObject, "", "">
+	StudentLine: string()
 });

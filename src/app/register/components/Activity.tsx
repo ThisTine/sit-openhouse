@@ -3,21 +3,25 @@ import React, { useState } from "react";
 import Checkbox from '@mui/material/Checkbox';
 import { red } from "@mui/material/colors";
 
-const Activity = () => {
-	const [checked1, setChecked1] = useState(false);
-	const [checked2, setChecked2] = useState(false);
-	const [checked3, setChecked3] = useState(false);
+interface ActivityProps {
+	setItCheck : React.Dispatch<React.SetStateAction<boolean>>;
+	setCsCheck : React.Dispatch<React.SetStateAction<boolean>>;
+	setDsiCheck : React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Activity = ({setItCheck,setCsCheck,setDsiCheck} : ActivityProps) => {
+
 
 	const handleChecked1 = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setChecked1(event.target.checked);
+		setDsiCheck(event.target.checked);
 	};
 
 	const handleChecked2 = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setChecked2(event.target.checked);
+		setCsCheck(event.target.checked);
 	};
 
 	const handleChecked3 = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setChecked3(event.target.checked);
+		setItCheck(event.target.checked);
 	};
 
 
@@ -27,7 +31,7 @@ const Activity = () => {
 				<h1 className="text-xl text-primary">กิจกรรมที่สนใจเข้าร่วม</h1>
 				<div className="relative rounded-xl bg-primary p-3">
 					<div>
-						<Checkbox checked={checked1} onChange={handleChecked1} sx={{color:'white','&.Mui-checked': {
+						<Checkbox onChange={handleChecked1} sx={{color:'white','&.Mui-checked': {
 							color: red[500]
 						}}} />
 						<label className="text-white">
@@ -41,7 +45,7 @@ const Activity = () => {
 				</div>
         	<div className="relative my-2 rounded-xl bg-primary p-3">
 					<div>
-						<Checkbox checked={checked2} onChange={handleChecked2} sx={{color:'white','&.Mui-checked': {
+						<Checkbox  onChange={handleChecked2} sx={{color:'white','&.Mui-checked': {
 							color: red[500]
 						}}} />
 						<label className="text-white">
@@ -57,7 +61,7 @@ const Activity = () => {
 				</div>
 				<div className="relative my-2 rounded-xl bg-primary p-3">
 					<div>
-						<Checkbox checked={checked3} onChange={handleChecked3} sx={{color:'white','&.Mui-checked': {
+						<Checkbox  onChange={handleChecked3} sx={{color:'white','&.Mui-checked': {
 							color: red[500]
 						}}} />
 						<label className="text-white">

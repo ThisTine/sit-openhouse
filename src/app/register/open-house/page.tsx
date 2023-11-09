@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import React, { useState } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { grade, prefix } from "../constant/formConst";
-import { UseFormHandleSubmit, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import CongratOPH from "../components/CongratOPH";
 import Activity from "../components/Activity";
@@ -17,6 +17,10 @@ import PDPAagreementPageOPH from "../components/pdpaAgreementOPH";
 const OpenhouseRegisterPage = () => {
 	const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver(ophFormAddSchema)});
 	const [Page , setPage] = useState<registerPage>(registerPage.pdapaPage);
+	const [itCheck, setItCheck] = useState(false);
+	const [csCheck, setCsCheck] = useState(false);
+	const [dsiCheck, setDsiCheck] = useState(false);
+
 	if(Page === registerPage.openHousePage){
 		return (
 			<div style={{ backgroundColor: "#34312F", padding: "30px" }}>
@@ -49,7 +53,7 @@ const OpenhouseRegisterPage = () => {
 					<div className="relative my-3 rounded-xl bg-primary">
 						<div className="relative bottom-3 right-3 rounded-xl bg-gray-2">
 							<StudentInfoForm formControl={control} formErrors={errors} grade={grade} prefix={prefix}/>
-							<Activity />
+							<Activity setCsCheck={setCsCheck} setDsiCheck={setDsiCheck} setItCheck={setItCheck} />
 						</div>
 					</div>
 					<div className="m-2">
@@ -60,7 +64,7 @@ const OpenhouseRegisterPage = () => {
 					</div>
 					<div />
 				</div>
-				<ConfirmModalOPH handleOnSubmit={handleSubmit} setPage={setPage}/>
+				<ConfirmModalOPH csCheck={csCheck} dsiCheck={dsiCheck} handleOnSubmit={handleSubmit} itCheck={itCheck} setPage={setPage}/>
 			</div>
 		);
 	}

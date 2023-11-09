@@ -48,7 +48,6 @@ export interface StudentOpenhouseForm {
   studentPrefix: string;
   studentFacebook?: string;
   StudentLine?: string;
-  activity: string[];
 }
 
 export interface Iprefix {

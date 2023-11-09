@@ -9,10 +9,13 @@ import { IOpenHouseRequest } from '../../../share/types/openHouseRequest';
 interface ConfirmModalProps {
 	handleOnSubmit : UseFormHandleSubmit<StudentOpenhouseForm,undefined>;
 	setPage : Dispatch<SetStateAction<registerPage>>;
+	itCheck : boolean;
+	csCheck : boolean;
+	dsiCheck : boolean;
 }
 
 
-const ConfirmModalOPH = ({handleOnSubmit,setPage} : ConfirmModalProps) => {
+const ConfirmModalOPH = ({handleOnSubmit,setPage,itCheck,csCheck,dsiCheck} : ConfirmModalProps) => {
 	const [open, setOpen] = useState(false);
 	const [formRequest, setFormRequest] = useState<IOpenHouseRequest>();
 	const handleOpen = () => {
@@ -22,6 +25,16 @@ const ConfirmModalOPH = ({handleOnSubmit,setPage} : ConfirmModalProps) => {
 
 	const onSubmit = (data : StudentOpenhouseForm) => {
 		handleOpen();
+		let ActivityField = [];
+		if (dsiCheck) {
+			ActivityField.push("Get to know me 'DSI'");
+		}
+		if (csCheck) {
+			ActivityField.push("Easy & Fun java");
+		}
+		if (itCheck) {
+			ActivityField.push("Let's Explore Web Dev Journey");
+		}
 		const resultRequest: IOpenHouseRequest = {
 			prefix: data.studentPrefix,
 			firstname: data.studentName,
@@ -33,7 +46,7 @@ const ConfirmModalOPH = ({handleOnSubmit,setPage} : ConfirmModalProps) => {
 			lineId: data.StudentLine,
 			schoolName: data.studentSchoolName,
 			schoolAddress: data.studentSchoolAddress,
-			activity: data.activity
+			activity: ActivityField
 		};
 		setFormRequest(resultRequest);
 	};
