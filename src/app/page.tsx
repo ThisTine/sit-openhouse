@@ -32,7 +32,8 @@ const slider = [
 		location: "ชั้น 1 และ 10 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
 		showButton: true,
 		moreDetails: <OpenHousePage />,
-		buttonText: "เปิดรับสมัครเร็ว ๆ นี้"
+		// buttonText: "เปิดรับสมัครเร็ว ๆ นี้",
+		href: "/register/open-house"
 	},
 	{
 		details: "รายละเอียดเพิ่มเติม...",
