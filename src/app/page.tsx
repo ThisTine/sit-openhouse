@@ -99,7 +99,7 @@ export default function App() {
 					return (
 						<SwiperSlide key={index}>
 							<PageView
-								buttonText={slide.buttonText}
+								buttonText={(slide as any).buttonText}
 								details={slide.details}
 								href={slide.href}
 								imageUrl={slide.imageUrl}
