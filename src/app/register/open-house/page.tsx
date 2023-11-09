@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-async-client-component */
+import 'server-only';
 import { ISheetData} from "@/app/api/utils/getSheetNum";
 import Form from "./Form";
 async function getData() {
