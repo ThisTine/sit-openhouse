@@ -1,5 +1,4 @@
 import nodemailer from 'nodemailer';
-import { promises as fs } from 'fs';
 import Mail from 'nodemailer/lib/mailer';
 import { ICT_EMAIL } from '@/mail/ict/email';
 import {OPEN_HOUSE_EMAIL} from '@/mail/open-house/email';
