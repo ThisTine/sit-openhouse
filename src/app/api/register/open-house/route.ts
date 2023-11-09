@@ -2,6 +2,7 @@ import { OpenHouseRequestSchema } from "@/share/schema/openHouseRequestSchema";
 import { IOpenHouseRequest, IOpenHouseRequestMapper, openHouseRequestMapper } from "@/share/types/openHouseRequest";
 import { IOpenHouseEmailTemplate, getEmailTemplate, sendmail } from "../../utils/sendmail";
 import {nanoid} from 'nanoid';
+import { cellEncoder, getSheetNum, mapper, tranformer } from "../../utils/getSheetNum";
 
 const openHouseEventMapper = {
 	"Get to know me 'DSI'": "Get to know me 'DSI', 10:15-11:30 @LX 12/1",
@@ -38,10 +39,17 @@ export async function POST(request: Request) {
 			":open-event-2:": openHouseEventMapper[(req.activity[1] ?? '') as keyof typeof openHouseEventMapper] ?? '',
 			":open-event-3:": openHouseEventMapper[(req.activity[2] ?? '') as keyof typeof openHouseEventMapper] ?? ''
 		};
+		const x = await getSheetNum();
+		const amount = x.data;
+		console.log(amount);
 		for(let activity of req['activity']){
+			const mapperKey = mapper[activity as keyof typeof mapper]; 
+			if(mapperKey && amount[mapperKey as keyof typeof amount] <= 0){
+				return Response.json({error:"The amount of "+activity+"Is full"}, {status:500});
+			}
 			params.append(openHouseRequestMapper['activity'],activity);
 		}
-
+        
 		const info = await fetch(url+'&'+params.toString());
 		if(!info.ok){
 			return Response.json({error:"Failed send form to API"},{status:400});
