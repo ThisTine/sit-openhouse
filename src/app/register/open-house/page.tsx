@@ -9,7 +9,6 @@ import CongratOPH from "../components/CongratOPH";
 import Activity from "../components/Activity";
 import { ophFormAddSchema } from "../schema/ictFormSchema";
 import StudentInfoForm from "../components/studentInfoForm";
-import ConfirmModal_OPH from "../components/confirmModal_OPH";
 import ConfirmModalOPH from "../components/confirmModal_OPH";
 import { registerPage } from "../model/formRegister";
 import PDPAagreementPageOPH from "../components/pdpaAgreementOPH";
