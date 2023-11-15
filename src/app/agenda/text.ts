@@ -6,7 +6,7 @@ export const th = {
 	ddayLocation: "@LX Building 3rd floor",
 	openhouseWorkshopLocation: "@LX Building 10th & 12th floor",
 	ictLocation: "@LX Building 3rd floor",
-	openhouseStageLocation: "@LX Building 1st floor"
+	openhouseStageLocation: "@LX Building"
 };
 
 export const en = {
