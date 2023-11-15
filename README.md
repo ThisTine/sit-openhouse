@@ -7,7 +7,7 @@ Logo -> [Googledrive](https://drive.google.com/drive/folders/1GiB8nIEuycF5nPeWcX
 
 staging -> [https://openhouse23.thistine.com](https://openhouse23.thistine.com)
 
-prod -> [https://openhouse.sit.kmutt.ac.th](https://openhouse.sit.kmutt.ac.th)
+prod -> [https://openhouse2023.sit.kmutt.ac.th](https://openhouse2023.sit.kmutt.ac.th)
 
 ## Development
 
