@@ -78,7 +78,7 @@ const TimeTable: FC<{
 					<h4>14:00</h4>
 					<h4>15:00</h4>
 					<h4>16:00</h4>
-					<h4>17:00</h4>
+					{/* <h4>17:00</h4> */}
 				</div>
 				<AllTable filter={filter} lang={lang} />
 			</div>

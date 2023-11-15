@@ -44,18 +44,18 @@ const OpenHouseStage: Agenda[] = [
 		height: 46
 	},
 	{
-		th: ["แนะนำกิจกรรมสาขา"],
+		th: ["Talk & Tips", "With Ajarn", "@LX 3 Auditorium"],
 		en: ["SIT Session talk"],
 		start: 1100,
-		end: 1130,
-		height: 76
+		end: 1200,
+		height: 152
 	},
 	{
 		th: ["พักเที่ยง"],
 		en: ["Lunch Break"],
-		start: 1130,
+		start: 1200,
 		end: 1300,
-		height: 216
+		height: 140
 	},
 	{
 		th: ["กิจกรรมภาคบ่าย ซุ้มกิจกรรม"],
