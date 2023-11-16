@@ -3,18 +3,18 @@
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import {Button} from "@mui/material";
 
-import { grade, prefix } from "../constant/formConst";
+import { grade, prefix } from "../../app/register/constant/formConst";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
-import { ictFormAddSchema } from "../schema/ictFormSchema";
-import { registerPage } from "../model/formRegister";
+import { ictFormAddSchema } from "../../app/register/schema/ictFormSchema";
+import { registerPage } from "../../app/register/model/formRegister";
 import { useState } from "react";
 import React from "react";
-import TeamInfoForm from "../components/teamInfoForm";
-import CongratICT from "../components/CongratICT";
-import FailRegister from "../components/FailRegister";
-import ConfirmModalICT from "../components/confirmModal_ICT";
-import PDPAagreementPageICT from "../components/pdpaAgreementICT";
+import TeamInfoForm from "../../app/register/components/teamInfoForm";
+import CongratICT from "../../app/register/components/CongratICT";
+import FailRegister from "../../app/register/components/FailRegister";
+import ConfirmModalICT from "../../app/register/components/confirmModal_ICT";
+import PDPAagreementPageICT from "../../app/register/components/pdpaAgreementICT";
 
 const SolutionFormPage = () => {
 	const { handleSubmit, control,formState: { errors } } = useForm({resolver : yupResolver(ictFormAddSchema)});
