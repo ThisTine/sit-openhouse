@@ -19,14 +19,14 @@ const OpenHouseMobile: Agenda[] = [
 	{
 		start: 1300,
 		end: 1415,
-		th: ["Workshop สาขา CS Easy & Fun Java (กิจกรรมภาษาอังกฤษ)"],
-		en: ["Workshop CS Easy & Fun Java (English Workshop)"],
+		th: ["Workshop สาขา CS Easy & Fun Algorithms (กิจกรรมภาษาอังกฤษ)"],
+		en: ["Workshop CS Easy & Fun Algorithms (English Workshop)"],
 		location: "LX 10th floor",
 		isLimited: true
 	},
 	{
 		start: 1430,
-		end: 1530,
+		end: 1545,
 		th: ["Workshop สาขา IT Let's Explore Web Dev Journey"],
 		en: ["Workshop IT Make your own Portfolio website"],
 		location: "LX 10th floor",
