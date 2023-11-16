@@ -43,8 +43,9 @@ const slider = [
 		location: "Auditorium ชั้น 3 อาคารการเรียนรู้พหุวิทยาการ (LX Buliding)",
 		showButton: true,
 		showLicense: true,
+		buttonText: "ปิดรับสมัครแล้ว",
 		moreDetails: <IctChallenge />,
-		href: "/register/ict-challenge"
+		// href: "/register/ict-challenge"
 	},
 	{
 		details: "รายละเอียดเพิ่มเติม...",

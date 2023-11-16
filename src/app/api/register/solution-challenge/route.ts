@@ -5,6 +5,7 @@ import { ISolutionChllengeRequest, solutionChallengeRequestMapper } from "@/shar
 
 export async function POST(request: Request) {
 	try{
+		return Response.json({error:"Closed"},{status:400});
 		const req =  await request.json() as ISolutionChllengeRequest;
 		await SolutionChallengeReuqestSchema.validate(req);
 		
@@ -15,8 +16,10 @@ export async function POST(request: Request) {
 
 		for(let k of Object.keys(req)){
 			let key = solutionChallengeRequestMapper[k as keyof ISolutionChllengeRequest];
-			if(key)
+			if(key){
+				// @ts-ignore
 				gReq[key] = req[k as keyof ISolutionChllengeRequest] as any;
+			}
 		}
 
 		const params = new URLSearchParams({
