@@ -28,7 +28,7 @@ const Activity = ({setItCheck,setCsCheck,setDsiCheck,data} : ActivityProps) => {
 		setItCheck(event.target.checked);
 	};
 	const outerBoxClassNameBuilder = (x : boolean)=>{
-		return `relative rounded-xl ${x?"bg-primary":"bg-gray-400"} p-3 mt-5`;	
+		return `relative rounded-xl ${x?"bg-primary":"bg-gray-400"} p-3 mt-5`;
 	};
 
 	return (
@@ -41,12 +41,12 @@ const Activity = ({setItCheck,setCsCheck,setDsiCheck,data} : ActivityProps) => {
 							color: red[500]
 						}}} />
 						<label className="text-white">
-              Get to Know me ‘DSI’ | 10.30 -11.30 น. ( จำกัด 40 ที่นั่ง ) {!isDsi ? "(เต็ม)" : null}
+              Get to Know me ‘DSI’ | 10.15 -11.30 น. ( จำกัด 60 ที่นั่ง ) {!isDsi ? "(เต็ม)" : null}
 						</label>
 						<div className="m-1 mx-5 w-24 rounded-md bg-red-500 p-1 text-center text-xs text-white">
               มีประกาศนียบัตร
 						</div>
-						<h4 className="mx-5 text-xs text-white">( โดยรุ่นพี่ DSI#2 ) กิจกรรมสุดพิเศษจากสาขา DSI ให้น้อง ๆ มาทำความรู้จักกับการเป็นนวัตกรในโลกยุคดิจิตอล ผ่านกิจกรรม Workshop ตั้งแต่การคิด Solution ให้ตอบโจทย์ลูกค้าสู่การทำ Prototype</h4>
+						<h4 className="mx-5 text-xs text-white">( โดยรุ่นพี่ DSI#2 ) กิจกรรมสุดพิเศษจากสาขา DSI ให้น้อง ๆ มาทำความรู้จักกับการเป็นนวัตกรในโลกยุคดิจิทัล ผ่านกิจกรรม Workshop ตั้งแต่การคิด Solution ให้ตอบโจทย์ลูกค้าสู่การทำ Prototype</h4>
 					</div>
 				</div>
         	<div className={outerBoxClassNameBuilder(isJava)}>
@@ -55,7 +55,7 @@ const Activity = ({setItCheck,setCsCheck,setDsiCheck,data} : ActivityProps) => {
 							color: red[500]
 						}}} />
 						<label className="text-white">
-            Easy & Fun Java | 13.00 - 14.00 น. ( จำกัด 50 ที่นั่ง ) {!isJava ? "(เต็ม)" : null}
+            Easy & Fun Algorithms | 13.00 - 14.15 น. ( จำกัด 60 ที่นั่ง ) {!isJava ? "(เต็ม)" : null}
 						</label>
 						<h1 className="mx-5 text-white">* กิจกรรมถูกจัดเป็นภาษาอังกฤษ</h1>
 						<div className="m-1 mx-5 w-24 rounded-md bg-red-500 p-1 text-center text-xs text-white">
@@ -63,7 +63,7 @@ const Activity = ({setItCheck,setCsCheck,setDsiCheck,data} : ActivityProps) => {
 						</div>
 						<h4 className="mx-5 text-xs text-white">เวิร์คช็อปที่จะชวนน้อง ๆ มาร่วมสนุกกับการทำเว็บของตนเอง ด้วย CSS & HTML ซึ่งนอกจากจะได้เรียนรู้แล้ว ยังได้ผลงานติดไม้ติดมือกลับบ้านอีกด้วย !</h4>
 					</div>
-          	
+
 				</div>
 				<div className={outerBoxClassNameBuilder(isWeb)}>
 					<div>
@@ -71,7 +71,7 @@ const Activity = ({setItCheck,setCsCheck,setDsiCheck,data} : ActivityProps) => {
 							color: red[500]
 						}}} />
 						<label className="text-white">
-              Let&rsquo;s Explore Web Dev Journey | 14.15 - 15.15 น. ( จำกัด 50 ที่นั่ง ) {!isWeb ? "(เต็ม)" : null}
+              Let&rsquo;s Explore Web Dev Journey | 14.30 - 15.45 น. ( จำกัด 60 ที่นั่ง ) {!isWeb ? "(เต็ม)" : null}
 						</label>
 						<div className="m-1 mx-5 w-24 rounded-md bg-red-500 p-1 text-center text-xs text-white">
               มีประกาศนียบัตร
