@@ -2,88 +2,69 @@
 import { Box, Button, Modal } from '@mui/material';
 import React, { useState } from 'react';
 import { UseFormHandleSubmit } from 'react-hook-form';
-import { ICTChallengeForm, registerPage } from '../model/formRegister';
-import { ISolutionChllengeRequest } from '../../../share/types/solutionChllengeRequest';
+import { StudentOpenhouseForm, registerPage } from '../model/formRegister';
 import { Dispatch } from 'react';
 import { SetStateAction } from 'react';
+import { IOpenHouseRequest } from '../../../share/types/openHouseRequest';
 interface ConfirmModalProps {
-	handleOnSubmit : UseFormHandleSubmit<ICTChallengeForm,undefined>;
+	handleOnSubmit : UseFormHandleSubmit<StudentOpenhouseForm,undefined>;
 	setPage : Dispatch<SetStateAction<registerPage>>;
+	itCheck : boolean;
+	csCheck : boolean;
+	dsiCheck : boolean;
 }
 
 
-const ConfirmModal = ({handleOnSubmit,setPage} : ConfirmModalProps) => {
+const ConfirmModalOPH = ({handleOnSubmit,setPage,itCheck,csCheck,dsiCheck} : ConfirmModalProps) => {
 	const [open, setOpen] = useState(false);
-	const [formRequest, setFormRequest] = useState<ISolutionChllengeRequest>();
+	const [formRequest, setFormRequest] = useState<IOpenHouseRequest>();
 	const handleOpen = () => {
 		setOpen(true);
-
-
 	};
 	const handleClose = () => setOpen(false);
 
-	const onSubmit = (data : ICTChallengeForm) => {
+	const onSubmit = (data : StudentOpenhouseForm) => {
 		handleOpen();
-		const resultRequest : ISolutionChllengeRequest = {
-			teamName: data.teamName,
-			schoolName: data.schoolName,
-			schoolAddress: data.schoolAddress,
-
-			firstPersonPrefix : data.prefixMember1,
-			firstPersonFirstname : data.nameMember1,
-			firstPersonLastname : data.surnameMember1,
-			firstPersonGrade : data.gradeMember1,
-			firstPersonTel : data.phoneNumMember1,
-			firstPersonEmail : data.emailMember1,
-			firstPersonFacebook : data.facebookMember1,
-			firstPersonLineId : data.lineMember1,
-
-			secondPersonPrefix : data.prefixMember2,
-			secondPersonFirstname : data.nameMember2,
-			secondPersonLastname : data.surnameMember2,
-			secondPersonGrade : data.gradeMember2,
-			secondPersonTel : data.phoneNumMember2,
-			secondPersonEmail : data.emailMember2,
-			secondPersonFacebook : data.facebookMember2,
-			secondPersonLineId : data.lineMember2,
-
-			thirdPersonPrefix : data.prefixMember3,
-			thirdPersonFirstname : data.nameMember3,
-			thirdPersonLastname : data.surnameMember3,
-			thirdPersonGrade : data.gradeMember3,
-			thirdPersonTel : data.phoneNumMember3,
-			thirdPersonEmail : data.emailMember3,
-			thirdPersonFacebook : data.facebookMember3,
-			thirdPersonLineId : data.lineMember3,
-			
-			advisorPersonPrefix : data.ajarnPrefix,
-			advisorPersonFirstname : data.ajarnName,
-			advisorPersonLastname : data.ajarnSurname,
-			advisorPersonTel : data.ajarnphoneNum,
-			advisorPersonEmail : data.ajarnEmail,
-			advisorPosition : data.ajarnPosition
-
+		let ActivityField = [];
+		if (dsiCheck) {
+			ActivityField.push("Get to know me 'DSI'");
+		}
+		if (csCheck) {
+			ActivityField.push("Easy & Fun java");
+		}
+		if (itCheck) {
+			ActivityField.push("Let's Explore Web Dev Journey");
+		}
+		const resultRequest: IOpenHouseRequest = {
+			prefix: data.studentPrefix,
+			firstname: data.studentName,
+			lastname: data.studentSurname,
+			grade: data.studentGrade,
+			tel: data.studentPhoneNum,
+			email: data.studentEmail,
+			facebook: data.studentFacebook,
+			lineId: data.StudentLine,
+			schoolName: data.studentSchoolName,
+			schoolAddress: data.studentSchoolAddress,
+			activity: ActivityField
 		};
-
 		setFormRequest(resultRequest);
 	};
 
-	const handleOnconfirm = async() => {
+	const handleOnconfirm = async () => {
 		handleClose();
-		const result = await fetch("/api/register/solution-challenge", {
+		const result = await fetch('/api/register/open-house', {
 			body: JSON.stringify(formRequest),
-			method: "POST",
+			method: 'POST',
 			headers: {
-				"Content-Type": "application/json"
+				'Content-Type': 'application/json'
 			}
 		});
-		if(result.status === 200){
-			setPage(registerPage.congratsIct);
-		}
-		else{
+		if (result.status === 200) {
+			setPage(registerPage.congratsOpenHouse);
+		} else {
 			setPage(registerPage.failCongrats);
-		}
-		
+		};
 	};
 
 	return (
@@ -119,4 +100,4 @@ const ConfirmModal = ({handleOnSubmit,setPage} : ConfirmModalProps) => {
 		</div>
 	);
 };
-export default ConfirmModal;
+export default ConfirmModalOPH;

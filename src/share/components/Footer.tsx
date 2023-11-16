@@ -7,6 +7,7 @@ import Mail from '@/share/icon/Mail.svg';
 import Facebook from '@/share/icon/Facebook.svg';
 import Phone from '@/share/icon/Phone.svg';
 import Line from '@/share/icon/line.svg';
+import Link from 'next/link';
 
 const Footer = () => {
 	return (
@@ -14,9 +15,9 @@ const Footer = () => {
 			<div className="flex w-full justify-center pb-5 max-lg:hidden">
 				<div className="grid w-[80%] grid-cols-3 gap-6 border-b-2 border-inherit pb-10">
 					<div>
-						<Image alt="sit logo" className="pb-5" src={sit_logo}/>
+						<Image alt="sit logo" className="pb-5" src={sit_logo} />
 						<div className="flex gap-2 text-gray-200">
-							<Location/>
+							<Location />
 							<h1>126 ถนนประชาอุทิศ แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140.</h1>
 						</div>
 					</div>
@@ -26,10 +27,10 @@ const Footer = () => {
 								<h1 className="text-2xl font-bold">Contact</h1>
 							</div>
 							<div>
-								<div className="mb-6 flex place-items-center gap-2 text-gray-200">
+								<Link className="mb-6 flex place-items-center gap-2 text-gray-200" href="mailto:info@sit.kmutt.ac.th" target="blank">
 									<Image alt='mail logo' src={Mail} />
 									<p>info@sit.kmutt.ac.th</p>
-								</div>
+								</Link>
 								<h1 className="text-2xl font-bold">Open House</h1>
 								<div className="my-2 flex place-items-center gap-2 text-gray-200">
 									<Image alt='Phone logo' src={Phone} />
@@ -37,10 +38,10 @@ const Footer = () => {
 								</div>
 							</div>
 							<div>
-								<div className="mb-6 flex place-items-center gap-2 text-gray-200">
+								<Link className="mb-6 flex place-items-center gap-2 text-gray-200" href="https://www.facebook.com/SIT.Family" target="blank">
 									<Image alt='facebook logo' src={Facebook} />
 									<p>SIT.Family</p>
-								</div>
+								</Link>
 								<h1 className="text-2xl font-bold">ICT</h1>
 								<div className="my-2 flex place-items-center gap-2 text-gray-200">
 									<Image alt='Phone logo' src={Phone} />
@@ -48,10 +49,10 @@ const Footer = () => {
 								</div>
 							</div>
 							<div>
-								<div className="mb-6 flex place-items-center gap-2 text-gray-200">
-									<Image alt='line logo' src={Line}  />
+								<Link className="mb-6 flex place-items-center gap-2 text-gray-200" href="https://page.line.me/olt5471s?openQrModal=true" target="blank">
+									<Image alt='line logo' src={Line} />
 									<p>@SIT KMUTT</p>
-								</div>
+								</Link>
 								<h1 className="text-2xl font-bold">D-Day</h1>
 								<div className="my-2 flex place-items-center gap-2 text-gray-200">
 									<Image alt='Phone logo' src={Phone} />
@@ -101,9 +102,17 @@ const Footer = () => {
 						<h1>126 ถนนประชาอุทิศ แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140.</h1>
 					</div>
 					<div className="col-span-2 flex justify-center gap-8 pt-4">
-						<Image alt='facebook logo' className="w-[35px]" src={Facebook}/>
-						<Image alt='mail logo' className="w-[35px]" src={Mail} />
-						<Image alt='line logo' className="w-[35px]" src={Line} />
+						<Link href="https://www.facebook.com/SIT.Family" target="blank">
+							<Image alt='facebook logo' className="w-[35px]" src={Facebook} />
+						</Link>
+						<Link href="mailto:info@sit.kmutt.ac.th" target="blank">
+							<Image alt='mail logo' className="w-[35px]" src={Mail} />
+
+						</Link>
+						<Link href="https://page.line.me/olt5471s?openQrModal=true" target="blank">
+							<Image alt='line logo' className="w-[35px]" src={Line} />
+
+						</Link>
 					</div>
 				</div>
 			</div>
