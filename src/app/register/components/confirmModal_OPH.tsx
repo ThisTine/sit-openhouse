@@ -6,22 +6,26 @@ import { StudentOpenhouseForm, registerPage } from '../model/formRegister';
 import { Dispatch } from 'react';
 import { SetStateAction } from 'react';
 import { IOpenHouseRequest } from '../../../share/types/openHouseRequest';
+import LoadingButton from '@mui/lab/LoadingButton';
 interface ConfirmModalProps {
 	handleOnSubmit : UseFormHandleSubmit<StudentOpenhouseForm,undefined>;
 	setPage : Dispatch<SetStateAction<registerPage>>;
 	itCheck : boolean;
 	csCheck : boolean;
 	dsiCheck : boolean;
+	talkCheck : boolean;
+	portCheck : boolean;
 }
 
 
-const ConfirmModalOPH = ({handleOnSubmit,setPage,itCheck,csCheck,dsiCheck} : ConfirmModalProps) => {
+const ConfirmModalOPH = ({handleOnSubmit,setPage,itCheck,csCheck,dsiCheck,portCheck,talkCheck} : ConfirmModalProps) => {
 	const [open, setOpen] = useState(false);
 	const [formRequest, setFormRequest] = useState<IOpenHouseRequest>();
 	const handleOpen = () => {
 		setOpen(true);
 	};
 	const handleClose = () => setOpen(false);
+	const [loading, setLoading] = useState(false);
 
 	const onSubmit = (data : StudentOpenhouseForm) => {
 		handleOpen();
@@ -34,6 +38,12 @@ const ConfirmModalOPH = ({handleOnSubmit,setPage,itCheck,csCheck,dsiCheck} : Con
 		}
 		if (itCheck) {
 			ActivityField.push("Let's Explore Web Dev Journey");
+		}
+		if (portCheck) {
+			ActivityField.push("Portfolio");
+		}
+		if (talkCheck) {
+			ActivityField.push("Talk With Ajarn");
 		}
 		const resultRequest: IOpenHouseRequest = {
 			prefix: data.studentPrefix,
@@ -52,19 +62,31 @@ const ConfirmModalOPH = ({handleOnSubmit,setPage,itCheck,csCheck,dsiCheck} : Con
 	};
 
 	const handleOnconfirm = async () => {
-		handleClose();
-		const result = await fetch('/api/register/open-house', {
-			body: JSON.stringify(formRequest),
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
+		setLoading(true);
+		try{
+			const result = await fetch('/api/register/open-house', {
+				body: JSON.stringify(formRequest),
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			});
+			if (result.ok) {
+				setPage(registerPage.congratsOpenHouse);
+			} else {
+				throw new Error("Fail load");
 			}
-		});
-		if (result.status === 200) {
-			setPage(registerPage.congratsOpenHouse);
-		} else {
+		}
+		catch(err){
 			setPage(registerPage.failCongrats);
-		};
+
+		}finally {
+			setLoading(false);
+			handleClose();
+
+		}
+
+
 	};
 
 	return (
@@ -92,7 +114,10 @@ const ConfirmModalOPH = ({handleOnSubmit,setPage,itCheck,csCheck,dsiCheck} : Con
 									backgroundColor: '#9c1e1e',
 									boxShadow: 'none'
 								}}} variant='contained'>cancel</Button>
-							<Button className="h-12 w-32 bg-primary text-white" onClick={handleOnconfirm} variant='contained'>confirm</Button>
+							<LoadingButton className="h-12 w-32 bg-primary text-white"
+										   loading={loading}
+										   loadingPosition="start" onClick={handleOnconfirm}
+										   variant='contained'>{loading ? "กำลังส่งข้อมูล" : "confirm"}</LoadingButton>
 						</Box>
 					</Box>
 				</Modal>

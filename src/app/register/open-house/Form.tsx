@@ -22,10 +22,11 @@ export default function Form({data}:{data:ISheetData}){
 	const [itCheck, setItCheck] = useState(false);
 	const [csCheck, setCsCheck] = useState(false);
 	const [dsiCheck, setDsiCheck] = useState(false);
-
+	const [portCheck, setPortCheck] = useState(false);
+	const [talkCheck, setTalkCheck] = useState(false);
 	if(Page === registerPage.openHousePage){
 		return (
-			<div style={{ backgroundColor: "#34312F", padding: "30px" }}>
+			<div className="p-2 md:p-20" style={{ backgroundColor: "#34312F" }}>
 				<div className="p-5">
 					<div className="flex justify-between py-3">
 						<div>
@@ -47,7 +48,9 @@ export default function Form({data}:{data:ISheetData}){
 					<div className="relative my-3 rounded-xl bg-primary py-2">
 						<div className="relative bottom-3 right-3 rounded-xl bg-gray-2">
 							<StudentInfoForm formControl={control} formErrors={errors} grade={grade} prefix={prefix}/>
-							<Activity data={data} setCsCheck={setCsCheck} setDsiCheck={setDsiCheck} setItCheck={setItCheck} />
+							<Activity data={data} setCsCheck={setCsCheck} 
+									  setDsiCheck={setDsiCheck} setIsPort={setPortCheck} setIsTak={setTalkCheck} 
+									  setItCheck={setItCheck} />
 						</div>
 					</div>
 					<div className="m-2">
@@ -58,7 +61,7 @@ export default function Form({data}:{data:ISheetData}){
 					</div>
 					<div />
 				</div>
-				<ConfirmModalOPH csCheck={csCheck} dsiCheck={dsiCheck} handleOnSubmit={handleSubmit} itCheck={itCheck} setPage={setPage}/>
+				<ConfirmModalOPH csCheck={csCheck} dsiCheck={dsiCheck} handleOnSubmit={handleSubmit} itCheck={itCheck} portCheck={portCheck} setPage={setPage} talkCheck={talkCheck}/>
 			</div>
 		);
 	}

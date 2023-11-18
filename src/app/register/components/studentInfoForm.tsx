@@ -16,7 +16,7 @@ const StudentInfoForm = ({
 	formErrors
 }: ITeamInfoFormProps) => {
 	return (
-		<div className="p-8">
+		<div className="p-3 md:p-8">
 			<div className="col-span-4">
 				<h1 className="text-3xl text-primary">ข้อมูลนักเรียน</h1>
 				<h2 className="py-3 text-xl text-primary">ข้อมูลส่วนตัว</h2>
