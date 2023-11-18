@@ -7,7 +7,9 @@ import { getSheetNum, mapper } from "../../utils/getSheetNum";
 const openHouseEventMapper = {
 	"Get to know me 'DSI'": "Get to know me 'DSI', 10:15-11:30 @LX 12/1",
 	"Easy & Fun java": "Easy & Fun java, 13:00-14:15 @LX 10/5",
-	"Let's Explore Web Dev Journey": "Let's Explore Web Dev Algorithms, 14:30-15:45 @LX 10/5"
+	"Let's Explore Web Dev Journey": "Let's Explore Web Dev Algorithms, 14:30-15:45 @LX 10/5",
+	"Talk With Ajarn": "Talk & Tips With Ajarn, 11:00-12:00 @LX 3 Auditorium",
+	"Portfolio": "กิจกรรมการบรรยายเทคนิคการทำพอร์ตโฟลิโอ, 09:00-10:00"
 };
 
 export async function POST(request: Request) {
@@ -37,7 +39,9 @@ export async function POST(request: Request) {
 			":open-pwd:": code,
 			":open-event-1:": openHouseEventMapper[(req.activity[0] ?? '') as keyof typeof openHouseEventMapper] ?? '',
 			":open-event-2:": openHouseEventMapper[(req.activity[1] ?? '') as keyof typeof openHouseEventMapper] ?? '',
-			":open-event-3:": openHouseEventMapper[(req.activity[2] ?? '') as keyof typeof openHouseEventMapper] ?? ''
+			":open-event-3:": openHouseEventMapper[(req.activity[2] ?? '') as keyof typeof openHouseEventMapper] ?? '',
+			":open-event-4:": openHouseEventMapper[(req.activity[3] ?? '') as keyof typeof openHouseEventMapper] ?? '',
+			":open-event-5:": openHouseEventMapper[(req.activity[4] ?? '') as keyof typeof openHouseEventMapper] ?? ''
 		};
 		const x = await getSheetNum();
 		const amount = x.data;

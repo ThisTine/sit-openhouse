@@ -8,13 +8,17 @@ interface ActivityProps {
 	setItCheck : React.Dispatch<React.SetStateAction<boolean>>;
 	setCsCheck : React.Dispatch<React.SetStateAction<boolean>>;
 	setDsiCheck : React.Dispatch<React.SetStateAction<boolean>>;
+	setIsPort: React.Dispatch<React.SetStateAction<boolean>>;
+	setIsTak: React.Dispatch<React.SetStateAction<boolean>>;
 	data: ISheetData
 }
 
-const Activity = ({setItCheck,setCsCheck,setDsiCheck,data} : ActivityProps) => {
+const Activity = ({setItCheck,setCsCheck,setDsiCheck,data,setIsPort,setIsTak} : ActivityProps) => {
 	const isDsi = useMemo(()=>data.dsi > 0, [data.dsi]);
 	const isJava = useMemo(()=>data.java > 0,[data.java]);
 	const isWeb = useMemo(()=>data.web > 0,[data.web]);
+	const isTalk = useMemo(()=>data.talk > 0,[data.talk]);
+	const isPort = useMemo(()=>data.portfolio > 0,[data.portfolio]);
 
 	const handleChecked1 = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setDsiCheck(event.target.checked);
@@ -77,6 +81,32 @@ const Activity = ({setItCheck,setCsCheck,setDsiCheck,data} : ActivityProps) => {
               มีประกาศนียบัตร
 						</div>
 						<h4 className="mx-5 text-xs text-white">( โดยรุ่นพี่ IT#2 ) เวิร์คช็อปที่จะชวนน้อง ๆ มาร่วมสนุกกับการทำเว็บของตนเอง ด้วย CSS & HTML ซึ่งนอกจากจะได้เรียนรู้แล้ว ยังได้ผลงานติดไม้ติดมือกลับบ้านอีกด้วย !</h4>
+					</div>
+				</div>
+
+				<div className={outerBoxClassNameBuilder(isPort)}>
+					<div>
+						<Checkbox disabled={!isPort} onChange={(e)=>setIsPort(e.target.checked)} sx={{color:'white','&.Mui-checked': {
+							color: red[500]
+						}}} />
+						<label className="text-white">
+							กิจกรรมการบรรยายเทคนิคการทำพอร์ตโฟลิโอ | 09.00 - 10.00 น. ( จำกัด 60 ที่นั่ง ) {!isPort ? "(เต็ม)" : null}
+						</label>
+
+						<h4 className="mx-5 text-xs text-white" >กิจกรรมบรรยายเทคนิคการทำพอร์ตโฟลิโอให้โดนใจมหาลัย</h4>
+					</div>
+				</div>
+
+				<div className={outerBoxClassNameBuilder(isTalk)}>
+					<div>
+						<Checkbox disabled={!isTalk} onChange={(e)=>setIsTak(e.target.checked)} sx={{color:'white','&.Mui-checked': {
+							color: red[500]
+						}}} />
+						<label className="text-white">
+							Talk & Tips With Ajarn | 11.00 - 12.00 น. ( จำกัด 120 ที่นั่ง ) {!isTalk ? "(เต็ม)" : null}
+						</label>
+
+						<h4 className="mx-5 text-xs text-white" >แชร์ประสบการณ์และสิ่งแวดล้อมภายในรั้ว SIT@KMUTT โดนอาจารย์และรุ่นพี่</h4>
 					</div>
 				</div>
 			</div>

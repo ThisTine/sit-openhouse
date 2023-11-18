@@ -370,6 +370,8 @@ export const OPEN_HOUSE_EMAIL = `
                                 <p>:open-event-1:</p>
                                 <p>:open-event-2:</p>
                                 <p>:open-event-3:</p>
+                                <p>:open-event-4:</p>
+                                <p>:open-event-5:</p>
                               </td>
                             </tr>
 

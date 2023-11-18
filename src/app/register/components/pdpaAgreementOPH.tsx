@@ -13,8 +13,8 @@ interface PDPAagreementPageProps {
 const PDPAagreementPageOPH = ({setPage} : PDPAagreementPageProps) => {
 	const router = useRouter();
 	return (
-		<div style={{backgroundColor:"#34312F",height:"100vh"}} >
-			<div className="p-5">
+		<div style={{backgroundColor:"#34312F",minHeight:"100vh"}} >
+			<div className="m-auto max-w-screen-2xl p-5">
 				<div className="mt-20 flex justify-between">
 					<div>
 						{/* <Button onClick={()=> router.back()}>

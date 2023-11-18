@@ -11,7 +11,7 @@ async function getData() {
 		const data = await res.json();	
 		return data as ISheetData;
 	}catch(err){
-		return {dsi:0,java:0,web:0} as ISheetData;
+		return {dsi:0,java:0,web:0,talk:0,portfolio:0} as ISheetData;
 	}
 		
 } 
