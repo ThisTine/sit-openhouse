@@ -17,6 +17,8 @@ export interface IOpenHouseEmailTemplate {
 	":open-event-1:": string
 	":open-event-2:": string
 	":open-event-3:": string
+	":open-event-4:": string
+	":open-event-5:": string
 	":open-pwd:": string
 }
 
