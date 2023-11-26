@@ -35,7 +35,7 @@ const openHouseWorkshop: Agenda[] = [
 	{
 		th: ["Workshop สาขา CS", "Easy & Fun Algorithms", "(กิจกรรมภาษาอังกฤษ)"],
 		en: ["Workshop CS", "Easy & Fun Algorithms", "(English Workshop)"],
-		location: "LX 10/5",
+		location: "LX 12",
 		start: 1300,
 		end: 1415,
 		height: 175
