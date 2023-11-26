@@ -21,7 +21,7 @@ const OpenHouseMobile: Agenda[] = [
 		end: 1415,
 		th: ["Workshop สาขา CS Easy & Fun Algorithms (กิจกรรมภาษาอังกฤษ)"],
 		en: ["Workshop CS Easy & Fun Algorithms (English Workshop)"],
-		location: "LX 10th floor",
+		location: "LX 12th floor",
 		isLimited: true
 	},
 	{
